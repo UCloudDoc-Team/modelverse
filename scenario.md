@@ -11,8 +11,8 @@
 ### 三步快速接入
 
 1. **获取 API Key**
-   - 登录到您的 DeepSeek 账户。
-   - 导航到 API 管理页面。
+   - 登录到您的Umodelverse账户。
+   - 进入「模型广场」，相应模型的API文档页面。
    - 创建一个新的 API Key 并记录下该 Key，您将在后续步骤中使用它。
 
 2. **安装必要的库**
@@ -39,13 +39,12 @@
          "model": "deepseek-chat",
          "messages": [
              {"role": "user", "content": "你好！"}
-         ],
-         "temperature": 0.7
+         ]
      }
 
      # 3. 发送请求
      response = requests.post(
-         "https://api.deepseek.com/v1/chat/completions",
+         "https://deepseek.modelverse.cn/v1/chat/completions",
          headers=headers,
          json=data
      )
@@ -69,10 +68,8 @@
       "role": "user",
       "content": "请解释量子计算"
     }
-  ],
-  "temperature": 0.7,  
-  "max_tokens": 1024,  
-  "top_p": 0.9,  
+  ], 
+  "max_tokens": 12288,  
   "stream": true  
 }
 ```
@@ -89,22 +86,15 @@
 
 根据您应用场景的不同，选择合适的模型：
 
-- **deepseek-chat**：通用模型，适用于对话场景。该模型已全面升级为 DeepSeek-V3，接口没变，通过指定 `model='deepseek-chat'`，即可直接调用 DeepSeek-V3。
-- **deepseek-coder**：代码模型，适用于代码生成和分析场景。
 - **deepseek-reasoner**：推理模型，即 DeepSeek 最新推出的推理模型 DeepSeek-R1。通过指定 `model='deepseek-reasoner'`，即可调用 DeepSeek-R1。
 
 #### 错误处理
-
 在您的代码中，正确处理不同的响应状态码，以便在出现问题时能够及时响应：
+| http状态码 | 类型               | 错误码            | 错误信息                | 描述                                                                 |
+|------------|--------------------|-------------------|-------------------------|----------------------------------------------------------------------|
+| 400        | invalid_request_error | invalid_messages   | 信息敏感                | 消息敏感                                                             |
+| 400        | invalid_request_error | characters_too_long | 对话 token 输出限制      | 目前 deepseek 系列模型支持的最大 max_tokens 为 4096*3                  |
+| 400        | invalid_request_error | tokens_too_long    | Prompt tokens too long   | 【用户输入错误】请求内容超过大模型内部限制，即用户输入大模型内容过长，可以尝试以下方法解决：<br>• 适当缩短输入 |
+| 400        | invalid_request_error | invalid_token      | Validate Certification failed | bearer token无效，用户可以参考【鉴权说明】获取最新密钥              |
+| 400        | invalid_request_error | invalid_model      | No permission to use the model | 没有模型权限                                                       |
 
-```python
-if response.status_code == 200:
-    # 处理成功响应
-    print("请求成功，处理响应数据")
-elif response.status_code == 401:
-    print("认证失败，请检查 API Key")
-elif response.status_code == 429:
-    print("请求频率超限，请稍后再试")
-else:
-    print("发生错误，状态码：", response.status_code)
-```
