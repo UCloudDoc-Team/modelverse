@@ -13,6 +13,6 @@
    * [模型评估](/modelverse/guide/model-evaluation.md)
    * [服务部署](/modelverse/guide/service-manage.md)
    * [数据集管理](/modelverse/guide/dataset-manage.md)
-* [API说明](/modelverse/api.md)
+* [API说明](/modelverse/API.md)
 * 场景实践
    * [调用DeepSeek推理服务](/modelverse/scenario.md)
