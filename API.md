@@ -32,7 +32,7 @@
 ### 请求示例
 ```bash
 curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
---header 'Authorization: Bearer 7507410634a07cfabf5ed70200217a3936a8c5302adba6def7c4190cfb09c33ec146995e359b566318ecdc7b2278354afd1f0a04ab4072f9f4417d52544e9c114e740c82d771b310a8e055cca84f8216d0ab8dfccd5f2c662a6d8f05688544b8d30e889681cfc129c5df528e6325efa2ad735b2ba9debb176309a184ed4340cd25618980dc3c606aa4da311783ed2e45d29a449452a7341de31aa84e6b3d8c7058166e05d6bbf7d276ed142d334231b13bda8075031aeaf0bbeebf156cd94dfcd3388bd3a5ffacbd2162c5d841a4c1ddd91ac865f31a2ca9a7fad2542584831f' \
+--header 'Authorization: Bearer <你的API Key>' \
 --header 'Content-Type: application/json' \
 --data '{
     "reasoning_effort": "low",
@@ -71,9 +71,9 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
 ### 响应示例
 ```json
 {
-    "id": "chatcmpl-da992342dddc42c49e2941dac2a4fbd9",
+    "id": "  ",
     "object": "chat.completion",
-    "created": 1739027063,
+    "created":  ,
     "model": "models/DeepSeek-R1",
     "choices": [
         {
