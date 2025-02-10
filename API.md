@@ -4,7 +4,7 @@
 本接口用于调用 ModelVerse 平台上的大模型，实现智能对话功能。
 
 ## 支持模型列表
-| 模型名称 | 模型版本 | max_completion_tokens 最大输出长度
+| 模型名称 | 模型版本 | 最大输出长度
 | --- | --- | ----
 | DeepSeek-Reasoner | DeepSeek-R1 | 16384
 | DeepSeek-Chat | DeepSeek-V3 | 16384 
