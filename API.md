@@ -26,9 +26,10 @@
 | 名称 | 类型 | 必填 | 描述 |
 | --- | --- | --- | --- |
 | model | string | 是 | 模型ID|
-| messages | List<[message]> | 是 | 聊天上下文信息。说明：   （1）messages成员不能为空，1个成员表示单轮对话，多个成员表示多轮对话，例如：   · 1个成员示例，`"messages": [ {"role": "user","content": "你好"}]`<br/>   · 3个成员示例，`"messages": [ {"role": "user","content": "你好"},{"role":"assistant","content":"需要什么帮助"},{"role":"user","content":"自我介绍下"}]`<br/>    （2） 最后一个message为当前请求的信息，前面的message为历史对话信息   （3）messages的role说明：   ① 第一条message的role必须是user或system   ② 最后一条message的role必须是user或tool   ③ 如果未使用function call功能：   · 当第一条message的role为user，role值需要依次为user -> assistant -> user...，即奇数位message的role值必须为user或function，偶数位message的role值为assistant，例如：示例中message中的role值分别为user、assistant、user、assistant、user；奇数位（红框）message中的role值为user，即第1、3、5个message中的role值为user；偶数位（蓝框）值为assistant，即第2、4个message中的role值为assistant   ![示例]https://www-s.ucloud.cn/2025/02/e3d47d50249ea9eb3f6194524f84b500_1739116591466.png|
+| messages | List[message] | 是 | 聊天上下文信息。说明：   （1）messages成员不能为空，1个成员表示单轮对话，多个成员表示多轮对话，例如：   · 1个成员示例，`"messages": [ {"role": "user","content": "你好"}]`<br/>   · 3个成员示例，`"messages": [ {"role": "user","content": "你好"},{"role":"assistant","content":"需要什么帮助"},{"role":"user","content":"自我介绍下"}]`<br/>    （2） 最后一个message为当前请求的信息，前面的message为历史对话信息   （3）messages的role说明：   ① 第一条message的role必须是user或system   ② 最后一条message的role必须是user或tool   ③ 如果未使用function call功能：   · 当第一条message的role为user，role值需要依次为user -> assistant -> user...，即奇数位message的role值必须为user或function，偶数位message的role值为assistant，例如：示例中message中的role值分别为user、assistant、user、assistant、user；奇数位（红框）message中的role值为user，即第1、3、5个message中的role值为user；偶数位（蓝框）值为assistant，即第2、4个message中的role值为assistant   ![](https://www-s.ucloud.cn/2025/02/e3d47d50249ea9eb3f6194524f84b500_1739116591466.png)|
 | stream | bool | 否 | 是否以流式接口的形式返回数据，说明：   （1）beam search模型只能为false   （2）默认false |
-| stream_options | [stream_options]| 否 | 流式响应的选项，当字段stream为true时，该字段生效 |
+| stream_options | stream_options | 否 | 流式响应是否输出usage，说明：true：是，设置为true时，在最后一个chunk会输出一个字段，这个chunk上的usage字段显示整个请求的token统计信息; false：否，流式响应默认不输出usage |
+
 
 ### 请求示例
 ```bash
@@ -50,13 +51,6 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
 
 
 ## 响应
-### 响应头域
-| 名称                           | 描述                                                         |
-|--------------------------------|--------------------------------------------------------------|
-| X-Ratelimit-Limit-Requests     | 一分钟内允许的最大请求次数                                    |
-| X-Ratelimit-Limit-Tokens       | 一分钟内允许的最大tokens消耗，包含输入tokens和输出tokens       |
-| X-Ratelimit-Remaining-Requests  | 达到RPM速率限制前，剩余可发送的请求数配额，如果配额用完，将会在0-60s后刷新 |
-| X-Ratelimit-Remaining-Tokens   | 达到TPM速率限制前，剩余可消耗的tokens数配额，如果配额用完，将会在0-60s后刷新 |
 
 ### 响应参数
 | 名称              | 类型          | 描述                                                                                                                                  |
