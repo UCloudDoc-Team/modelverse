@@ -30,6 +30,7 @@
 | stream | bool | 否 | 是否以流式接口的形式返回数据，说明：   （1）beam search模型只能为false   （2）默认false |
 | stream_options | stream_options | 否 | 流式响应是否输出usage，说明：true：是，设置为true时，在最后一个chunk会输出一个字段，这个chunk上的usage字段显示整个请求的token统计信息; false：否，流式响应默认不输出usage |
 
+
 ### 请求示例
 ```bash
 curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
