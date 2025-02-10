@@ -4,10 +4,10 @@
 本接口用于调用 ModelVerse 平台上的大模型，实现智能对话功能。
 
 ## 支持模型列表
-| 模型名称 | 模型版本 | max_completion_tokens   最大输出长度 |
-| --- | --- | --- |
-| DeepSeek-Reasoner | DeepSeek-R1 | 8192 |
-| DeepSeek-Chat | DeepSeek-V3 | 8192 |
+| 模型名称 | 模型版本 | 
+| --- | --- | 
+| DeepSeek-Reasoner | DeepSeek-R1 |
+| DeepSeek-Chat | DeepSeek-V3 |
 
 ## 第一步：获取 API Key
 请参考[获取模型服务 - GetUMInferService](https://docs.ucloud.cn/api/uai-modelverse-api/get_um_infer_service) 获取 API Key。
