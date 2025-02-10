@@ -11,7 +11,7 @@
 
 ## 第一步：获取 API Key
 请参考[获取模型服务 - GetUMInferService](https://docs.ucloud.cn/api/uai-modelverse-api/get_um_infer_service) 获取 API Key。
-或请直接点击链接[API Key获取界面](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)获取API Key。
+或请直接点击链接[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)获取API Key。
 
 ## 第二步：Chat API调用
 ## 请求
