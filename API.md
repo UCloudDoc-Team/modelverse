@@ -10,8 +10,13 @@
 | DeepSeek-Chat | DeepSeek-V3 | 16384 
 
 ## 第一步：获取 API Key
-请参考[获取模型服务 - GetUMInferService](https://docs.ucloud.cn/api/uai-modelverse-api/get_um_infer_service) 获取 API Key。
-
+请参考[获取模型服务 - GetUMInferService](https://docs.ucloud.cn/api/uai-modelverse-api/get_um_infer_service) 获取 API Key。或在页面中获取API Key：
+- 打开API列表页面[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」
+![api1.png](https://www-s.ucloud.cn/2025/02/ae9774428a03a2f52b5c0c904d1cea6b_1739186338233.png)
+- 点击弹窗的「确认发送请求」
+![api2.png](https://www-s.ucloud.cn/2025/02/06b4aca355f8952569c46e11db71e48b_1739186338242.png)
+- 从返回的列表中根据模型名称选择您需要的Key
+![api3.png](https://www-s.ucloud.cn/2025/02/67caa1e2c510d270c76b07af9eebc32b_1739186338249.png)
 
 ## 第二步：Chat API调用
 ## 请求
@@ -29,6 +34,7 @@
 | messages | List[message] | 是 | 聊天上下文信息。说明：   （1）messages成员不能为空，1个成员表示单轮对话，多个成员表示多轮对话，例如：   · 1个成员示例，`"messages": [ {"role": "user","content": "你好"}]`<br/>   · 3个成员示例，`"messages": [ {"role": "user","content": "你好"},{"role":"assistant","content":"需要什么帮助"},{"role":"user","content":"自我介绍下"}]`<br/>    （2） 最后一个message为当前请求的信息，前面的message为历史对话信息   （3）messages的role说明：   ① 第一条message的role必须是user或system   ② 最后一条message的role必须是user或tool   ③ 如果未使用function call功能：   · 当第一条message的role为user，role值需要依次为user -> assistant -> user...，即奇数位message的role值必须为user或function，偶数位message的role值为assistant，例如：示例中message中的role值分别为user、assistant、user、assistant、user；奇数位（红框）message中的role值为user，即第1、3、5个message中的role值为user；偶数位（蓝框）值为assistant，即第2、4个message中的role值为assistant   ![](https://www-s.ucloud.cn/2025/02/e3d47d50249ea9eb3f6194524f84b500_1739116591466.png)|
 | stream | bool | 否 | 是否以流式接口的形式返回数据，说明：   （1）beam search模型只能为false   （2）默认false |
 | stream_options | stream_options | 否 | 流式响应是否输出usage，说明：true：是，设置为true时，在最后一个chunk会输出一个字段，这个chunk上的usage字段显示整个请求的token统计信息; false：否，流式响应默认不输出usage |
+
 
 ### 请求示例
 ```bash
