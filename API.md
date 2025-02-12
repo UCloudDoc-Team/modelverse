@@ -52,15 +52,15 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
 ## 响应
 
 ### 响应参数
-| 名称              | 类型          | 描述                                                                                                                                  |
-|-------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------|
-| id                | string        | 本次请求的唯一标识，可用于排查问题                                                                                                     |
-| object            | string        | 回包类型 `chat.completion`：多轮对话返回                                                                                               |
-| created           | int           | 时间戳                                                                                                                              |
-| model             | string        | 说明：<br>(1) 如果是预置服务，返回模型ID<br>(2) 如果是sft后部署的服务，该字段返回`model:modelversionID`，model与请求参数相同，是本次请求使用的大模型ID；modelversionID用于溯源 |
-| choices           | choices/sse_choices | stream=false时，返回内容<br>stream=true时，返回内容                                                                                   |
-| usage             | usage         | token统计信息，说明：<br>(1) 同步请求默认返回<br>(2) 流式请求默认不返回，当开启`stream_options.include_usage=true`时，会在最后一个chunk返回实际内容，其他chunk返回null |
-| search_results    | search_results | 搜索结果列表                                                                                                                         |
+| 名称 | 类型 | 描述 |
+|-|-|-|
+| id | string | 本次请求的唯一标识，可用于排查问题 |
+| object | string | 回包类型 `chat.completion`：多轮对话返回 |
+| created | int | 时间戳 |
+| model | string | 说明：<br>(1) 如果是预置服务，返回模型ID<br>(2) 如果是sft后部署的服务，该字段返回`model:modelversionID`，model与请求参数相同，是本次请求使用的大模型ID；modelversionID用于溯源 |
+| choices | choices/sse_choices | stream=false时，返回内容<br>stream=true时，返回内容 |
+| usage | usage | token统计信息，说明：<br>(1) 同步请求默认返回<br>(2) 流式请求默认不返回，当开启`stream_options.include_usage=true`时，会在最后一个chunk返回实际内容，其他chunk返回null(deepseek系列模型暂不支持) |
+| search_results    | search_results | 搜索结果列表 |
 
 ### 响应示例
 ```json
@@ -94,13 +94,13 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
 ## 错误码
 如果请求错误，服务器返回的JSON文本包含以下参数。
 
-| HTTP 状态码 | 类型              | 错误码            | 错误信息                        | 描述                                                                 |
-|------------|-------------------|-------------------|----------------------------------|----------------------------------------------------------------------|
-| 400        | invalid_request_error | invalid_messages   | 信息敏感                        | 消息敏感                                                             |
-| 400        | invalid_request_error | characters_too_long | 对话 token 输出限制              | 目前 deepseek 系列模型支持的最大 max_tokens 为 12288               |
-| 400        | invalid_request_error | tokens_too_long    | Prompt tokens too long           | 【用户输入错误】请求内容超过大模型内部限制，即用户输入大模型内容过长，可以尝试以下方法解决：<br>• 适当缩短输入 |
-| 400        | invalid_request_error | invalid_token      | Validate Certification failed    | bearer token 无效，用户可以参考【鉴权说明】获取最新密钥               |
-| 400        | invalid_request_error | invalid_model      | No permission to use the model   | 没有模型权限                                                         |
+| HTTP 状态码 | 类型 | 错误码 | 错误信息 | 描述 |
+|-|-|-|-|-|
+| 400 | invalid_request_error | invalid_messages | 信息敏感 | 消息敏感 |
+| 400 | invalid_request_error | characters_too_long | 对话 token 输出限制 | 目前 deepseek 系列模型支持的最大 max_tokens 为 12288 |
+| 400 | invalid_request_error | tokens_too_long | Prompt tokens too long | 【用户输入错误】请求内容超过大模型内部限制，即用户输入大模型内容过长，可以尝试以下方法解决：<br>• 适当缩短输入 |
+| 400 | invalid_request_error | invalid_token | Validate Certification failed | bearer token 无效，用户可以参考【鉴权说明】获取最新密钥 |
+| 400 | invalid_request_error | invalid_model | No permission to use the model | 没有模型权限 |
 
 
 
