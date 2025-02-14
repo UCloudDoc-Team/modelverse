@@ -4,8 +4,6 @@
 模型服务平台UModelVerse旨在为客户快速搭建AGI应用的能力，作为AGI的应用者，客户无需关注底层的算力资源调度、基础环境的模型部署，仅需要通过UModelVerse控制台或者统一对外API，即可快速搭建专属AGI应用。
 
 
-
-
 ## 1.产品简介
 
 *  [什么是模型服务平台](/modelverse/introduction/introduction.md)
@@ -29,6 +27,8 @@
 * [数据集管理](/modelverse/guide/dataset-manage.md)
 
 ## 5.API说明
+* [通用说明](/modelverse/API.md)
+* [OpenAI接口兼容](/modelverse/OpenAI.md)
   
 
 
