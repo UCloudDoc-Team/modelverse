@@ -18,6 +18,7 @@ base_url指模型服务的请求地址。通过该地址，可以请求服务提
 ## 通过OpenAI SDK调用
 - 请确保您已安装了最新版OpenAI SDK。
 - 调用示例
+
 ```python
 from openai import OpenAI
 
