@@ -24,7 +24,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key=" ",  # Modelverse平台bearer token
-    base_url="https://deepseek.modelverse.cn/v1",  # Modelverse平台域名
+    base_url="https://deepseek.modelverse.cn/v0.1",  # Modelverse平台域名
 )
 
 completion = client.chat.completions.create(
