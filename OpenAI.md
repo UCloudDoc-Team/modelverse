@@ -12,7 +12,7 @@ base_url指模型服务的请求地址。通过该地址，可以请求服务提
 | DeepSeek-Chat | DeepSeek-V3 | 16384 
 
 ## api_key说明
-如何获取api_key值，请点击[API列表]()
+如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
 ![](https://www-s.ucloud.cn/2025/02/d51820006284a8c28160dc669c505987_1739523878908.png)
 
 ## 通过OpenAI SDK调用
