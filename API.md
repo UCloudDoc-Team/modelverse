@@ -6,8 +6,8 @@
 ## 支持模型列表
 | 模型名称 | 模型版本 | 最大输出长度
 | --- | --- | ----
-| DeepSeek-Reasoner | DeepSeek-R1 | 16384
-| DeepSeek-Chat | DeepSeek-V3 | 16384 
+| DeepSeek-Reasoner | DeepSeek-R1 | 12288
+| DeepSeek-Chat | DeepSeek-V3 | 12288
 
 ## 第一步：获取 API Key
 请参考[获取模型服务 - GetUMInferService](https://docs.ucloud.cn/api/uai-modelverse-api/get_um_infer_service) 获取 API Key。或在页面中获取API Key：
