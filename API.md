@@ -10,12 +10,8 @@
 | DeepSeek-Chat | DeepSeek-V3 | 12288
 
 ## 第一步：获取 API Key
-打开API列表页面[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」
-![api1.png](https://www-s.ucloud.cn/2025/02/ae9774428a03a2f52b5c0c904d1cea6b_1739186338233.png)
-- 点击弹窗的「确认发送请求」
-![api2.png](https://www-s.ucloud.cn/2025/02/06b4aca355f8952569c46e11db71e48b_1739186338242.png)
-- 从返回的列表中根据模型名称选择您需要的Key
-![api3.png](https://www-s.ucloud.cn/2025/02/67caa1e2c510d270c76b07af9eebc32b_1739186338249.png)
+如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
+![](https://www-s.ucloud.cn/2025/02/d51820006284a8c28160dc669c505987_1739523878908.png)
 
 ## 第二步：Chat API调用
 ## 请求
