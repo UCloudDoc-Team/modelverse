@@ -62,7 +62,7 @@
 
 
 ## search_results说明
-[联网搜索功能 结果说明](https://aq6ky2b8nql.feishu.cn/wiki/RXEOw02rFiwzGSkd9mUcqoeAnNK)
+[联网搜索功能结果说明](https://aq6ky2b8nql.feishu.cn/wiki/RXEOw02rFiwzGSkd9mUcqoeAnNK)
 
 若联网失败，则返回：
 ```json
