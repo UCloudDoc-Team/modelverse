@@ -13,4 +13,6 @@
    * [模型评估](/modelverse/guide/model-evaluation.md)
    * [服务部署](/modelverse/guide/service-manage.md)
    * [数据集管理](/modelverse/guide/dataset-manage.md)
-* [API说明](/modelverse/API.md)
+* API说明
+   * [通用说明](/modelverse/API.md)
+   * [OpenAI接口兼容](/modelverse/OpenAI.md) 
