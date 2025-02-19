@@ -29,4 +29,4 @@ Chatbox 是一个流行的大语言模型的全平台聊天客户端，特点是
 ### 第二步：打开ChatBox，进行配置
 ![](https://www-s.ucloud.cn/2025/02/f157d3cc11001adf71511734d28032ed_1739959761948.png)
 ![](https://www-s.ucloud.cn/2025/02/5025a54f7588bfddcd5ed6cfa34e7d23_1739959761957.png)
-![](https://www-s.ucloud.cn/2025/02/8a64d18c4582f702164758a9c9dc1ef5_1739960783871.png)
+![](https://www-s.ucloud.cn/2025/02/9ccaf962b2276fc17d2e8bd55a774eb2_1739961410410.png)
