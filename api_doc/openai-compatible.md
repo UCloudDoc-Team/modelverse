@@ -3,7 +3,7 @@ Modelverse提供了与OpenAI兼容的使用方式，用户只需调整api_key、
 
 ## base_url说明
 base_url指模型服务的请求地址。通过该地址，可以请求服务提供的功能或数据。当使用OpenAI兼容接口进行调用时，需要配置base_url。
-- 需要配置的base_url如下：https://deepseek.modelverse.cn/v0.1
+- 需要配置的base_url如下：https://deepseek.modelverse.cn/v1
 
 ## 支持模型列表
 | 模型名称 | 模型版本 | 最大输出长度
