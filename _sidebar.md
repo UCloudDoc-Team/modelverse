@@ -17,4 +17,5 @@
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
-   * [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md) 
+   * [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md)
+   * [常见客户端示例](/modelverse/scenario.md)
