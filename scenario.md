@@ -16,12 +16,12 @@
 | 聊天功能调用   | `https://deepseek.modelverse.cn/v1/chat/completions` | 专门用于聊天功能的API接口，针对对话生成等任务优化，参数和返回结果更聚焦于聊天场景。 |
 
 ## 三、常见客户端举例
-## 1.在 Chatbox 中使用
+## 1 在 Chatbox 中使用
 
-### 1.1关于ChatBox
+### 1.1 关于ChatBox
 Chatbox 是一个流行的大语言模型的全平台聊天客户端，特点是功能强大、安装简单。你可以用它接入各种大语言模型，然后在任何设备（电脑、手机、网页）上和 AI 聊天。
 
-### 1.2 在 Chatbox 中使用 DeepSeek 模型
+### 1.2 在 Chatbox 中使用 DeepSeek API
 #### 第一步：获取 API Key
 如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
 ![](https://www-s.ucloud.cn/2025/02/d51820006284a8c28160dc669c505987_1739523878908.png)
@@ -33,3 +33,21 @@ Chatbox 是一个流行的大语言模型的全平台聊天客户端，特点是
 
 #### 第三步：开始聊天
 ![](https://www-s.ucloud.cn/2025/02/828fdba2b6d9d0fd239b997b373e526f_1739961608007.png)
+
+## 2 在Open WebUI中使用
+### 2.1 关于Open WebUI
+Open WebUI适合企业内部部署 (https://github.com/open-webui/)
+它会在计算机上启动一个服务，获得一个内网网址，企业内部的人就都可以进行访问。Open-WebUI功能十分完整，支持对多用户进行管理，支持函数调用、RAG、联网等功能。
+
+### 2.2 在OpenWeb UI中使用DeepSeek API
+#### 第一步：获取 API Key
+如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
+![](https://www-s.ucloud.cn/2025/02/d51820006284a8c28160dc669c505987_1739523878908.png)
+
+#### 第二步：进入Open WebUI进行配置
+- 从左下角的图标中进入「设置」
+![](https://www-s.ucloud.cn/2025/02/11ac091a723823ad40c91fe8675eed49_1739963047863.png)
+- 点击「外部链接」——「编辑链接」，按图片信息填写
+![](https://www-s.ucloud.cn/2025/02/430b950a41d45286c68fb393b5d99dc4_1739963047859.png)
+
+#### 第三步：开始聊天
