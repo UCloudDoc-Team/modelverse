@@ -27,8 +27,11 @@
 * [数据集管理](/modelverse/guide/dataset-manage.md)
 
 ## 5.API说明
-* [通用说明](/modelverse/API.md)
-* [OpenAI接口兼容](/modelverse/OpenAI.md)
+* [通用说明](/modelverse/api_doc/chat.md)
+* [错误码](/modelverse/api_doc/error-code.md)
+* [结构说明](/modelverse/api_doc/struct.md)
+* [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md) 
+
   
 
 
