@@ -18,4 +18,4 @@
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
    * [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md)
-   * [客户端场景示例](/modelverse/scenario.md)
+   * [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
