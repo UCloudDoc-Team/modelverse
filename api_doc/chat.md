@@ -4,10 +4,10 @@
 本接口用于调用 ModelVerse 平台上的大模型，实现智能对话功能。
 
 ## 支持模型列表
-| 模型ID | 模型名称 | 模型版本 | 最大输出长度
-| --- | --- | --- | ----
-| deepseek-ai/DeepSeek-R1 | DeepSeek-Reasoner | DeepSeek-R1 | 12288
-| deepseek-ai/DeepSeek-V3| DeepSeek-Chat | DeepSeek-V3 | 12288
+| 模型ID | 模型版本 | 最大输出长度
+| --- |  --- | ----
+| deepseek-ai/DeepSeek-R1 | DeepSeek-R1 | 12288
+| deepseek-ai/DeepSeek-V3| DeepSeek-V3 | 12288
 
 ## 第一步：获取 API Key
 如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
@@ -52,7 +52,7 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
 --data '{
     "reasoning_effort": "low",
     "stream": true,
-    "model": "deepseek-r1",
+    "model": "deepseek-ai/DeepSeek-R1",
     "messages": [
         {
             "role": "user",
@@ -82,7 +82,7 @@ curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
     "id": "  ",
     "object": "chat.completion",
     "created":  ,
-    "model": "models/DeepSeek-R1",
+    "model": "deepseek-ai/DeepSeek-R1",
     "choices": [
         {
             "index": 0,
