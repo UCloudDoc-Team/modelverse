@@ -28,7 +28,7 @@ client = OpenAI(
 )
 
 completion = client.chat.completions.create(
-    model="DeepSeek-Reasoner",  # 预置服务请查看支持的模型列表
+    model="deepseek-ai/DeepSeek-R1",  # 预置服务请查看支持的模型列表
     messages=[
         {'role': 'system', 'content': 'You are a helpful assistant.'},
         {'role': 'user', 'content': 'Hello！'}
