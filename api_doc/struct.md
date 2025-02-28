@@ -77,3 +77,44 @@
 }
 ```
 
+### 搜索引擎
+
+#### 搜狗
+
+```json
+{
+    "RequestId": "", // Optional
+    "Query": "今日金价如何",
+    "Uuid": "", // Optional
+    "Pages": [
+      {
+        // 网页抓取日期
+        "date": "2025-02-28 15:30:34",
+        // 网站图标
+        "favicon": "http://img02.sogoucdn.com/app/a/200913/ab735a258a90e8e1f3e3dcf231bf53a9.png",
+        // 描述图片(如果有)
+        "images": [],
+        // 搜索结果摘要
+        "passage": "今天是2月28日,国际金价保持下跌...",
+        // 相关性得分
+        "score": 0.81802785,
+        // 网站名称
+        "site": "腾讯网",
+        // 标题
+        "title": "金价下跌6元！2025年2月28日各大金店黄金价格多少钱一克？",
+        "url": "https://new.xxxx.com/xxx/a/xxxxxx"
+      },
+      {
+        "date": "2025-02-28 17:05:08",
+        "favicon": "http://img02.sogoucdn.com/app/a/200913/ab735a258a90e8e1f3e3dcf231bf53a9.png",
+        "images": [],
+        "passage": "当下的黄金价格走势一直牵动着投资者的心弦..",
+        "score": 0.78595155,
+        "site": "腾讯网",
+        "title": "热搜第一！金价大跳水",
+        "url": "https://new.xxxxx.com/xx/xxxxxx"
+      },
+     ]
+}
+```
+
