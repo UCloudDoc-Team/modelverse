@@ -19,3 +19,5 @@
    * [结构说明](/modelverse/api_doc/struct.md)
    * [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md)
    * [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
+* 服务等级协议SLA
+   * [服务等级协议SLA](/modelverse/Service-Level-Agreement.md)
