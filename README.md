@@ -25,7 +25,7 @@
 * [模型评估](/modelverse/guide/model-evaluation.md)
 * [服务部署](/modelverse/guide/service-manage.md)
 * [数据集管理](/modelverse/guide/dataset-manage.md)
-* [服务等级协议SLA](/modelverse/Service Level Agreement.md)
+* [服务等级协议SLA](/modelverse/guide/Service-Level-Agreement.md)
 
 ## 5.API说明
 * [通用说明](/modelverse/api_doc/chat.md)
