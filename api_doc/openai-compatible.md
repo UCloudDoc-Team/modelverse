@@ -9,7 +9,7 @@ base_url指模型服务的请求地址。通过该地址，可以请求服务提
 | 模型名称 | 模型版本 | 最大输出长度
 | --- | --- | ----
 | DeepSeek-Reasoner | DeepSeek-R1 | 12288
-| DeepSeek-Chat | DeepSeek-V3 | 12288 
+| DeepSeek-Chat | DeepSeek-V3-0324 | 12288 
 
 ## api_key说明
 如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-「API Key管理」进行快速创建。
