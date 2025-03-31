@@ -7,7 +7,7 @@
 | 模型ID | 模型版本 | 最大输出长度
 | --- |  --- | ----
 | deepseek-ai/DeepSeek-R1 | DeepSeek-R1 | 12288
-| deepseek-ai/DeepSeek-V3| DeepSeek-V3 | 12288
+| deepseek-ai/DeepSeek-V3-0324| DeepSeek-V3-0324 | 12288
 
 ## 第一步：获取 API Key
 如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-「API Key管理」进行快速创建。
