@@ -3,7 +3,7 @@
 | **参数名称** | **说明**                                                                 | **示例值**                                      |
 |--------------|--------------------------------------------------------------------------|-------------------------------------------------|
 | **URL**      | API的请求地址，用于指定调用的接口。                                       | `https://deepseek.modelverse.cn/v1/chat/completions` `https://deepseek.modelverse.cn/v1`|
-| **模型ID**   | 指定调用的模型名称，用于确定API调用的具体功能。                           | `deepseek-ai/DeepSeek-R1` `deepseek-ai/DeepSeek-V3`                      |
+| **模型ID**   | 指定调用的模型名称，用于确定API调用的具体功能。                           | `deepseek-ai/DeepSeek-R1` `deepseek-ai/DeepSeek-V3-0324`                      |
 | **API Key**  | 用于验证用户身份的密钥，确保只有授权用户可以访问API服务。                 | |
 
 
