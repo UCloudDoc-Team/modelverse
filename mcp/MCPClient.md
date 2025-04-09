@@ -181,7 +181,7 @@ if __name__ == "__main__":
 
 实际用户请求：**“请帮我阅读并总结网页** [https://docs.ucloud.cn/modelverse/api_doc/chat](https://docs.ucloud.cn/modelverse/api_doc/chat) **”**
 
-![image](assets/resources/GL4E58QUuWZfE-o12fIfT13yfVYVLSzvBNHypM9yHwU.png)
+![image](https://www-s.ucloud.cn/2025/04/fbf32af85c9cbc5650b8d45d9ab031f9_1744219791330.png)
 
 
 
