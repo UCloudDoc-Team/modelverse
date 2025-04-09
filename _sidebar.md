@@ -21,5 +21,5 @@
    * [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
-   * [](/modelverse/mcp/MCPServer.md)
-   * [](/modelverse/mcp/MCPClient.md)
+   * [使用UmodelVerse QwQ API实现MCP Server](/modelverse/mcp/MCPServer.md)
+   * [使用UmodelVerse QwQ API实现MCP Client](/modelverse/mcp/MCPClient.md)
