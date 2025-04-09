@@ -10,13 +10,13 @@
 
 在vscode extension列表中找到CLINE并选择安装。
 
-![image](assets/resources/ZgMNy350iWSJFl0I5J1bc58eppVM_ZRhsRWBml55o88.png)
+![image1](https://www-s.ucloud.cn/2025/04/a2f325d3afe05070ee59d10319d5e0f3_1744219330796.png)
 
 ### 配置CLINE使用UCloud QWQ API
 
 #### 1.点击VSCODE左侧的小机器人图标
 
-![image](assets/resources/Kci9lGQeFTB0s26pxSezcg1LxxvoYU0gP6YjQbY2lSo.png)
+![image2](https://www-s.ucloud.cn/2025/04/f4cc22b8ed55378a438a24050d4b7401_1744219330791.png)
 
 #### 2.首次使用会提示配置chatbot的api,如果之前使用过，可以点击CLINE的设置齿轮进行配置。
 
@@ -30,13 +30,13 @@ Base url,API key,Model ID 为UCloud提供的API信息
 
 Context Window Size限制40000
 
-![image](assets/resources/VkstAzwZgzKUY5WMcET3Gcu-ZZFVOB3DMfugIMaPZHs.png)
+![image3](https://www-s.ucloud.cn/2025/04/8fdd8534ac59221dda1debf068c4ba4b_1744219330789.png)
 
 #### 3.配置好后可以进行对话测试
 
 看到回复表明配置成功。
 
-![image](assets/resources/RomNRkouC_Tnn86bjqJ5qzJNcyWyk5WFegCYFo_CxC8.png)
+![image](https://www-s.ucloud.cn/2025/04/8b3e8cd2ec7a1ac4524291d8fa54d53f_1744219330788.png)
 
 ### 安装UV 和SQLITE
 
@@ -64,7 +64,7 @@ brew install sqlite3
 
 在MCP Servers中选择installed标签，下面会有Configure MCP Servers,点击打开Cline的MCP配置文件
 
-![image](assets/resources/4zPO7r7L11FSk9wqV32ddJEJv62VSmpvjG9nhE-yUJA.png)
+![image](https://www-s.ucloud.cn/2025/04/44185ccda7bfdf90d52ef8fef4421077_1744219330785.png)
 
 修改CLine MCP配置文件。
 
@@ -103,11 +103,11 @@ Mac修改参考：
 
 文件保存后会提示
 
-![image](assets/resources/I9MBR__of3Je9gHaUEj09y_ZVWH_xVQndBj50Xf4WQw.png)
+![image](https://www-s.ucloud.cn/2025/04/32c28070c025c1cc183861dbc337a3e1_1744219330783.png)
 
 installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态说明已经启用。
 
-![image](assets/resources/D7V8xrsn-zoMLT2FiKsrBEKG2gacF4Lsc-bdvIfpr-g.png)
+![image](https://www-s.ucloud.cn/2025/04/7faa7486521eed8cc82ea77d94063940_1744219330782.png)
 
 ### 交互示例
 
@@ -119,7 +119,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 你能打开哪些database？
 ```
  
-![image](assets/resources/5ZbZNJPXvQ6vQXaFHtcUafyvxpBAf3T5G90bIidloI0.png)
+![image](https://www-s.ucloud.cn/2025/04/2c6abb7f8542c6f9be6d45c775d62135_1744219330781.png)
 
 模型会返回需要运行的命令并询问是否要运行，选择run command或approve会执行命令。
 
@@ -127,11 +127,11 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 如果想要模型全自动执行，可以配置auto approve选型，但是会有一定安全风险。
 
-![image](assets/resources/ePNjqGKOb-U5nnl9k56NYzTSYhksHXUPAnd9YeRbols.png)
+![image](https://www-s.ucloud.cn/2025/04/8b668dd4878c8fa917ba87db031acdc9_1744219330780.png)
 
 运行后得到以下回答：
 
-![image](assets/resources/-kFOKE_BHA_uqCMAfGqB46OFUxQwnUD8xwPf8z11elU.png)
+![image](https://www-s.ucloud.cn/2025/04/cc2c2543be0cb3505b98b91cd2d8e951_1744219330777.png)
 
 2. #### 创建table
 
@@ -139,15 +139,15 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 我需要创建一个员工名单列表，里面需要记录11位数员工id,员工名称，员工职级和员工入职日期，帮我创建一下。
 ```
  
-![image](assets/resources/y4jG0cpGyxephjNGpU-UAHCRGC7VQ8tjj8lMc0Sdf7Y.png)
+![image](https://www-s.ucloud.cn/2025/04/dbd7b094eb5e5b287c23cdf2b184e70b_1744219330774.png)
 
 模型请求执行创建table命令，选择批准。
 
-![image](assets/resources/dj_gkHuRapIrjP85UdT6csgwD8rxQVTd5NqnuZ9FHc4.png)
+![image](https://www-s.ucloud.cn/2025/04/e83241b4c15d0c0b9df838ecc149d5d7_1744219330773.png)
 
 这样就创建好了一个table用于存储数据。
 
-![image](assets/resources/DfuZR-Ja9LLGpIrIqHXlmT2EZ7N2fqHAaKuzjAv1mxE.png)
+![image](https://www-s.ucloud.cn/2025/04/8256f8993e00f06210cfb50ef737e75a_1744219330770.png)
 
 ### 插入随机示例数据
 
@@ -157,15 +157,15 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
  
 模型请求执行插入命令，选择批准。
 
-![image](assets/resources/AyhcW_g57HqvWLc3akWTlCum3YtIQpYZz6vCI_MYPXg.png)
+![image](https://www-s.ucloud.cn/2025/04/59197da0e18d784151756c8d352b27ad_1744219330766.png)
 
 模型请求执行select命令用于检查是否插入成功，选择批准。
 
-![image](assets/resources/FA-c-arJyWZ8T5S6lcR0CepnLwvdAykY9aLC6kxzhHM.png)
+![image](https://www-s.ucloud.cn/2025/04/b7cf5bb4f815d83e2b9ed5457c1b055b_1744219330763.png)
 
 模型执行完了select命令，可以看到成功在sqlite中插入了随机数据，任务完成。
 
-![image](assets/resources/RLTtKSiPxoXZVjZlu-1S6MgeDT0PfWqiEnFWnvu87ho.png)
+![image](https://www-s.ucloud.cn/2025/04/53081111a50301871aa4044f41767a39_1744219330755.png)
 
 
 
@@ -177,15 +177,15 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
  
 模型请求执行删除列表命令，选择批准。
 
-![image](assets/resources/rblT0gQJLs7hT5nHpE1gIgECNxhc_zxCHxJ6JK9h7cA.png)
+![image](https://www-s.ucloud.cn/2025/04/ea73eba196390170b4fa0e27039baedf_1744219330752.png)
 
 模型请求执行列表查看功能，选择批准。
 
-![image](assets/resources/-APBPfqHcKTrkWWeyCvoJU-XbGJd8DQxODApwCSqG2Q.png)
+![image](https://www-s.ucloud.cn/2025/04/08e19e2605acfc11e2c29504a82dad2f_1744219330746.png)
 
 模型确认数据已清空，任务完成。
 
-![image](assets/resources/LeHxuu22POsU3oBUtx7YT98cRlDvCt2LbRZhS_V95tg.png)
+![image](https://www-s.ucloud.cn/2025/04/2244261dd3c25c7cc948c69328c9ead0_1744219330742.png)
 
 
 
