@@ -7,6 +7,6 @@ Anthropic开源了一套[MCP协议](https://modelcontextprotocol.io/introduction
 
 # MCP架构简述
 ![架构图](https://www-s.ucloud.cn/2025/04/8a14e6a21115123788531ba3b8ee8881_1744217679656.png)
-MCP Hosts：像 Claude Desktop、Cursor这样的程序，它们通过MCP访问数据。
-MCP Clients：与服务器保持 1:1 连接的协议客户端。
-MCP Servers：轻量级程序，每个程序都通过标准化的模型上下文协议公开特定功能。
+- MCP Hosts：像 Claude Desktop、Cursor这样的程序，它们通过MCP访问数据。
+- MCP Clients：与服务器保持 1:1 连接的协议客户端。
+- MCP Servers：轻量级程序，每个程序都通过标准化的模型上下文协议公开特定功能。
