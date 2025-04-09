@@ -19,3 +19,7 @@
    * [结构说明](/modelverse/api_doc/struct.md)
    * [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md)
    * [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
+* MCP说明
+   * [MCP简介](/modelverse/mcp/mcpgeneral.md)
+   * [](/modelverse/mcp/MCPServer.md)
+   * [](/modelverse/mcp/MCPClient.md)
