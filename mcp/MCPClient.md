@@ -1,6 +1,5 @@
 # 使用UmodelVerse QwQ API实现MCP Client
 
-如果你想更加了解MCP的运行过程，那么
 
 ## 安装nodejs
 
