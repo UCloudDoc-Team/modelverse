@@ -2,23 +2,23 @@
 
 ## 以MCP SQLITE为示例
 
-### 安装VSCODE
+## 安装VSCODE
 
 从官网 [https://code.visualstudio.com/下载vscode安装包进行安装。](https://code.visualstudio.com/下载vscode安装包进行安装。)
 
-### 安装CLINE
+## 安装CLINE
 
 在vscode extension列表中找到CLINE并选择安装。
 
 ![image1](https://www-s.ucloud.cn/2025/04/a2f325d3afe05070ee59d10319d5e0f3_1744219330796.png)
 
-### 配置CLINE使用UCloud QWQ API
+## 配置CLINE使用UCloud QWQ API
 
-#### 1.点击VSCODE左侧的小机器人图标
+### 1.点击VSCODE左侧的小机器人图标
 
 ![image2](https://www-s.ucloud.cn/2025/04/f4cc22b8ed55378a438a24050d4b7401_1744219330791.png)
 
-#### 2.首次使用会提示配置chatbot的api,如果之前使用过，可以点击CLINE的设置齿轮进行配置。
+### 2.首次使用会提示配置chatbot的api,如果之前使用过，可以点击CLINE的设置齿轮进行配置。
 
 下图中：
 
@@ -32,13 +32,13 @@ Context Window Size限制40000
 
 ![image3](https://www-s.ucloud.cn/2025/04/8fdd8534ac59221dda1debf068c4ba4b_1744219330789.png)
 
-#### 3.配置好后可以进行对话测试
+### 3.配置好后可以进行对话测试
 
 看到回复表明配置成功。
 
 ![image](https://www-s.ucloud.cn/2025/04/8b3e8cd2ec7a1ac4524291d8fa54d53f_1744219330788.png)
 
-### 安装UV 和SQLITE
+## 安装UV 和SQLITE
 
 参考 [https://zhuanlan.zhihu.com/p/20222456593](https://zhuanlan.zhihu.com/p/20222456593)
 
@@ -56,7 +56,7 @@ brew install uv
 brew install sqlite3
 ```
  
-### 配置CLINE使用mcp-server-sqlite
+## 配置CLINE使用mcp-server-sqlite
 
 点击小机器人图标打开CLINE
 
@@ -109,9 +109,9 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/7faa7486521eed8cc82ea77d94063940_1744219330782.png)
 
-### 交互示例
+## 交互示例
 
-1. #### 列出database
+1. ### 列出database
 
 在对话框内输入以下指令并发送：
 
@@ -133,7 +133,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/cc2c2543be0cb3505b98b91cd2d8e951_1744219330777.png)
 
-2. #### 创建table
+2. ### 创建table
 
 ```
 我需要创建一个员工名单列表，里面需要记录11位数员工id,员工名称，员工职级和员工入职日期，帮我创建一下。
@@ -149,7 +149,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/8256f8993e00f06210cfb50ef737e75a_1744219330770.png)
 
-### 插入随机示例数据
+## 插入随机示例数据
 
 ```
 帮我生成20个随机的员工样本，我需要看一下表格是否符合预期。
@@ -169,7 +169,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 
 
-### 清空数据
+## 清空数据
 
 ```
 帮我把数据和列表都删除掉，我需要空的database。
