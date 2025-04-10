@@ -90,7 +90,7 @@ Mac修改参考：
       "args": [
         "mcp-server-sqlite",
         "--db-path",
-        "D:\\ymkdatabase\\tmp.db"
+        "D:\ymkdatabase\tmp.db"
       ]
     }
   }
