@@ -6,7 +6,9 @@ Anthropic开源了一套[MCP协议](https://modelcontextprotocol.io/introduction
 这种"即插即用"的特性，让企业能快速将业务数据流注入大模型训练与推理环节，加速知识学习与模式挖掘。
 
 # MCP架构简述
-![架构图](https://www-s.ucloud.cn/2025/04/8a14e6a21115123788531ba3b8ee8881_1744217679656.png)
+![架构图](https://www-s.ucloud.cn/2025/04/20acf058dbf10d527eba13c72fe35583_1744250962037.png)
 - MCP Hosts：像 Claude Desktop、Cursor这样的程序，它们通过MCP访问数据。
 - MCP Clients：与服务器保持 1:1 连接的协议客户端。
 - MCP Servers：轻量级程序，每个程序都通过标准化的模型上下文协议公开特定功能。
+- 本地数据源: MCP 服务器可安全访问的计算机文件、数据库和服务
+- 远程服务: MCP 服务器可连接的互联网上的外部系统（如通过 APIs）
