@@ -20,15 +20,13 @@
 
 ### 2.首次使用会提示配置chatbot的api,如果之前使用过，可以点击CLINE的设置齿轮进行配置。
 
-下图中：
+| 设置项                     | 描述                                                                 |
+|---------------------------|---------------------------------------------------------------------|
+| API Provider              | 选择 OpenAI Compatible                                              |
+| Base url, API key, Model ID | 由 UCloud 提供的 API 信息                                            |
+| Model Configuration       | 由于 QWQ 是思维链模型，需要选择 **Enable R1 messages format**        |
+| Context Window Size       | 限制为 40000                                                         |
 
-API Provider选择OpenAI Compatible
-
-Base url,API key,Model ID 为UCloud提供的API信息
-
-由于QWQ为思维链模型，所以在Model Configuration里需要选择Enable R1 messages format。
-
-Context Window Size限制40000
 
 ![image3](https://www-s.ucloud.cn/2025/04/8fdd8534ac59221dda1debf068c4ba4b_1744219330789.png)
 
