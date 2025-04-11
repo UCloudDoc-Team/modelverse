@@ -176,7 +176,7 @@ if __name__ == "__main__":
  
 
 
-## 最终效果
+## 交互示例
 
 实际用户请求：**“请帮我阅读并总结网页** [https://docs.ucloud.cn/modelverse/api_doc/chat](https://docs.ucloud.cn/modelverse/api_doc/chat) **”**
 
