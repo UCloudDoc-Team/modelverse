@@ -107,7 +107,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ## 交互示例
 
-1. ### 列出database
+## 列出database
 
 在对话框内输入以下指令并发送：
 
@@ -121,7 +121,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 一次任务可能会涉及多次运行，每次都需要人类进行批准。
 
-如果想要模型全自动执行，可以配置auto approve选型，但是会有一定安全风险。
+如果想要模型全自动执行，可以配置auto approve选项，但是会有一定安全风险。
 
 ![image](https://www-s.ucloud.cn/2025/04/8b668dd4878c8fa917ba87db031acdc9_1744219330780.png)
 
@@ -129,7 +129,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/cc2c2543be0cb3505b98b91cd2d8e951_1744219330777.png)
 
-2. ### 创建table
+## 创建table
 
 ```
 我需要创建一个员工名单列表，里面需要记录11位数员工id,员工名称，员工职级和员工入职日期，帮我创建一下。
