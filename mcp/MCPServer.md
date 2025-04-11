@@ -110,11 +110,13 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/7faa7486521eed8cc82ea77d94063940_1744219330782.png)
 
+
 ## 交互示例
 
-## 列出database
+**注意：以下prompt请在同一次对话内完成，不要清空上下文；或请二次提问时强调使用sqlite。**
+### 列出database
 
-在对话框内输入以下指令并发送：
+对话框内输入以下指令并发送：
 
 ```
 你能打开哪些database？
@@ -134,7 +136,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/cc2c2543be0cb3505b98b91cd2d8e951_1744219330777.png)
 
-## 创建table
+### 创建table
 
 ```
 我需要创建一个员工名单列表，里面需要记录11位数员工id,员工名称，员工职级和员工入职日期，帮我创建一下。
@@ -150,7 +152,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/8256f8993e00f06210cfb50ef737e75a_1744219330770.png)
 
-## 插入随机示例数据
+### 插入随机示例数据
 
 ```
 帮我生成20个随机的员工样本，我需要看一下表格是否符合预期。
@@ -170,7 +172,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 
 
-## 清空数据
+### 清空数据
 
 ```
 帮我把数据和列表都删除掉，我需要空的database。
