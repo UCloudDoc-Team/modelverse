@@ -14,7 +14,7 @@
 
 ### 1.点击VSCODE左侧的小机器人图标
 
-![image2](https://www-s.ucloud.cn/2025/04/f4cc22b8ed55378a438a24050d4b7401_1744219330791.png)
+![image2](https://www-s.ucloud.cn/2025/04/7476289be66d52f95188a9685ad96a2b_1744368546129.png)
 
 ### 2.首次使用会提示配置chatbot的api,如果之前使用过，可以点击CLINE的设置齿轮进行配置。
 
