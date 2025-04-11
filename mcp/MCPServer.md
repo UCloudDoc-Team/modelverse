@@ -2,7 +2,7 @@
 
 ## 安装VSCODE
 
-从官网 [https://code.visualstudio.com/下载vscode安装包进行安装。](https://code.visualstudio.com/下载vscode安装包进行安装。)
+从官网 [https://code.visualstudio.com/下载vscode安装包进行安装。](https://code.visualstudio.com/)
 
 ## 安装CLINE
 
