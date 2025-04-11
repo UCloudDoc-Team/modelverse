@@ -65,15 +65,20 @@ brew install sqlite3
 Windows修改参考：
 
 ```
-"sqlite_server" :{
-    "command": "cmd.exe",
-  "args": [
-  "/c",
-  "uvx",
-  "mcp-server-sqlite",
-  "--db-path",
-  "D:\\tmp\\test.db"
-]
+{
+  "mcpServers": {
+    "sqlite_server" :{
+        "command": "cmd.exe",
+      "args": [
+      "/c",
+      "uvx",
+      "mcp-server-sqlite",
+      "--db-path",
+      "D:\\tmp\\test.db"
+    ]
+    }
+  }
+}
 ```
  
 Mac修改参考：
