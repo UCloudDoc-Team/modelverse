@@ -1,6 +1,4 @@
-# 通过CLINE插件快速连接MCP服务
-
-## 以MCP SQLITE为示例
+# 通过CLINE插件快速连接MCP服务（以MCP SQLITE为示例）
 
 ## 安装VSCODE
 
@@ -105,7 +103,7 @@ installed选项卡下会出现sqlite_server的选项卡，如下图绿色状态�
 
 ![image](https://www-s.ucloud.cn/2025/04/7faa7486521eed8cc82ea77d94063940_1744219330782.png)
 
-## 交互示例
+# 交互示例
 
 ## 列出database
 
