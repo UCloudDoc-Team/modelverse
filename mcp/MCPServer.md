@@ -21,7 +21,9 @@
 | 设置项                     | 描述                                                                 |
 |---------------------------|---------------------------------------------------------------------|
 | API Provider              | 选择 OpenAI Compatible                                              |
-| Base url, API key, Model ID | 由 UCloud 提供的 API 信息                                            |
+| Base url|  https://api.modelverse.cn/v1                                          |
+|API key|  进入UModelVerse控制台-体验中心-Key页面获取                                          |
+|Model ID | Qwen/QwQ-32B                                           |
 | Model Configuration       | 由于 QWQ 是思维链模型，需要选择 **Enable R1 messages format**        |
 | Context Window Size       | 限制为 40000                                                         |
 
