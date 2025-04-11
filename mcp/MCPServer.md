@@ -76,7 +76,7 @@ Windows修改参考：
   "uvx",
   "mcp-server-sqlite",
   "--db-path",
-  "D:\\ymkdatabase\\tmp.db"
+  "D:\\tmp\\test.db"
 ]
 ```
  
@@ -90,14 +90,14 @@ Mac修改参考：
       "args": [
         "mcp-server-sqlite",
         "--db-path",
-        "D:\ymkdatabase\tmp.db"
+        "/tmp/test.db"
       ]
     }
   }
 }
 ```
  
-其中："D:\\\\ymkdatabase\\\\tmp.db"修改为希望储存sqlite数据库的位置，可以为已有db文件，如果没有会自动创建。
+其中："D:\\tmp\\test.db"和"/tmp/test.db"修改为希望储存sqlite数据库的位置，可以为已有db文件，如果没有会自动创建。
 
 文件保存后会提示
 
