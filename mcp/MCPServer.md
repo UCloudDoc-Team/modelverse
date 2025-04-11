@@ -38,8 +38,6 @@
 
 ## 安装UV 和SQLITE
 
-参考 [https://zhuanlan.zhihu.com/p/20222456593](https://zhuanlan.zhihu.com/p/20222456593)
-
 Windows 用户在cmd中运行
 
 ```
