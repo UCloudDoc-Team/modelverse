@@ -20,7 +20,7 @@ pip install openai
 
 以下代码可以作为模版使用，但需注意**使用您实际的modelverse平台API_KEY**
 
-> 我们选择无需密钥即可使用的MCP Server  [web-search](https://github.com/mzxrai/mcp-webresearch )。若您是windows系统，请打开注释command="cmd.exe", args=\["/c", "npx", "-y", "@mzxrai/mcp-webresearch@latest"\],
+> 我们选择无需密钥即可使用的MCP Server  [web-search](https://github.com/mzxrai/mcp-webresearch )。若您是windows系统，请打开代码中注释`# command="cmd.exe", args=\["/c", "npx", "-y", "@mzxrai/mcp-webresearch@latest"\]`
 
 ```python
 import asyncio
@@ -178,7 +178,8 @@ if __name__ == "__main__":
 
 ## 交互示例
 
-实际用户请求：**“请帮我阅读并总结网页** [https://docs.ucloud.cn/modelverse/api_doc/chat](https://docs.ucloud.cn/modelverse/api_doc/chat) **”**
+用户请求：
+> 请帮我阅读并总结网页 [https://docs.ucloud.cn/modelverse/api_doc/chat](https://docs.ucloud.cn/modelverse/api_doc/chat)
 
 ![image](https://www-s.ucloud.cn/2025/04/fbf32af85c9cbc5650b8d45d9ab031f9_1744219791330.png)
 
