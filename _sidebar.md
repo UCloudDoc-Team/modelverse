@@ -22,4 +22,4 @@
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
-   * [通过Ucloud API实现MCP Client](/modelverse/mcp/MCPClient.md)
+   * [通过UCloud API实现MCP Client](/modelverse/mcp/MCPClient.md)
