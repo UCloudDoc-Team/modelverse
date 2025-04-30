@@ -9,6 +9,7 @@
 | deepseek-ai/DeepSeek-R1 | DeepSeek-R1 | 12288
 | deepseek-ai/DeepSeek-V3-0324| DeepSeek-V3-0324 | 12288
 | Qwen/QwQ-32B| QwQ-32B | 12288
+| Qwen/Qwen3-235B-A22B| QwQ3-235B | 12288
 
 
 ## 第一步：获取 API Key
