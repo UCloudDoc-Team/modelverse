@@ -22,9 +22,7 @@
 Chatbox 是一个流行的大语言模型的全平台聊天客户端，特点是功能强大、安装简单。你可以用它接入各种大语言模型，然后在任何设备（电脑、手机、网页）上和 AI 聊天。
 
 ### 1.2 在 Chatbox 中使用 DeepSeek API
-#### 第一步：获取 API Key
-如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-[API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys) 进行快速创建。
-![](https://www-s.ucloud.cn/2025/03/a427b4a6c0ff2d4dc2f2ee3cdad95098_1743154241648.png)
+#### 第一步：[获取 API Key](https://console.ucloud.cn/modelverse/experience/api-keys)
 
 #### 第二步：打开ChatBox，按图片说明进行配置
 ![](https://www-s.ucloud.cn/2025/02/f157d3cc11001adf71511734d28032ed_1739959761948.png)
@@ -40,9 +38,7 @@ Open WebUI适合企业内部部署 (https://github.com/open-webui/)
 它会在计算机上启动一个服务，获得一个内网网址，企业内部的人就都可以进行访问。Open-WebUI功能十分完整，支持对多用户进行管理，支持函数调用、RAG、联网等功能。
 
 ### 2.2 在OpenWeb UI中使用DeepSeek API
-#### 第一步：获取 API Key
-如何获取api_key值，请点击[API列表](https://console.ucloud.cn/uapi/detail?id=GetUMInferService)，无需填写参数，点击「发送请求」即可根据模型名称选择你需要的API Key。
-![](https://www-s.ucloud.cn/2025/02/d51820006284a8c28160dc669c505987_1739523878908.png)
+#### 第一步：[获取 API Key](https://console.ucloud.cn/modelverse/experience/api-keys)
 
 #### 第二步：进入Open WebUI进行配置
 - 从左下角的图标中进入「设置」
