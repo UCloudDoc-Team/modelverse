@@ -48,3 +48,16 @@ Open WebUI适合企业内部部署 (https://github.com/open-webui/)
 
 #### 第三步：开始聊天
 ![](https://www-s.ucloud.cn/2025/02/c9174bd62ee33d00587935ba2e070da0_1739964081012.png)
+
+## 3 在Dify中使用
+### 2.1 关于Dify
+Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后端即服务（Backend as Service）和 LLMOps 的理念，使开发者可以快速搭建生产级的生成式 AI 应用。
+
+### 2.2 在Dify中使用DeepSeek API
+#### 第一步：[获取 API Key](https://console.ucloud.cn/modelverse/experience/api-keys)
+
+#### 第二步：进入Dify进行配置
+
+
+#### 第三步：开始聊天
+![]()
