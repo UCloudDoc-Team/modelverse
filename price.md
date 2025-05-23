@@ -20,3 +20,6 @@
 | ------------ | ------------ | ------------------------------------------------------------ |
 | DeepSeek-R1     | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
 | DeepSeek-V3     | tokens后付费   |输入0.002元/千tokens，输出0.008/千tokens |
+| DeepSeek-Prover-V2 | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
+| QwQ-32B         | tokens后付费   |输入0.002元/千tokens，输出0.006/千tokens |
+| Qwen3-235B-A22B | tokens后付费   |输入0.004元/千tokens，输出0.012/千tokens |
