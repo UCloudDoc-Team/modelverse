@@ -14,7 +14,7 @@
    * [服务部署](/modelverse/guide/service-manage.md)
    * [数据集管理](/modelverse/guide/dataset-manage.md)
 * API说明
-   * [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
+   * [常见客户端接入指南](/modelverse/scenario.md)
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
