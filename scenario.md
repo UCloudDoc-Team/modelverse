@@ -23,7 +23,7 @@ Chatbox 是一个流行的大语言模型的全平台聊天客户端，特点是
 
 ### 1.2 在 Chatbox 中使用 DeepSeek API
 #### 第一步：获取 API Key
-如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-「API Key管理」进行快速创建。
+如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-[API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys)进行快速创建。
 ![](https://www-s.ucloud.cn/2025/03/a427b4a6c0ff2d4dc2f2ee3cdad95098_1743154241648.png)
 
 #### 第二步：打开ChatBox，按图片说明进行配置
