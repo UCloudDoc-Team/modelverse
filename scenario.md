@@ -4,7 +4,7 @@
 |--------------|--------------------------------------------------------------------------|-------------------------------------------------|
 | **URL**      | API的请求地址，用于指定调用的接口。                                       | `https://api.modelverse.cn/v1/chat/completions` `https://api.modelverse.cn/v1`|
 | **模型ID**   | 指定调用的模型名称，用于确定API调用的具体功能。                           | `deepseek-ai/DeepSeek-R1` `deepseek-ai/DeepSeek-V3-0324` `deepseek-ai/DeepSeek-Prover-V2-671B` `Qwen/QwQ-32B` `Qwen/Qwen3-235B-A22B`                      |
-| **API Key**  | 用于验证用户身份的密钥，确保只有授权用户可以访问API服务。                 | | [点击这里创建Key](https://console.ucloud.cn/modelverse/experience/api-keys)
+| **API Key**  | 用于验证用户身份的密钥，确保只有授权用户可以访问API服务。                 | [点此链接获取Key](https://console.ucloud.cn/modelverse/experience/api-keys)| 
 
 
 ## 二、域名链接说明
