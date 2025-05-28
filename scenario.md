@@ -62,10 +62,10 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 - 在在模型供应商中安装OpenAI-API-compatible
 ![](https://www-s.ucloud.cn/2025/05/3c68c98a1ac97df6332199c423e2ddce_1748427192982.png)
 - 点击添加模型
-1. 模型类型选择LLM
-2. 模型名称填写您所使用的模型ID，例如 `deepseek-ai/DeepSeek-R1` `deepseek-ai/DeepSeek-V3-0324` `deepseek-ai/DeepSeek-Prover-V2-671B` `Qwen/QwQ-32B` `Qwen/Qwen3-235B-A22B`
-3. API Key从控制台上获取
-4. URL填写`https://deepseek.modelverse.cn/v1`
+  1. 模型类型选择LLM
+  2. 模型名称填写您所使用的模型ID，例如 `deepseek-ai/DeepSeek-R1` `deepseek-ai/DeepSeek-V3-0324` `deepseek-ai/DeepSeek-Prover-V2-671B` `Qwen/QwQ-32B` `Qwen/Qwen3-235B-A22B`
+  3. API Key从控制台上获取
+  4. URL填写`https://deepseek.modelverse.cn/v1`
 ![](https://www-s.ucloud.cn/2025/05/7d5bd1aea02a464c28debd1d3bbc5815_1748427192973.png)
 #### 第三步：接入完成
 ![](https://www-s.ucloud.cn/2025/05/7d5bd1aea02a464c28debd1d3bbc5815_1748427192973.png)
