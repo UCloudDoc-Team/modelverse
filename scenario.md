@@ -69,4 +69,3 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 ![](https://www-s.ucloud.cn/2025/05/7d5bd1aea02a464c28debd1d3bbc5815_1748427192973.png)
 
 #### 第三步：接入完成
-![](https://www-s.ucloud.cn/2025/05/7d5bd1aea02a464c28debd1d3bbc5815_1748427192973.png)
