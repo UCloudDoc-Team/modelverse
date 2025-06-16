@@ -22,3 +22,5 @@
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
    * [通过UCloud API实现MCP Client](/modelverse/mcp/MCPClient.md)
+* UModelVerse协议
+   * [UModelVerse隐私政策](/modelverse/private.md)
