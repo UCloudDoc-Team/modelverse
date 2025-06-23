@@ -8,14 +8,17 @@
 ---
 
 ## 生图模型列表
-black-forest-labs/FLUX.1-dev
-black-forest-labs/Flux-Kontext-Max
-black-forest-labs/Flux-Kontext-Max-multi
-black-forest-labs/Flux-Kontext-Max-text2image
-black-forest-labs/Flux-Kontext-Pro
-black-forest-labs/Flux-Kontext-Pro-multi
-black-forest-labs/Flux-Kontext-Pro-text2image
-stepfun-ai/Step1X-Edit
+| 模型 | 描述 | 免费额度（张图） |
+| - | - | - |
+| black-forest-labs/FLUX.1-dev | 英文模型 | 10 |
+| black-forest-labs/Flux-Kontext-Max | 英文模型 | 5 |
+| black-forest-labs/Flux-Kontext-Max-multi | | 5 |
+| black-forest-labs/Flux-Kontext-Max-text2image | | 5 |
+| black-forest-labs/Flux-Kontext-Pro | | 5 |
+| black-forest-labs/Flux-Kontext-Pro-multi | | 5 |
+| black-forest-labs/Flux-Kontext-Pro-text2image | | 5 |
+| stepfun-ai/Step1X-Edit | | 5 |
+
 
 ## 请求参数
 
