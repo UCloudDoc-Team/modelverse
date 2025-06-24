@@ -1,111 +1,57 @@
-
-
-
-`POST https://ark.cn-beijing.volces.com/api/v3/images/generations`
+`POST https://api.modelverse.cn/v1/images/generations`
 
 本文介绍图片生成模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
 ---
 
 ## 生图模型列表
-black-forest-labs/FLUX.1-dev
-black-forest-labs/Flux-Kontext-Max
-black-forest-labs/Flux-Kontext-Max-multi
-black-forest-labs/Flux-Kontext-Max-text2image
-black-forest-labs/Flux-Kontext-Pro
-black-forest-labs/Flux-Kontext-Pro-multi
-black-forest-labs/Flux-Kontext-Pro-text2image
-stepfun-ai/Step1X-Edit
+
+| 模型                                          | 描述 | 免费额度（张图） |
+| --------------------------------------------- | ---- | ---------------- |
+| black-forest-labs/FLUX.1-dev                  |      | 10               |
+| black-forest-labs/Flux-Kontext-Max            |      | 5                |
+| black-forest-labs/Flux-Kontext-Max-multi      |      | 5                |
+| black-forest-labs/Flux-Kontext-Max-text2image |      | 5                |
+| black-forest-labs/Flux-Kontext-Pro            |      | 5                |
+| black-forest-labs/Flux-Kontext-Pro-multi      |      | 5                |
+| black-forest-labs/Flux-Kontext-Pro-text2image |      | 5                |
+| stepfun-ai/Step1X-Edit                        |      | 5                |
 
 ## 请求参数
 
 ### 请求体
 
-- **prompt** `string` `必选`
-用于生成图像的提示词。
-
-- **model** `string` `必选`
-本次请求使用模型的 Model
-
-- **n** `integer` `可选` `默认值 1`
-生成图片张数
-支持模型：
-`black-forest-labs/FLUX.1-dev`
-`black-forest-labs/Flux-Kontext-Pro-text2image`
-`black-forest-labs/Flux-Kontext-Max-text2image`
-
-- **image** `string`
-生图的参考图片，可以是url链接或者base64的编码数据。
-支持模型：
-`black-forest-labs/FLUX.1-dev` `可选`
-`black-forest-labs/Flux-Kontext-Max` `必填`
-`black-forest-labs/Flux-Kontext-Pro` `必填`
-
-- **images** `list`
-生图的参考图片数组，每个item可以是url链接或者base64的编码数据。
-支持模型：
-`black-forest-labs/Flux-Kontext-Max-multi` `必填`
-`black-forest-labs/Flux-Kontext-Pro-multi` `必填`
-
-- **response_format** `string` `可选` `默认值 url`
-指定生成图像的返回格式。支持以下两种取值：
-    - "url"：以可下载的图片链接形式返回；
-    - "b64_json"：以 Base64 编码字符串的 JSON 格式返回图像数据。
-
-- **size** `string` `可选` `默认值 1024x1024`
-生成图像的宽高像素，要求介于 [256x256, 1536x1536] 之间。
-支持模型：
-`black-forest-labs/FLUX.1-dev`
-
-- **strength** `float` `可选` `默认值 0.8`
-转换图像的参考程度，取值 [0.0, 1.0]
-支持模型：
-`black-forest-labs/FLUX.1-dev`
-
-- **aspect_ratio** `string` `默认值 1:1`
-生成图片的尺寸
-支持模型：
-`black-forest-labs/Flux-Kontext-Max-text2image`
-`black-forest-labs/Flux-Kontext-Pro-text2image`
-
-- **steps** `integer` `可选`  `默认值 28`
-要执行的推理步骤数
-支持模型：
-`black-forest-labs/FLUX.1-dev`
-`stepfun-ai/Step1X-Edit`
-
-- **seed** `integer` `可选`  `默认值 -1`
-随机数种子，用于控制模型生成内容的随机性。取值范围为 [-1, 2147483647]。如果不提供，则自动生成随机种子。如果希望生成内容保持一致，可以使用相同的 seed 参数值。
-
-- **guidance_scale**  `float` `可选` `默认值 2.5`
-模型输出结果与prompt的一致程度，即生成图像的自由度；值越大，模型自由度越小，与用户输入的提示词相关性越强。取值范围：[1, 10] 之间的浮点数。
-
-- **negative_prompt** `string` `可选`
-负面提示词，用于指定不希望在生成图像中出现的内容
-支持模型： `stepfun-ai/Step1X-Edit`
+| 字段名          | 是否必须 | 默认值    | 支持模型                                                                                                                         | 描述                                                                                                                                                                                                                                                |
+| --------------- | -------- | --------- | -------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| prompt          | 条件必填 | -         | 全部                                                                                                                             | 用于生成图像的提示词。                                                                                                                                                                                                                              |
+| model           | 必须     | -         | 全部                                                                                                                             | 本次请求使用的模型名称。                                                                                                                                                                                                                            |
+| n               | 可选     | 1         | black-forest-labs/FLUX.1-dev<br>black-forest-labs/Flux-Kontext-Pro-text2image<br>black-forest-labs/Flux-Kontext-Max-text2image   | 生成图片张数。                                                                                                                                                                                                                                      |
+| image           | 条件必填 | -         | black-forest-labs/FLUX.1-dev（可选）<br>black-forest-labs/Flux-Kontext-Max（必填）<br>black-forest-labs/Flux-Kontext-Pro（必填） | 参考图图片链接或 Base64 编码。<br>图片限制：10MB 以内，支持 PNG、JPG、JPEG、WEBP、BMP、ICO，长宽比例不超过 4 倍，长或宽不低于 128 像素。<br>仅支持 irag-1.0。<br>可传图片链接或 Base64 编码（格式为：data:image/<图片格式>;base64,<Base64 编码>）。 |
+| images          | 必填     | -         | black-forest-labs/Flux-Kontext-Max-multi<br>black-forest-labs/Flux-Kontext-Pro-multi                                             | 参考图片数组，每个 item 为 url 或 base64 编码。                                                                                                                                                                                                     |
+| response_format | 可选     | url       | 全部                                                                                                                             | 指定生成图像的返回格式。<br>url：返回图片链接；<br>b64_json：返回 Base64 编码字符串。                                                                                                                                                               |
+| size            | 可选     | 1024x1024 | black-forest-labs/FLUX.1-dev                                                                                                     | 生成图像的宽高像素，要求介于[256x256, 1536x1536]之间。                                                                                                                                                                                              |
+| strength        | 可选     | 0.8       | black-forest-labs/FLUX.1-dev                                                                                                     | 转换图像的参考程度，取值[0.0, 1.0]。                                                                                                                                                                                                                |
+| aspect_ratio    | 可选     | 1:1       | black-forest-labs/Flux-Kontext-Max-text2image<br>black-forest-labs/Flux-Kontext-Pro-text2image                                   | 生成图片的尺寸比例。                                                                                                                                                                                                                                |
+| steps           | 可选     | 28        | black-forest-labs/FLUX.1-dev<br>stepfun-ai/Step1X-Edit                                                                           | 推理步骤数。                                                                                                                                                                                                                                        |
+| seed            | 可选     | -1        | 全部                                                                                                                             | 随机数种子，控制生成内容的随机性。取值范围[-1, 2147483647]。如不提供则自动生成。相同 seed 可复现相同内容。                                                                                                                                          |
+| guidance_scale  | 可选     | 2.5       | 全部                                                                                                                             | 模型输出与 prompt 一致程度，值越大自由度越小，与提示词相关性越强。取值[1, 10]。                                                                                                                                                                     |
+| negative_prompt | 可选     | -         | stepfun-ai/Step1X-Edit                                                                                                           | 负面提示词，用于指定不希望在生成图像中出现的内容。                                                                                                                                                                                                  |
 
 ## 响应参数
 
-- **created** `integer`
-本次请求创建时间的 Unix 时间戳（秒）。
-
-- **data** `list` 
-输出图像的信息，包括图像下载的 URL 或 Base64。
-    - 当指定返回生成图像的格式为url时，则相应参数的子字段为url；
-    注意：链接将在生成后7天内失效，请务必及时保存图像。
-    - 当指定返回生成图像的格式为b64_json时，则相应参数的子字段为b64_json。
-
-- **error**  `Object`
-    - error.code `string`
-        错误码 TODO: 跳转链接
-    - error.message `string`
-        错误提示信息
-    - error.param `string`
-        请求id
+| 字段名        | 类型      | 描述                                                                                                                                                                                                                                                    |
+| ------------- | --------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| created       | `integer` | 本次请求创建时间的 Unix 时间戳（秒）。                                                                                                                                                                                                                  |
+| data          | `list`    | 输出图像的信息，包括图像下载的 URL 或 Base64。<br>• 当指定返回生成图像的格式为 url 时，则相应参数的子字段为 url；<br>• 当指定返回生成图像的格式为 b64_json 时，则相应参数的子字段为 b64_json。<br>注意：链接将在生成后 7 天内失效，请务必及时保存图像。 |
+| error         | `Object`  | 错误信息对象                                                                                                                                                                                                                                            |
+| error.code    | `string`  | 错误码 TODO: 跳转链接                                                                                                                                                                                                                                   |
+| error.message | `string`  | 错误提示信息                                                                                                                                                                                                                                            |
+| error.param   | `string`  | 请求 id                                                                                                                                                                                                                                                 |
 
 ## 示例
 
 ### 请求
+
 ```bash
 curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Authorization: Bearer <你的API Key>' \
@@ -115,21 +61,19 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "prompt": "draw a cute cat"
 }'
 ```
+
 ### 响应
 
 ```json
 {
-    "created": 1750667997,
-    "data":
-    [
-        {
-            "url": "https://api.modelverse.cn/image/xxx"
-        }
-    ],
-    "usage":
+  "created": 1750667997,
+  "data": [
     {
-        "input_tokens_details":
-        {}
+      "url": "https://api.modelverse.cn/image/xxx"
     }
+  ],
+  "usage": {
+    "input_tokens_details": {}
+  }
 }
 ```
