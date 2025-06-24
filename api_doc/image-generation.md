@@ -17,7 +17,7 @@
 | black-forest-labs/flux-kontext-pro               | 5                |
 | black-forest-labs/flux-kontext-pro/multi         | 5                |
 | black-forest-labs/flux-kontext-pro/text-to-image | 5                |
-| stepfun-ai/Step1X-Edit                           | 5                |
+| stepfun-ai/step1x-edit                       | 5                |
 
 ## 请求参数
 
@@ -36,10 +36,10 @@
 | size            | 可选     | 1024x1024 | black-forest-labs/flux.1-dev                                                                                                         | 生成图像的宽高像素，要求介于[256x256, 1536x1536]之间。                                                                                                                                                                                              |
 | strength        | 可选     | 0.8       | black-forest-labs/flux.1-dev                                                                                                         | 转换图像的参考程度，取值[0.0, 1.0]。                                                                                                                                                                                                                |
 | aspect_ratio    | 可选     | 1:1       | black-forest-labs/flux-kontext-max/text-to-image<br>black-forest-labs/flux-kontext-pro/text-to-image                                 | 生成图片的尺寸比例。                                                                                                                                                                                                                                |
-| steps           | 可选     | 28        | black-forest-labs/flux.1-dev<br>stepfun-ai/Step1X-Edit                                                                               | 推理步骤数。                                                                                                                                                                                                                                        |
+| steps           | 可选     | 28        | black-forest-labs/flux.1-dev<br>stepfun-ai/step1x-edit                                                                           | 推理步骤数。                                                                                                                                                                                                                                        |
 | seed            | 可选     | -1        | 全部                                                                                                                                 | 随机数种子，控制生成内容的随机性。取值范围[-1, 2147483647]。如不提供则自动生成。相同 seed 可复现相同内容。                                                                                                                                          |
 | guidance_scale  | 可选     | 2.5       | 全部                                                                                                                                 | 模型输出与 prompt 一致程度，值越大自由度越小，与提示词相关性越强。取值[1, 10]。                                                                                                                                                                     |
-| negative_prompt | 可选     | -         | stepfun-ai/Step1X-Edit                                                                                                               | 负面提示词，用于指定不希望在生成图像中出现的内容。                                                                                                                                                                                                  |
+| negative_prompt | 可选     | -         | stepfun-ai/step1x-edit                                                                                                           | 负面提示词，用于指定不希望在生成图像中出现的内容。                                                                                                                                                                                                  |
 
 ## 响应参数
 
