@@ -11,13 +11,13 @@
 | 模型                                             | 免费额度（张图） |
 | ------------------------------------------------ | ---------------- |
 | black-forest-labs/flux.1-dev                     | 10               |
-| black-forest-labs/flux-kontext-max               | 5                |
-| black-forest-labs/flux-kontext-max/multi         | 5                |
-| black-forest-labs/flux-kontext-max/text-to-image | 5                |
 | black-forest-labs/flux-kontext-pro               | 5                |
 | black-forest-labs/flux-kontext-pro/multi         | 5                |
 | black-forest-labs/flux-kontext-pro/text-to-image | 5                |
 | stepfun-ai/step1x-edit                           | 5                |
+| black-forest-labs/flux-kontext-max               | 0                |
+| black-forest-labs/flux-kontext-max/multi         | 0                |
+| black-forest-labs/flux-kontext-max/text-to-image | 0                |
 
 ## 请求参数
 
@@ -61,8 +61,8 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Authorization: Bearer <你的API Key>' \
 --header 'Content-Type: application/json' \
 --data '{
-    "model": "black-forest-labs/flux.1-dev",
-    "prompt": "draw a cute cat"
+    "model": "black-forest-labs/flux-kontext-pro/text-to-image",
+    "prompt": "Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed"
 }'
 ```
 
@@ -92,4 +92,32 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "code": "xxx"
   }
 }
+```
+
+### openai sdk 兼容
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url=os.getenv("BASE_URL", "https://api.modelverse.cn/v1"),
+    # 请替换为您的<API_KEY>
+    api_key=os.getenv("API_KEY", "<API_KEY>"),
+)
+
+#
+propmt = "Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed"
+
+img = client.images.generate(
+    prompt=propmt,
+    model="black-forest-labs/flux-kontext-pro/text-to-image",
+    extra_body={
+        "aspect_ratio": "9:16",  # 图片尺寸
+    },
+)
+
+# 获取返回的第一个图片数据
+img_data = img.data[0]
+print("图片下载链接为：", img_data.url)
 ```
