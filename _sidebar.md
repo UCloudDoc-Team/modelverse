@@ -18,6 +18,7 @@
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
+   * [图片生成API](/modelverse/api_doc/image-generation.md)
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
