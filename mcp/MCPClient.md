@@ -1,4 +1,4 @@
-# 使用UmodelVerse QwQ API实现MCP Client
+# 通过UCloud API实现MCP Client
 
 
 ## 安装nodejs
@@ -35,7 +35,7 @@ from mcp.client.stdio import stdio_client
 
 openai_client = OpenAI(
     base_url="https://api.modelverse.cn/v1",  # modelverse的API地址（无需更改）
-    api_key="<您的api_key>",  # 控制台创建API Key  https://console.ucloud.cn/modelverse/experience
+    api_key="<您的api_key>",  # 控制台创建API Key 
 )
 model_name = "Qwen/QwQ-32B"  # 模型名称（无需更改）
 
@@ -176,10 +176,10 @@ if __name__ == "__main__":
  
 
 
-## 最终效果
+## 交互示例
 
 用户请求：
-> 请帮我阅读并总结网页 [https://docs.ucloud.cn/modelverse/api_doc/chat](https://docs.ucloud.cn/modelverse/api_doc/chat)
+> 请帮我阅读并总结网页 [https://XXXXXXXXXXXXXXXX)
 
 ![image](https://www-s.ucloud.cn/2025/04/fbf32af85c9cbc5650b8d45d9ab031f9_1744219791330.png)
 

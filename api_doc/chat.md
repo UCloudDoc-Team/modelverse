@@ -3,15 +3,19 @@
 ## 功能介绍
 本接口用于调用 ModelVerse 平台上的大模型，实现智能对话功能。
 
-## 支持模型列表
-| 模型ID | 模型版本 | 最大输出长度
-| --- |  --- | ----
-| deepseek-ai/DeepSeek-R1 | DeepSeek-R1 | 12288
-| deepseek-ai/DeepSeek-V3-0324| DeepSeek-V3-0324 | 12288
-| Qwen/QwQ-32B| QwQ-32B | 12288
+## 模型列表
+| 模型ID | 模型版本 
+| --- |  --- 
+| deepseek-ai/DeepSeek-R1-0528 | DeepSeek-R1-0528 
+| deepseek-ai/DeepSeek-R1 | DeepSeek-R1 
+| deepseek-ai/DeepSeek-V3-0324| DeepSeek-V3-0324 
+| deepseek-ai/DeepSeek-Prover-V2-671B| DeepSeek-Prover-V2-671B 
+| Qwen/QwQ-32B| QwQ-32B 
+| Qwen/Qwen3-235B-A22B| QwQ3-235B
+
 
 ## 第一步：获取 API Key
-如何获取api_key值：请进入Umodelverse控制台 -「体验中心」-「API Key管理」进行快速创建。
+如何获取api_key值：请进入Umodelverse控制台 -「体验中心」- [API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys) 进行快速创建。
 ![](https://www-s.ucloud.cn/2025/03/a427b4a6c0ff2d4dc2f2ee3cdad95098_1743154241648.png)
 
 ## 第二步：Chat API调用
