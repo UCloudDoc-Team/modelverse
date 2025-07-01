@@ -23,3 +23,20 @@
 | DeepSeek-Prover-V2 | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
 | QwQ-32B         | tokens后付费   |输入0.002元/千tokens，输出0.006/千tokens |
 | Qwen3-235B-A22B | tokens后付费   |输入0.004元/千tokens，输出0.012/千tokens |
+
+
+
+**生图模型API定价**
+
+于2025年6月30日开始收费。免费额度：根据不同的模型区分免费次数，详情请参考[图片生成API](https://docs.ucloud.cn/modelverse/api_doc/image-generation)
+
+| 模型名称                        | 价格（元） | 分类     |
+|----------------------------------|-----------|----------|
+| Flux Kontext Pro Text2Image      | 0.35      | 文生图   |
+| Flux Kontext Max Text2Image      | 0.70      | 文生图   |
+| Flux Dev                         | 0.10      | 文生图   |
+| Step1X Edit                      | 0.30      | 图片编辑 |
+| Flux Kontext Pro                 | 0.35      | 图片编辑 |
+| Flux Kontext Max                 | 0.70      | 图片编辑 |
+| Flux Kontext Max Multi           | 0.70      | 多图编辑 |
+| Flux Kontext Pro Multi           | 0.35      | 多图编辑 |
