@@ -30,7 +30,7 @@
 
 于2025年6月30日开始收费。免费额度：根据不同的模型区分免费次数，详情请参考[图片生成API](https://docs.ucloud.cn/modelverse/api_doc/image-generation)
 
-| 模型名称                        | 价格（元） | 分类     |
+| 模型名称                        | 价格（元/张） | 分类     |
 |----------------------------------|-----------|----------|
 | Flux Kontext Pro Text2Image      | 0.35      | 文生图   |
 | Flux Kontext Max Text2Image      | 0.70      | 文生图   |
