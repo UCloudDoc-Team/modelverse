@@ -12,6 +12,7 @@
 | deepseek-ai/DeepSeek-Prover-V2-671B| DeepSeek-Prover-V2-671B 
 | Qwen/QwQ-32B| QwQ-32B 
 | Qwen/Qwen3-235B-A22B| QwQ3-235B
+| moonshotai/Kimi-K2-Instruct| Kimi-K2
 
 
 ## 第一步：获取 API Key
