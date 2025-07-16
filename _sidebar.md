@@ -19,7 +19,7 @@
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
    * [图片生成API](/modelverse/api_doc/image-generation.md)
-   * [Kimi K2 × Claude Code 接入指南](/modelverse/api_doc/claudecodekimi.md)
+   * [Kimi K2×Claude Code接入指南](/modelverse/api_doc/claudecodekimi.md)
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
