@@ -24,6 +24,9 @@
 | Qwen/QwQ-32B         | tokens后付费   |输入0.002元/千tokens，输出0.006/千tokens |
 | Qwen/Qwen3-235B-A22B | tokens后付费   |输入0.004元/千tokens，输出0.012/千tokens |
 | moonshotai/Kimi-K2-Instruct | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
+| ERNIE-X1-Turbo-32K | tokens后付费   |输入0.001元/千tokens，输出0.004/千tokens |
+| ERNIE-4.5-Turbo-128K  | tokens后付费   |输入0.0008元/千tokens，输出0.0032/千tokens |
+| ERNIE-4.5-Turbo-VL-32K | tokens后付费   |输入0.003元/千tokens，输出0.009/千tokens |
 
 
 **生图模型API定价**
