@@ -40,6 +40,7 @@ vim .env
 ```
 ![](https://www-s.ucloud.cn/2025/07/682ae34721e558e2efc06c524918a37d_1752663308311.PNG)
 需要修改的配置，以 moonshotai/Kimi-K2-Instruct 模型为例：
+
 | 设置项 | 描述 |
 |---|---|
 | OPENAL_API_KEY | [API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys)|
@@ -48,6 +49,7 @@ vim .env
 | BIG_MODEL | moonshotai/Kimi-K2-instruct |
 | MIDDLE_MODEL | moonshotai/Kimi-K2-instruct |
 | SMALL_MODEL | moonshotai/Kimi-K2-instruct |
+
 ## 启动代理
 1. 临时启动
 ```bash
