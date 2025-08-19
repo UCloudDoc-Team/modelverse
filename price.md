@@ -18,16 +18,20 @@
 
 | **模型名称** | **计费方式** | **计费说明**                                                 |
 | ------------ | ------------ | ------------------------------------------------------------ |
-| deepseek-ai/DeepSeek-R1 | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
-| deepseek-ai/DeepSeek-V3     | tokens后付费   |输入0.002元/千tokens，输出0.008/千tokens |
-| deepseek-ai/DeepSeek-Prover-V2 | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
-| Qwen/QwQ-32B         | tokens后付费   |输入0.002元/千tokens，输出0.006/千tokens |
-| Qwen/Qwen3-235B-A22B | tokens后付费   |输入0.004元/千tokens，输出0.012/千tokens |
-| moonshotai/Kimi-K2-Instruct | tokens后付费   |输入0.004元/千tokens，输出0.016/千tokens |
-| ERNIE-X1-Turbo-32K | tokens后付费   |输入0.001元/千tokens，输出0.004/千tokens |
-| ERNIE-4.5-Turbo-128K  | tokens后付费   |输入0.0008元/千tokens，输出0.0032/千tokens |
-| ERNIE-4.5-Turbo-VL-32K | tokens后付费   |输入0.003元/千tokens，输出0.009/千tokens |
-
+| deepseek-ai/DeepSeek-R1 | tokens后付费   |输入4元/百万tokens，输出16/百万tokens |
+| deepseek-ai/DeepSeek-V3     | tokens后付费   |输入2元/百万tokens，输出8元/百万tokens |
+| deepseek-ai/DeepSeek-Prover-V2 | tokens后付费   |输入4元/百万tokens，输出16元/百万tokens |
+| Qwen/QwQ-32B         | tokens后付费   |输入2元/百万tokens，输出6元/百万tokens |
+| Qwen/Qwen3-235B-A22B | tokens后付费   |输入2元/百万tokens，输出8元/百万tokens |
+| Qwen3-Coder | tokens后付费   |输入4元/百万tokens，输出16/百万tokens |
+| Qwen2.5-VL-72B-Instruct | tokens后付费   |输入16元/百万tokens，输出48元/百万tokens |
+| Kimi-K2-Instruct | tokens后付费   |输入4元/百万tokens，输出16/百万tokens |
+| ERNIE-X1-Turbo-32K | tokens后付费   |输入1元/百万tokens，输出4/百万tokens |
+| ERNIE-4.5-Turbo-128K  | tokens后付费   |输入0.8元/千tokens，输出0.32/千tokens |
+| ERNIE-4.5-Turbo-VL-32K | tokens后付费   |输入3元/百万tokens，输出9/百万tokens |
+| DeepSeek-R1-Distill-Llama-70B | tokens后付费   |输入1元/百万tokens，输出3/百万tokens |
+| GLM-4.5 | tokens后付费   |输入2元/百万tokens，输出8/百万tokens |
+| GLM-4.5V | tokens后付费   |输入2元/百万tokens，输出6/百万tokens |
 
 **生图模型API定价**
 
