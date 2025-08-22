@@ -32,6 +32,8 @@
 | DeepSeek-R1-Distill-Llama-70B | tokens后付费   |输入1元/百万tokens，输出3/百万tokens |
 | GLM-4.5 | tokens后付费   |输入2元/百万tokens，输出8/百万tokens |
 | GLM-4.5V | tokens后付费   |输入2元/百万tokens，输出6/百万tokens |
+| DeepSeek-V3.1 | tokens后付费   |输入4元/百万tokens，输出12/百万tokens |
+
 
 **生图模型API定价**
 
