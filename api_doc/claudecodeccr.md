@@ -22,7 +22,7 @@ npm install -g @musistudio/claude-code-router
 
 ### 2. 配置
 
-创建并配置您的 `~/.claude-code-router/config.json` 文件。有关更多详细信息，您可以参考 `config.example.json`。
+创建并配置您的 `~/.claude-code-router/config.json` 文件。
 
 `config.json` 文件有几个关键部分：
 - **`PROXY_URL`** (可选): 您可以为 API 请求设置代理，例如：`"PROXY_URL": "http://127.0.0.1:7890"`。
@@ -42,7 +42,7 @@ npm install -g @musistudio/claude-code-router
 
 ```json
 {
-  "APIKEY": "your-ccr-secret-key",
+  "APIKEY": "your-ccr-secret-key", // 这里填写您的ccr的 api-key，用于WEB页面 ccr ui 的访问 
   "PROXY_URL": "",
   "LOG": false,
   "API_TIMEOUT_MS": 600000,
@@ -51,7 +51,7 @@ npm install -g @musistudio/claude-code-router
     {
       "name": "ucloud",
       "api_base_url": "https://api.modelverse.cn/v1/chat/completions",
-      "api_key": "sk-your-umodelverse-api-key",
+      "api_key": "sk-your-umodelverse-api-key", // 填写您的UModelverse的api-key
       "models": [
         "openai/gpt-4.1",
         "deepseek-ai/DeepSeek-V3.1",
