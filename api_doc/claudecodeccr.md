@@ -123,17 +123,6 @@ ccr ui
 
 这将打开一个基于 Web 的界面，您可以在其中轻松查看和编辑您的 `config.json` 文件。
 
-
-#### Providers
-
-`Providers` 数组是您定义要使用的不同模型提供商的地方。每个提供商对象都需要：
-
--   `name`: 提供商的唯一名称。
--   `api_base_url`: 聊天补全的完整 API 端点。
--   `api_key`: 您提供商的 API 密钥。
--   `models`: 此提供商可用的模型名称列表。
--   `transformer` (可选): 指定用于处理请求和响应的转换器。
-
 #### Router
 
 `Router` 对象定义了在不同场景下使用哪个模型：
