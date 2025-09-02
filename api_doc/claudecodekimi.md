@@ -45,10 +45,10 @@ vim .env
 |---|---|
 | OPENAL_API_KEY | [API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys)|
 | ANTHROPIC_API_KEY | 需要注释掉这一行 |
-| OPENAL_BASE_URL | https://api.modeliverse.cn/v1 |
-| BIG_MODEL | moonshotai/Kimi-K2-instruct |
-| MIDDLE_MODEL | moonshotai/Kimi-K2-instruct |
-| SMALL_MODEL | moonshotai/Kimi-K2-instruct |
+| OPENAL_BASE_URL | https://api.modeliverse.cn |
+| BIG_MODEL | moonshotai/Kimi-K2-Instruct |
+| MIDDLE_MODEL | moonshotai/Kimi-K2-Instruct |
+| SMALL_MODEL | moonshotai/Kimi-K2-Instruct |
 
 ## 启动代理
 1. 临时启动
