@@ -27,11 +27,11 @@
 * [数据集管理](/modelverse/guide/dataset-manage.md)
 
 ## 5.API说明
+* [常见客户端接入API](/modelverse/scenario.md)
 * [通用说明](/modelverse/api_doc/chat.md)
 * [错误码](/modelverse/api_doc/error-code.md)
 * [结构说明](/modelverse/api_doc/struct.md)
-* [OpenAI接口兼容](/modelverse/api_doc/openai-compatible.md) 
-* [客户端一键接入DeepSeek指南](/modelverse/scenario.md)
-  
+* [图片生成API](/modelverse/api_doc/image-generation.md)
+* [Claude Code接入指南](/modelverse/api_doc/claudecodeccr.md)
 
 
