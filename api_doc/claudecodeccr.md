@@ -7,15 +7,15 @@
 ## 🚀 快速入门
 ### 1. 安装
 
-首先，请确保您已安装 npm, 请参考 [Node.js官方网站](https://nodejs.org/zh-cn/download)。
+1. 请确保您已安装 npm, 请参考 [Node.js官方网站](https://nodejs.org/zh-cn/download)。
 
-然后，安装[Claude Code](https://docs.anthropic.com/en/docs/claude-code/quickstart)：
+2. 安装[Claude Code](https://docs.anthropic.com/en/docs/claude-code/quickstart)：
 
 ```shell
 npm install -g @anthropic-ai/claude-code
 ```
 
-然后，安装 Claude Code Router：
+3. 安装 Claude Code Router：
 
 ```shell
 npm install -g @musistudio/claude-code-router
