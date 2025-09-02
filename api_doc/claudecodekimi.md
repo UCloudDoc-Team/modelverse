@@ -45,7 +45,7 @@ vim .env
 |---|---|
 | OPENAL_API_KEY | [API Key管理](https://console.ucloud.cn/modelverse/experience/api-keys)|
 | ANTHROPIC_API_KEY | 需要注释掉这一行 |
-| OPENAL_BASE_URL | https://api.modeliverse.cn |
+| OPENAL_BASE_URL | https://api.modelverse.cn |
 | BIG_MODEL | moonshotai/Kimi-K2-Instruct |
 | MIDDLE_MODEL | moonshotai/Kimi-K2-Instruct |
 | SMALL_MODEL | moonshotai/Kimi-K2-Instruct |
