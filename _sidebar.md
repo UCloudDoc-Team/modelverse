@@ -3,14 +3,12 @@
 - [概览](/modelverse/README.md)
 
 - 产品简介
-
   - [什么是模型服务平台](/modelverse/introduction/introduction.md)
   - [产品优势](/modelverse/introduction/advantages.md)
 
 - [计费说明](/modelverse/price.md)
 
 - API 调用
-
   - [快速开始](/modelverse/quick_start.md)
   - 通用说明
     - [认证鉴权](/modelverse/api_doc/certificate.md)
@@ -34,7 +32,6 @@
     - [Qwen/Qwen-Image](/modelverse/image_api/Qwen-Qwen-Image.md)
     - [gpt-image-1](/modelverse/image_api/gpt-image-1.md)
   - 视频生成
-
     - [Wan-AI/Wan2.2-I2V](/modelverse/video_api/Wan-AI-Wan2.2-I2V.md)
     - [Wan-AI/Wan2.2-T2V](/modelverse/video_api/Wan-AI-Wan2.2-T2V.md)
 
@@ -47,8 +44,8 @@
     - [Dify](/modelverse/scenario/dify.md)
     - [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
     - [ComfyUI](/modelverse/scenario/comfyui.md)
-- MCP 说明
 
+- MCP 说明
   - [MCP 简介](/modelverse/mcp/mcpgeneral.md)
   - [通过 UCloud API 实现 MCP Client](/modelverse/mcp/MCPClient.md)
 
