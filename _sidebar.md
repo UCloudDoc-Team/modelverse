@@ -9,7 +9,7 @@
 - [计费说明](/modelverse/price.md)
 
 - API 调用
-  - [快速开始](/modelverse/quick_start.md)
+  - [快速开始](/modelverse/api_doc/quick-start.md)
   - 通用说明
     - [认证鉴权](/modelverse/api_doc/certificate.md)
     - [获取模型列表](/modelverse/api_doc/models.md)
