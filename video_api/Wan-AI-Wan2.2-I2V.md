@@ -6,16 +6,21 @@
 
 ### 接口
 
-`{{api_proxy}}/v1/tasks/submit`
+`https://api.modelverse.cn/v1/tasks/submit`
 
 ### 输入
 
 | 参数 | 类型 | 是否必选 | 描述 |
 | :--- | :--- | :--- | :--- |
 | model | string | 是 | 模型名称，此处为 `Wan-AI/Wan2.2-I2V` |
-| input.image_url | string | 是 | 输入图片的 URL |
+| input.first_frame_url | string | 是 | 视频首帧图片URL，可为URL或Base64 |
+| input.last_frame_url | string | 是 | 视频末帧图片URL，可为URL或Base64 |
 | input.prompt | string | 否 | 提示词，用于指导视频生成 |
-| parameters.resolution | string | 否 | 分辨率, 默认为`480P`。 |
+| input.negative_prompt | string | 否 | 反向提示词，用于限制不希望出现的内容 |
+| parameters.size | string | 否 | 输出尺寸，例如："832x480", "480x832", "1280x720", "720x1280" |
+| parameters.resolution | string | 否 | 生成视频的分辨率档位，当前仅支持`720P`、`480P` |
+| parameters.duration | int | 否 | 视频生成时长（秒），当前固定为`5` |
+| parameters.seed | int | 否 | 随机数种子，范围`[0, 2147483647]` |
 
 ### 请求示例
 
@@ -26,11 +31,12 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --data '{
     "model": "Wan-AI/Wan2.2-I2V",
     "input": {
-      "image_url": "https://example.com/source_image.jpg",
-      "prompt": "make the person in image wave their hand"
+      "first_frame_url": "https://example.com/first_frame.jpg",
+      "last_frame_url": "https://example.com/last_frame.jpg",
+      "prompt": "a beautiful flower"
     },
     "parameters": {
-      "resolution": "480P"
+      "resolution": "720P"
     }
   }'
 ```
@@ -47,9 +53,9 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 ```json
 {
     "output": {
-        "task_id": "a1b2c3d4e5f67890a1b2c3d4e5f67890"
+        "task_id": "task_id"
     },
-    "request_id": "12345678-1234-1234-1234-1234567890ab"
+    "request_id": "request_id"
 }
 ```
 
@@ -57,14 +63,13 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 
 ### 接口
 
-`{{api_proxy}}/v1/tasks/status?task_id=<task_id>`
+`https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>`
 
 ### 请求示例
 
 ```shell
-curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=a1b2c3d4e5f67890a1b2c3d4e5f67890' \
---header 'Authorization: <YOUR_API_KEY>' \
---data ''
+curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
+--header 'Authorization: <YOUR_API_KEY>'
 ```
 
 ### 输出
@@ -72,10 +77,11 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=a1b2c3d4e5f67
 | 参数 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | output.task_id | string | 异步任务的唯一标识 |
-| output.task_status | string | 任务状态，如 `Success`, `Running`, `Failed` |
+| output.task_status | string | 任务状态：`Pending`,`Running`,`Success`,`Failure` |
 | output.urls | array | 视频结果的 URL 列表 |
 | output.submit_time | integer | 任务提交时间戳 |
 | output.finish_time | integer | 任务完成时间戳 |
+| output.error_message | string | 失败时返回的错误信息 |
 | usage.duration | integer | 任务执行时长（秒） |
 | request_id | string | 请求的唯一标识 |
 
@@ -84,10 +90,10 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=a1b2c3d4e5f67
 ```json
 {
     "output": {
-        "task_id": "a1b2c3d4e5f67890a1b2c3d4e5f67890",
+        "task_id": "task_id",
         "task_status": "Success",
         "urls": [
-            "https://d2p7pge43lyniu.cloudfront.net/output/some-video-id.mp4"
+            "https://xxxxx/xxxx.mp4"
         ],
         "submit_time": 1756959000,
         "finish_time": 1756959050

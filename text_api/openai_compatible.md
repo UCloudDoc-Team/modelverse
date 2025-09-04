@@ -15,7 +15,7 @@ curl https://api.modelverse.cn/v1/chat/completions \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $MODELVERSE_API_KEY" \
   -d '{
-    "model": "deepseek-ai/DeepSeek-V3.1",
+    "model": "{model_name}",
     "messages": [
       {
         "role": "system",
@@ -30,7 +30,7 @@ curl https://api.modelverse.cn/v1/chat/completions \
   }'
 ```
 
-请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key，获取 [API Key](https://console.ucloud.cn/modelverse/experience/api-keys)。
+请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key。
 
 ### Python 示例
 
@@ -49,7 +49,7 @@ chat_completion = client.chat.completions.create(
             "content": "Say this is a test",
         }
     ],
-    model="deepseek-ai/DeepSeek-V3.1",
+    model="{model_name}",
 )
 
 print(chat_completion.choices[0].message.content)
@@ -68,7 +68,7 @@ const openai = new OpenAI({
 async function main() {
   const chatCompletion = await openai.chat.completions.create({
     messages: [{ role: "user", content: "Say this is a test" }],
-    model: "deepseek-ai/DeepSeek-V3.1",
+    model: "{model_name}",
   });
 
   console.log(chatCompletion.choices[0].message.content);

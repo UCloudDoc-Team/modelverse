@@ -6,7 +6,7 @@
 
 ### 接口
 
-`{{api_proxy}}/v1/tasks/submit`
+`https://api.modelverse.cn/v1/tasks/submit`
 
 ### 输入
 
@@ -14,7 +14,11 @@
 | :--- | :--- | :--- | :--- |
 | model | string | 是 | 模型名称，此处为 `Wan-AI/Wan2.2-T2V` |
 | input.prompt | string | 是 | 提示词，用于生成视频的内容描述 |
-| parameters.resolution | string | 否 | 分辨率, 默认为`480P`。 |
+| input.negative_prompt | string | 否 | 反向提示词，用于限制不希望出现的内容 |
+| parameters.size | string | 否 | 输出尺寸，例如："832x480", "480x832", "1280x720", "720x1280" |
+| parameters.resolution | string | 否 | 生成视频的分辨率档位，当前仅支持`720P`、`480P` |
+| parameters.duration | int | 否 | 视频生成时长（秒），当前固定为`5` |
+| parameters.seed | int | 否 | 随机数种子，范围`[0, 2147483647]` |
 
 ### 请求示例
 
@@ -25,10 +29,12 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --data '{
     "model": "Wan-AI/Wan2.2-T2V",
     "input": {
-      "prompt": "杨幂和冯绍峰"
+      "prompt": "a beautiful flower",
+      "negative_prompt": "low quality"
     },
     "parameters": {
-      "resolution": "480P"
+      "resolution": "720P",
+      "seed": 12345
     }
   }'
 ```
@@ -45,9 +51,9 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 ```json
 {
     "output": {
-        "task_id": "f151ae7f80f44db190194e36c4c6d2b1"
+        "task_id": "task_id"
     },
-    "request_id": "44a3fd36-5951-4a40-b483-27c72cbb7840"
+    "request_id": "request_id"
 }
 ```
 
@@ -55,14 +61,13 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 
 ### 接口
 
-`{{api_proxy}}/v1/tasks/status?task_id=<task_id>`
+`https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>`
 
 ### 请求示例
 
 ```shell
-curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=f151ae7f80f44db190194e36c4c6d2b1' \
+curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
 --header 'Authorization: <YOUR_API_KEY>' \
---data ''
 ```
 
 ### 输出
@@ -70,10 +75,11 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=f151ae7f80f44
 | 参数 | 类型 | 描述 |
 | :--- | :--- | :--- |
 | output.task_id | string | 异步任务的唯一标识 |
-| output.task_status | string | 任务状态，如 `Success`, `Running`, `Failed` |
+| output.task_status | string | 任务状态：`Pending`,`Running`,`Success`,`Failure` |
 | output.urls | array | 视频结果的 URL 列表 |
 | output.submit_time | integer | 任务提交时间戳 |
 | output.finish_time | integer | 任务完成时间戳 |
+| output.error_message | string | 失败时返回的错误信息 |
 | usage.duration | integer | 任务执行时长（秒） |
 | request_id | string | 请求的唯一标识 |
 
@@ -82,10 +88,10 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=f151ae7f80f44
 ```json
 {
     "output": {
-        "task_id": "f151ae7f80f44db190194e36c4c6d2b1",
+        "task_id": "task_id",
         "task_status": "Success",
         "urls": [
-            "https://d2p7pge43lyniu.cloudfront.net/output/48170c13-a8a0-4961-8d35-ec84410ba3c5-u1_b5889a37-cc50-4449-ab25-f8385bc339e6.mp4"
+            "https://xxxxx/xxxx.mp4"
         ],
         "submit_time": 1756958375,
         "finish_time": 1756958428
@@ -93,6 +99,6 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=f151ae7f80f44
     "usage": {
         "duration": 5
     },
-    "request_id": ""
+    "request_id": "request_id"
 }
 ```

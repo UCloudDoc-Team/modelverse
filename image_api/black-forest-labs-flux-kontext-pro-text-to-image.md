@@ -42,7 +42,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "black-forest-labs/flux-kontext-pro/text-to-image",
-    "prompt": "Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed",
+    "prompt": "a beautiful flower",
     "aspect_ratio": "9:16"
 }'
 ```
@@ -58,7 +58,7 @@ client = OpenAI(
 
 response = client.images.generate(
     model="black-forest-labs/flux-kontext-pro/text-to-image",
-    prompt="Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed",
+    prompt="a beautiful flower",
     extra_body={
         "aspect_ratio": "9:16"
     }
@@ -74,8 +74,8 @@ print(response.data[0].url)
   "created": 1750667997,
   "data": [
     {
-      "url": "https://api.modelverse.cn/image/xxx",
-      "b64_json": "data:image/png;base64,iVBORw0KGgoAAAANSUhEU..."
+      "url": "https://xxxxx/xxxx.png",
+      "b64_json": "data:image/png;base64,{image_base64_string}"
     }
   ],
   "usage": {
@@ -87,10 +87,10 @@ print(response.data[0].url)
 ```json
 {
   "error": {
-    "message": "xxx",
-    "type": "",
-    "param": "b4a7b49c-203c-43c9-88ce-9e636e77ace8",
-    "code": "xxx"
+    "message": "error_message",
+    "type": "error_type",
+    "param": "request_id",
+    "code": "error_code"
   }
 }
 ```

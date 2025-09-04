@@ -41,8 +41,8 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "black-forest-labs/flux-kontext-pro",
-    "prompt": "A cute cat",
-    "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+    "prompt": "a beautiful flower",
+    "image": "data:image/png;base64,{image_base64_string}"
 }'
 ```
 
@@ -57,9 +57,9 @@ client = OpenAI(
 
 response = client.images.generate(
     model="black-forest-labs/flux-kontext-pro",
-    prompt="A cute cat",
+    prompt="a beautiful flower",
     extra_body={
-        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII="
+        "image": "data:image/png;base64,{image_base64_string}"
     }
 )
 
@@ -73,8 +73,8 @@ print(response.data[0].url)
   "created": 1750667997,
   "data": [
     {
-      "url": "https://api.modelverse.cn/image/xxx",
-      "b64_json": "data:image/png;base64,iVBORw0KGgoAAAANSUhEU..."
+      "url": "https://xxxxx/xxxx.png",
+      "b64_json": "data:image/png;base64,{image_base64_string}"
     }
   ],
   "usage": {
@@ -86,10 +86,10 @@ print(response.data[0].url)
 ```json
 {
   "error": {
-    "message": "xxx",
-    "type": "",
-    "param": "b4a7b49c-203c-43c9-88ce-9e636e77ace8",
-    "code": "xxx"
+    "message": "error_message",
+    "type": "error_type",
+    "param": "request_id",
+    "code": "error_code"
   }
 }
 ```

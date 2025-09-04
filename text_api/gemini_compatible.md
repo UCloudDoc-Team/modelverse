@@ -13,7 +13,7 @@ UModelverse 平台提供了与 Google Gemini API 兼容的接口，开发者可�
 下面是一个使用 `curl` 调用 `generateContent` 接口的示例。请注意，这里的认证头使用的是 `Authorization: Bearer`，与 Gemini 原生的 `x-goog-api-key` 不同。
 
 ```bash
-curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generateContent" \
+curl "https://api.modelverse.cn/v1beta/models/{model_name}:generateContent" \
     -H "Authorization: Bearer $MODELVERSE_API_KEY" \
     -H "Content-Type: application/json" \
     -X POST \
@@ -22,7 +22,7 @@ curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generate
         {
           "parts": [
             {
-              "text": "你好"
+              "text": "hello"
             }
           ]
         }
@@ -35,7 +35,7 @@ curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generate
 下面是一个使用 `curl` 调用 `streamGenerateContent` 接口以实现流式返回的示例：
 
 ```bash
-curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?alt=sse" \
+curl "https://api.modelverse.cn/v1beta/models/{model_name}:GenerateContent?alt=sse" \
     -H "Authorization: Bearer $MODELVERSE_API_KEY" \
     -H "Content-Type: application/json" \
     -d '{
@@ -44,7 +44,7 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
           "role": "user",
           "parts": [
             {
-              "text": "你好"
+              "text": "hello"
             }
           ]
         }
@@ -52,7 +52,7 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
     }'
 ```
 
-请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key，获取 [API Key](https://console.ucloud.cn/modelverse/experience/api-keys)。
+请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key。
 
 ### Python 示例
 
@@ -73,14 +73,14 @@ genai.configure(
 )
 
 # 创建模型实例
-model = genai.GenerativeModel('deepseek-ai/DeepSeek-V3.1')
+model = genai.GenerativeModel('{model_name}')
 
 # 调用模型并获取非流式响应
-response = model.generate_content("你好")
+response = model.generate_content("hello")
 print(response.text)
 
 # 调用模型并获取流式响应
-response_stream = model.generate_content("你好", stream=True)
+response_stream = model.generate_content("hello", stream=True)
 for chunk in response_stream:
   print(chunk.text)
 ```
