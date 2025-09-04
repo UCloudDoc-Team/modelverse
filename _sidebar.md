@@ -11,8 +11,8 @@
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
 * 场景示例   
-   * [Claude Code x Claude Code Router 接入指南](/modelverse/api_doc/claudecodeccr.md)
-   * [Kimi 接入指南](/modelverse/api_doc/claudecodekimi.md)
+   * [Claude Code x Claude Code Router 接入指南](/modelverse/scenario/claudecodeccr.md)
+   * [Kimi 接入指南](/modelverse/scenario/claudecodekimi.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
    * [常见客户端接入API](/modelverse/scenario/index.md)
      * [Chatbox](/modelverse/scenario/chatbox.md)
@@ -21,7 +21,7 @@
      * [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
 * 文本生成
   * [OpenAI兼容](/modelverse/text_api/openai_compatible.md)
-  * [OpenAI文本接口结构说明](/modelverse/api_doc/struct.md)
+  * [OpenAI文本接口结构说明](/modelverse/text_api/struct.md)
   * [Gemini兼容](/modelverse/text_api/gemini_compatible.md)
 * 视频生成
    * [Wan-AI/Wan2.2-I2V](/modelverse/video_api/Wan-AI-Wan2.2-I2V.md)
