@@ -46,7 +46,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "stepfun-ai/step1x-edit",
-    "prompt": "a beautiful flower",
+    "prompt": "Convert to quick pencil sketch",
     "image": "data:image/png;base64,{image_base64_string}",
     "negative_prompt": "blurry, low quality"
 }'
@@ -63,7 +63,7 @@ client = OpenAI(
 
 response = client.images.generate(
     model="stepfun-ai/step1x-edit",
-    prompt="a beautiful flower",
+    prompt="Convert to quick pencil sketch",
     extra_body={
         "image": "data:image/png;base64,{image_base64_string}",
         "negative_prompt": "blurry, low quality"

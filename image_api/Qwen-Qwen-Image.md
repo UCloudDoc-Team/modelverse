@@ -45,7 +45,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "Qwen/Qwen-Image",
-    "prompt": "a beautiful flower",
+    "prompt": "Convert to quick pencil sketch",
     "aspect_ratio": "16:9"
 }'
 ```
@@ -61,7 +61,7 @@ client = OpenAI(
 
 response = client.images.generate(
     model="Qwen/Qwen-Image",
-    prompt="a beautiful flower",
+    prompt="Convert to quick pencil sketch",
     extra_body={
         "aspect_ratio": "16:9"
     }

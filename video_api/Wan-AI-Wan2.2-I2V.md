@@ -30,9 +30,9 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --data '{
     "model": "Wan-AI/Wan2.2-I2V",
     "input": {
-      "first_frame_url": "https://example.com/first_frame.jpg",
-      "last_frame_url": "https://example.com/last_frame.jpg",
-      "prompt": "a beautiful flower"
+      "first_frame_url": "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+      "last_frame_url": "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+      "prompt": "Convert to quick pencil sketch"
     },
     "parameters": {
       "resolution": "720P"
