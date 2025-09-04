@@ -2,28 +2,30 @@
 * 产品简介
    * [什么是模型服务平台](/modelverse/introduction/introduction.md)
    * [产品优势](/modelverse/introduction/advantages.md)
-* [快速上手](/modelverse/briefguide.md)
+
 * [计费说明](/modelverse/price.md)
-* 操作指南
-   * [模型广场](/modelverse/guide/model-marketplace.md)
-   * [模型管理](/modelverse/guide/model-manage.md)
-   * [模型微调](/modelverse/guide/model-finetuning.md)
-   * [模型评估](/modelverse/guide/model-evaluation.md)
-   * [服务部署](/modelverse/guide/service-manage.md)
-   * [数据集管理](/modelverse/guide/dataset-manage.md)
-* API说明
+
+* API指引
    * [认证鉴权](/modelverse/api_doc/certificate.md)
-   * [获取模型ID](/modelverse/api_doc/model_id.md)
+   * [获取模型列表](/modelverse/api_doc/models.md)
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
 * 场景示例   
    * [Claude Code x Claude Code Router 接入指南](/modelverse/api_doc/claudecodeccr.md)
-   * [常见客户端接入API](/modelverse/scenario.md) 
-   * // TODO：拆分一下,分cherry studio, openwebui 等
+   * [Kimi 接入指南](/modelverse/api_doc/claudecodekimi.md)
+   * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
+   * [常见客户端接入API](/modelverse/scenario/index.md)
+     * [Chatbox](/modelverse/scenario/chatbox.md)
+     * [Open WebUI](/modelverse/scenario/open-webui.md)
+     * [Dify](/modelverse/scenario/dify.md)
+     * [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
 * 文本生成
   * [OpenAI兼容](/modelverse/text_api/openai_compatible.md)
   * [OpenAI文本接口结构说明](/modelverse/api_doc/struct.md)
   * [Gemini兼容](/modelverse/text_api/gemini_compatible.md)
+* 视频生成
+   * [Wan-AI/Wan2.2-I2V](/modelverse/video_api/Wan-AI-Wan2.2-I2V.md)
+   * [Wan-AI/Wan2.2-T2V](/modelverse/video_api/Wan-AI-Wan2.2-T2V.md)
 * 图片生成
   * [black-forest-labs/flux.1-dev](/modelverse/image_api/black-forest-labs-flux.1-dev.md)
   * [black-forest-labs/flux-kontext-pro](/modelverse/image_api/black-forest-labs-flux-kontext-pro.md)
@@ -36,11 +38,16 @@
   * [Qwen/Qwen-Image-Edit](/modelverse/image_api/Qwen-Qwen-Image-Edit.md)
   * [Qwen/Qwen-Image](/modelverse/image_api/Qwen-Qwen-Image.md)
   * [gpt-image-1](/modelverse/image_api/gpt-image-1.md)
-* 视频生成
-   * [video_model](/modelverse/video_api/model.md)
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
-   * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
    * [通过UCloud API实现MCP Client](/modelverse/mcp/MCPClient.md)
+* 操作指南
+   * [快速上手](/modelverse/briefguide.md)
+   * [模型广场](/modelverse/guide/model-marketplace.md)
+   * [模型管理](/modelverse/guide/model-manage.md)
+   * [模型微调](/modelverse/guide/model-finetuning.md)
+   * [模型评估](/modelverse/guide/model-evaluation.md)
+   * [服务部署](/modelverse/guide/service-manage.md)
+   * [数据集管理](/modelverse/guide/dataset-manage.md)
 * UModelVerse协议
    * [UModelVerse隐私政策](/modelverse/private.md)
