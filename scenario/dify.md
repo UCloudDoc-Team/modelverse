@@ -12,7 +12,7 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 
 ![dify](/pics/dify/market.png)
 
-3. 输入优云智算模型API Key
+3. 输入UCloud模型API Key
 
 ![dify](/pics/dify/api.png)
 
