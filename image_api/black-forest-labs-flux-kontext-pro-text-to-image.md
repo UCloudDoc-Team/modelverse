@@ -1,7 +1,5 @@
 # black-forest-labs/flux-kontext-pro/text-to-image API
 
-`POST https://api.modelverse.cn/v1/images/generations`
-
 本文介绍 `black-forest-labs/flux-kontext-pro/text-to-image` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
 ---
@@ -32,7 +30,11 @@
 
 ## 示例
 
-### 请求
+### OPENAI 兼容接口
+
+`POST https://api.modelverse.cn/v1/images/generations`
+
+#### 同步请求
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/images/generations' \
@@ -43,6 +45,26 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "prompt": "Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed",
     "aspect_ratio": "9:16"
 }'
+```
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url=os.getenv("BASE_URL", "https://api.modelverse.cn/v1"),
+    api_key=os.getenv("API_KEY", "<你的API Key>")
+)
+
+response = client.images.generate(
+    model="black-forest-labs/flux-kontext-pro/text-to-image",
+    prompt="Retro game style, man in old school suit, upper body, true detective, detailed character, nigh sky, crimson moon silhouette, american muscle car parked on dark street in background, complex background in style of Bill Sienkiewicz and Dave McKean and Carne Griffiths, extremely detailed, mysterious, grim, provocative, thrilling, dynamic, action-packed, fallout style, vintage, game theme, masterpiece, high contrast, stark. vivid colors, 16-bit, pixelated, textured, distressed",
+    extra_body={
+        "aspect_ratio": "9:16"
+    }
+)
+
+print(response.data[0].url)
 ```
 
 ### 响应
@@ -72,3 +94,8 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
   }
 }
 ```
+<!-- 
+TODO:异步请求
+### 异步请求
+  
+``` -->

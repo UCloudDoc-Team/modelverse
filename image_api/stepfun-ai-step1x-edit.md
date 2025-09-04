@@ -1,7 +1,5 @@
 # stepfun-ai/step1x-edit API
 
-`POST https://api.modelverse.cn/v1/images/generations`
-
 本文介绍 `stepfun-ai/step1x-edit` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
 ---
@@ -33,7 +31,11 @@
 
 ## 示例
 
-### 请求
+### OPENAI 兼容接口
+
+`POST https://api.modelverse.cn/v1/images/generations`
+
+#### 同步请求
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/images/generations' \
@@ -45,6 +47,27 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
     "negative_prompt": "blurry, low quality"
 }'
+```
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url=os.getenv("BASE_URL", "https://api.modelverse.cn/v1"),
+    api_key=os.getenv("API_KEY", "<你的API Key>")
+)
+
+response = client.images.generate(
+    model="stepfun-ai/step1x-edit",
+    prompt="make the cat wear a hat",
+    extra_body={
+        "image": "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR42mNkYAAAAAYAAjCB0C8AAAAASUVORK5CYII=",
+        "negative_prompt": "blurry, low quality"
+    }
+)
+
+print(response.data[0].url)
 ```
 
 ### 响应
@@ -74,3 +97,9 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
   }
 }
 ```
+
+<!-- 
+TODO:异步请求
+### 异步请求
+  
+``` -->

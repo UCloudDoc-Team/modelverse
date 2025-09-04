@@ -1,7 +1,5 @@
 # black-forest-labs/flux.1-dev API
 
-`POST https://api.modelverse.cn/v1/images/generations`
-
 本文介绍 `black-forest-labs/flux.1-dev` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
 ---
@@ -36,7 +34,11 @@
 
 ## 示例
 
-### 请求
+### OPENAI 兼容接口
+
+`POST https://api.modelverse.cn/v1/images/generations`
+
+#### 同步请求
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/images/generations' \
@@ -49,6 +51,27 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "size": "1024x1024"
 }'
 ```
+
+```python
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    base_url=os.getenv("BASE_URL", "https://api.modelverse.cn/v1"),
+    api_key=os.getenv("API_KEY", "<你的API Key>")
+)
+
+response = client.images.generate(
+    model="black-forest-labs/flux.1-dev",
+    prompt="A cute cat",
+    n=1,
+    size="1024x1024"
+)
+
+print(response.data[0].url)
+```
+
+
 
 ### 响应
 
@@ -77,3 +100,8 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
   }
 }
 ```
+<!-- 
+TODO:异步请求
+### 异步请求
+
+``` -->
