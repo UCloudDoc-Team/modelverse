@@ -27,7 +27,17 @@
   * [OpenAI兼容](/modelverse/text_api/openai_compatible.md)
   * [Gemini兼容](/modelverse/text_api/gemini_compatible.md)
 * 图片生成
-   * [image_model](/modelverse/image_api/model.md)
+  * [black-forest-labs/flux.1-dev](/modelverse/image_api/black-forest-labs-flux.1-dev.md)
+  * [black-forest-labs/flux-kontext-pro](/modelverse/image_api/black-forest-labs-flux-kontext-pro.md)
+  * [black-forest-labs/flux-kontext-pro/multi](/modelverse/image_api/black-forest-labs-flux-kontext-pro-multi.md)
+  * [black-forest-labs/flux-kontext-pro/text-to-image](/modelverse/image_api/black-forest-labs-flux-kontext-pro-text-to-image.md)
+  * [stepfun-ai/step1x-edit](/modelverse/image_api/stepfun-ai-step1x-edit.md)
+  * [black-forest-labs/flux-kontext-max](/modelverse/image_api/black-forest-labs-flux-kontext-max.md)
+  * [black-forest-labs/flux-kontext-max/multi](/modelverse/image_api/black-forest-labs-flux-kontext-max-multi.md)
+  * [black-forest-labs/flux-kontext-max/text-to-image](/modelverse/image_api/black-forest-labs-flux-kontext-max-text-to-image.md)
+  * [Qwen/Qwen-Image-Edit](/modelverse/image_api/Qwen-Qwen-Image-Edit.md)
+  * [Qwen/Qwen-Image](/modelverse/image_api/Qwen-Qwen-Image.md)
+  * [gpt-image-1](/modelverse/image_api/gpt-image-1.md)
 * 视频生成
    * [video_model](/modelverse/video_api/model.md)
 * MCP说明
