@@ -47,7 +47,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "black-forest-labs/flux.1-dev",
-    "prompt": "a beautiful flower",
+    "prompt": "Convert to quick pencil sketch",
     "n": 1,
     "size": "1024x1024"
 }'
@@ -64,7 +64,7 @@ client = OpenAI(
 
 response = client.images.generate(
     model="black-forest-labs/flux.1-dev",
-    prompt="a beautiful flower",
+    prompt="Convert to quick pencil sketch",
     n=1,
     size="1024x1024"
 )

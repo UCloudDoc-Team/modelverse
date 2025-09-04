@@ -46,9 +46,9 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "black-forest-labs/flux-kontext-pro/multi",
-    "prompt": "a beautiful flower",
+    "prompt": "Convert to quick pencil sketch",
     "images": [
-        "https://example.com/image1.png",
+        "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
         "data:image/png;base64,{image_base64_string}"
     ]
 }'
@@ -65,10 +65,10 @@ client = OpenAI(
 
 response = client.images.generate(
     model="black-forest-labs/flux-kontext-pro/multi",
-    prompt="a beautiful flower",
+    prompt="Convert to quick pencil sketch",
     extra_body={
         "images": [
-            "https://example.com/image1.png",
+            "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
             "data:image/png;base64,{image_base64_string}"
         ]
     }

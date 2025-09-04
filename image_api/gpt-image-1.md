@@ -44,8 +44,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "gpt-image-1",
-    "prompt": "a beautiful flower",
-    "aspect_ratio": "1:1"
+    "prompt": "a beautiful flower"
 }'
 ```
 
@@ -60,10 +59,7 @@ client = OpenAI(
 
 response = client.images.generate(
     model="gpt-image-1",
-    prompt="a beautiful flower",
-    extra_body={
-        "aspect_ratio": "1:1"
-    }
+    prompt="Convert to quick pencil sketch"
 )
 
 print(response.data[0].url)
