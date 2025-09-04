@@ -1,5 +1,3 @@
-
-
 * [概览](/modelverse/README.md)
 * 产品简介
    * [什么是模型服务平台](/modelverse/introduction/introduction.md)
@@ -15,16 +13,16 @@
    * [数据集管理](/modelverse/guide/dataset-manage.md)
 * API说明
    * [认证鉴权](/modelverse/api_doc/certificate.md)
+   * [获取模型ID](/modelverse/api_doc/model_id.md)
    * [通用说明](/modelverse/api_doc/chat.md)
    * [错误码](/modelverse/api_doc/error-code.md)
-   * [结构说明](/modelverse/api_doc/struct.md)
-   * [图片生成API](/modelverse/api_doc/image-generation.md)
 * 场景示例   
    * [Claude Code x Claude Code Router 接入指南](/modelverse/api_doc/claudecodeccr.md)
    * [常见客户端接入API](/modelverse/scenario.md) 
    * // TODO：拆分一下,分cherry studio, openwebui 等
 * 文本生成
   * [OpenAI兼容](/modelverse/text_api/openai_compatible.md)
+  * [OpenAI文本接口结构说明](/modelverse/api_doc/struct.md)
   * [Gemini兼容](/modelverse/text_api/gemini_compatible.md)
 * 图片生成
   * [black-forest-labs/flux.1-dev](/modelverse/image_api/black-forest-labs-flux.1-dev.md)
