@@ -12,10 +12,10 @@ ModelVerse API 使用 API Key 进行认证。所有API请求都必须在HTTP请�
 API Key 需要放在 HTTP 请求的 `Authorization` 头中。
 
 ### 请求头
-| 名称            | 类型   | 是否必须 | 描述                                       |
-| --------------- | ------ | -------- | ------------------------------------------ |
+| 名称            | 类型   | 是否必须 | 描述                                              |
+| --------------- | ------ | -------- | ------------------------------------------------- |
 | `Authorization` | string | 是       | 使用 `Bearer <YOUR_API_KEY>` 的格式传入 API Key。 |
-| `Content-Type`  | string | 是       | 固定值为 `application/json`。                  |
+| `Content-Type`  | string | 是       | 固定值为 `application/json`。                     |
 
 ### 请求示例
 这是一个使用 `curl` 命令调用 API 的示例，展示了如何在请求头中加入 API Key：
