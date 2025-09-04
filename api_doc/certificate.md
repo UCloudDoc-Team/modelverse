@@ -21,7 +21,7 @@ API Key 需要放在 HTTP 请求的 `Authorization` 头中。
 这是一个使用 `curl` 命令调用 API 的示例，展示了如何在请求头中加入 API Key：
 
 ```bash
-curl --location 'https://deepseek.modelverse.cn/v1/chat/completions' \
+curl --location 'https://api.modelverse.cn/v1/chat/completions' \
 --header 'Authorization: Bearer <你的API Key>' \
 --header 'Content-Type: application/json' \
 --data '{
