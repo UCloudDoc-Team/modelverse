@@ -16,13 +16,18 @@
 * API说明
    * [认证鉴权](/modelverse/api_doc/certificate.md)
    * [通用说明](/modelverse/api_doc/chat.md)
+   * [获取模型列表](/modelverse/api_doc/models.md)
    * [错误码](/modelverse/api_doc/error-code.md)
    * [结构说明](/modelverse/api_doc/struct.md)
    * [图片生成API](/modelverse/api_doc/image-generation.md)
 * 场景示例   
    * [Claude Code x Claude Code Router 接入指南](/modelverse/api_doc/claudecodeccr.md)
-   * [常见客户端接入API](/modelverse/scenario.md) 
-   * // TODO：拆分一下,分cherry studio, openwebui 等
+   * [Kimi 接入指南](/modelverse/api_doc/claudecodekimi.md)
+   * [常见客户端接入API](/modelverse/scenario/index.md)
+     * [Chatbox](/modelverse/scenario/chatbox.md)
+     * [Open WebUI](/modelverse/scenario/open-webui.md)
+     * [Dify](/modelverse/scenario/dify.md)
+     * [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
 * 文本生成
   * [OpenAI兼容](/modelverse/text_api/openai_compatible.md)
   * [Gemini兼容](/modelverse/text_api/gemini_compatible.md)
@@ -39,7 +44,8 @@
   * [Qwen/Qwen-Image](/modelverse/image_api/Qwen-Qwen-Image.md)
   * [gpt-image-1](/modelverse/image_api/gpt-image-1.md)
 * 视频生成
-   * [video_model](/modelverse/video_api/model.md)
+   * [Wan-AI/Wan2.2-I2V](/modelverse/video_api/Wan-AI-Wan2.2-I2V.md)
+   * [Wan-AI/Wan2.2-T2V](/modelverse/video_api/Wan-AI-Wan2.2-T2V.md)
 * MCP说明
    * [MCP简介](/modelverse/mcp/mcpgeneral.md)
    * [通过CLINE插件快速连接MCP服务](/modelverse/mcp/MCPServer.md)
