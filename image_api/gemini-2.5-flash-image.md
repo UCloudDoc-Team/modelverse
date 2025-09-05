@@ -88,7 +88,7 @@ import requests
 import json
 import base64
 
-api_key = os.getenv("API_KEY", "alk3hpXNq6byfuOkD1C9Ff3930654709BeEf5e5e975673B1")
+api_key = os.getenv("API_KEY", "<your_api_key>")
 
 url = "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent"
 
@@ -189,7 +189,7 @@ import requests
 import json
 import base64
 
-api_key = os.getenv("API_KEY", "alk3hpXNq6byfuOkD1C9Ff3930654709BeEf5e5e975673B1")
+api_key = os.getenv("API_KEY", "<your_api_key>")
 
 url = "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent"
 
