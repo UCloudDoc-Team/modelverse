@@ -1,4 +1,4 @@
-# gemini-2.5-flash-image API
+# gemini-2.5-flash-image( nano banana )
 
 本文介绍 `gemini-2.5-flash-image` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
@@ -47,11 +47,17 @@
 
 `POST https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent`
 
-#### 同步请求
+#### 图片生成（文本转图片）
+
+> ⚠️ 注意：您必须在配置中添加 responseModalities: ["TEXT", "IMAGE"]。这些模型不支持仅图片输出。
+
+<!-- tabs:start -->
+
+##### ** curl **
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent' \
---header 'Authorization: Bearer <你的API Key>' \
+--header "x-goog-api-key: $MODELVERSE_API_KEY" \
 --header 'Content-Type: application/json' \
 --data '{
     "contents": [
@@ -70,13 +76,17 @@ curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:
             "IMAGE"
         ]
     }
-}'
+}' | jq -r '.candidates[0].content.parts[1].inlineData.data' \
+| base64 -d > modelverse_generated_image.png
 ```
+
+##### ** python **
 
 ```python
 import os
 import requests
 import json
+import base64
 
 api_key = os.getenv("API_KEY", "alk3hpXNq6byfuOkD1C9Ff3930654709BeEf5e5e975673B1")
 
@@ -94,7 +104,7 @@ payload = json.dumps({
         }
     ],
     "generationConfig": {
-        "responseModalities": [s
+        "responseModalities": [
             "TEXT",
             "IMAGE"
         ]
@@ -107,11 +117,143 @@ headers = {
 }
 
 response = requests.request("POST", url, headers=headers, data=payload)
+response_data = response.json()
 
-print(response.json())
+# Extract and save the image from the response
+if "candidates" in response_data:
+    for candidate in response_data["candidates"]:
+        if "content" in candidate and "parts" in candidate["content"]:
+            for part in candidate["content"]["parts"]:
+                if "inlineData" in part:
+                    image_data = part["inlineData"]["data"]
+                    mime_type = part["inlineData"]["mimeType"]
+
+                    # Decode the base64 string
+                    image_bytes = base64.b64decode(image_data)
+
+                    # Determine the file extension
+                    extension = mime_type.split('/')[-1]
+                    file_name = f"modelverse_generated_image.{extension}"
+
+                    # Save the image to a file
+                    with open(file_name, "wb") as f:
+                        f.write(image_bytes)
+                    print(f"Image saved as {file_name}")
+
+                    # Stop after saving the first image
+                    break
+            break
 ```
 
-### 响应
+<!-- tabs:end -->
+
+#### 图片编辑（文本和图片转图片）
+
+<!-- tabs:start -->
+
+##### ** curl **
+
+```bash
+cat <<EOF | curl -X POST \
+  --header "Authorization: Bearer ${MODELVERSE_API_KEY}" \
+  --header "Content-Type: application/json" \
+  --data @- \
+  https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent | jq -r '.candidates[0].content.parts[] | select(.inlineData) | .inlineData.data' | base64 --decode > modelverse_generated_image.png
+{
+  "contents": [
+    {
+      "role": "user",
+      "parts": [
+        {"text": "Convert this photo to black and white, in a cartoonish style."},
+        {
+          "inline_data": {
+            "mime_type": "image/jpeg",
+            "data": "$(curl -s https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg | base64 | tr -d '\n')"
+          }
+        }
+      ]
+    }
+  ],
+  "generationConfig": {
+    "responseModalities": ["TEXT", "IMAGE"]
+  }
+}
+EOF
+```
+
+##### ** python **
+
+```python
+import os
+import requests
+import json
+import base64
+
+api_key = os.getenv("API_KEY", "alk3hpXNq6byfuOkD1C9Ff3930654709BeEf5e5e975673B1")
+
+url = "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent"
+
+
+image_url = "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg"
+image_response = requests.get(image_url)
+image_response.raise_for_status()
+image_base64_data = base64.b64encode(image_response.content).decode("utf-8")
+
+
+payload = json.dumps(
+    {
+        "contents": [
+            {
+                "role": "user",
+                "parts": [
+                    {"text": "Convert this photo to black and white, in a cartoonish style."},
+                    {
+                        "inline_data": {
+                            "mime_type": "image/jpeg",
+                            "data": image_base64_data,
+                        }
+                    },
+                ],
+            }
+        ],
+        "generationConfig": {"responseModalities": ["TEXT", "IMAGE"]},
+    }
+)
+
+headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+
+response = requests.request("POST", url, headers=headers, data=payload)
+response_data = response.json()
+
+# Extract and save the image from the response
+if "candidates" in response_data:
+    for candidate in response_data["candidates"]:
+        if "content" in candidate and "parts" in candidate["content"]:
+            for part in candidate["content"]["parts"]:
+                if "inlineData" in part:
+                    image_data = part["inlineData"]["data"]
+                    mime_type = part["inlineData"]["mimeType"]
+
+                    # Decode the base64 string
+                    image_bytes = base64.b64decode(image_data)
+
+                    # Determine the file extension
+                    extension = mime_type.split("/")[-1]
+                    file_name = f"modelverse_generated_image.{extension}"
+
+                    # Save the image to a file
+                    with open(file_name, "wb") as f:
+                        f.write(image_bytes)
+                    print(f"Image saved as {file_name}")
+
+                    # Stop after saving the first image
+                    break
+            break
+```
+
+<!-- tabs:end -->
+
+### 响应示例
 
 ```json
 {

@@ -114,31 +114,5 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
     }'
 ```
 
-**nano banana(gemini-2.5-flash-image)模型**
-
-```bash
-curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent' \
---header 'x-goog-api-key: <API_KEY>' \
---header 'Content-Type: application/json' \
---data '{
-    "contents": [
-        {
-            "role": "user",
-            "parts": [
-                {
-                    "text": "Create a picture of a nano banana dish in a fancy restaurant with a Gemini theme"
-                }
-            ]
-        }
-    ],
-    "generationConfig": {
-        "responseModalities": [
-            "TEXT",
-            "IMAGE"
-        ]
-    }
-}'
-```
-
 ## 模型ID说明
-更多受支持的gemini模型，请参考[获取模型ID](/modelverse/api_doc/model_id.md)
+更多受支持的gemini模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
