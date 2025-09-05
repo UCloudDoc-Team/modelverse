@@ -4,8 +4,15 @@
 
 如何获取 api_key 值：请进入 Umodelverse 控制台 -「体验中心」- [API Key 管理](https://console.ucloud.cn/modelverse/experience/api-keys) 进行快速创建。
 ![](https://www-s.ucloud.cn/2025/03/a427b4a6c0ff2d4dc2f2ee3cdad95098_1743154241648.png)
+## 第二步：将 API 密钥设置为环境变量
 
-## 第二步：Chat API 调用
+<!-- 以下是 API 密钥在本地设置为环境变量 MODELVERSE_API_KEY 的方法。 -->
+
+```bash
+export MODELVERSE_API_KEY=<YOUR_API_KEY_HERE>
+```
+
+## 第三步：Chat API 调用
 
 ## 请求
 
@@ -13,7 +20,7 @@
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/chat/completions' \
---header 'Authorization: Bearer <你的API Key>' \
+--header "Authorization: Bearer $MODELVERSE_API_KEY" \
 --header 'Content-Type: application/json' \
 --data '{
     "stream": true,

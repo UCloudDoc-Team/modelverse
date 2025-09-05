@@ -8,16 +8,16 @@
 
 ### 请求体
 
-| 字段名          | 类型   | 是否必须 | 默认值    | 描述                                                                                                                                   |
-| --------------- | ------ | -------- | --------- | -------------------------------------------------------------------------------------------------------------------------------------- |
-| prompt          | string | 必须     | -         | 提示词                                                                                                                                 |
-| model           | string | 必须     | -         | 本次请求使用的模型名称，此处为 `gpt-image-1`。                                                                                         |
-| n               | int    | 可选     | 1         | 生成图片数量，取值范围为 1~4                                                                                                           |
-| size            | string | 可选     | "1024x1024" | 分辨率                                                                                                                                 |
-| seed            | int    | 可选     | -1        | 随机数种子，用于控制模型生成内容的随机性。如果希望生成内容保持一致，可以使用相同的 seed 参数值。                                           |
-| guidance_scale  | float  | 可选     | 2.5       | 模型输出结果与prompt的一致程度，即生成图像的自由度；值越大，模型自由度越小，与用户输入的提示词相关性越强。                             |
-| negative_prompt | string | 可选     | -         | 负面提示词，用于指定不希望在生成图像中出现的内容                                                                                       |
-| response_format | string | 可选     | "url"     | 指定返回生成图像的格式，默认为 `url`，可选 `b64_json`                                                                                  |
+| 字段名          | 类型   | 是否必须 | 默认值      | 描述                                                                                                         |
+| --------------- | ------ | -------- | ----------- | ------------------------------------------------------------------------------------------------------------ |
+| prompt          | string | 必须     | -           | 提示词                                                                                                       |
+| model           | string | 必须     | -           | 本次请求使用的模型名称，此处为 `gpt-image-1`。                                                               |
+| n               | int    | 可选     | 1           | 生成图片数量，取值范围为 1~4                                                                                 |
+| size            | string | 可选     | "1024x1024" | 分辨率                                                                                                       |
+| seed            | int    | 可选     | -1          | 随机数种子，用于控制模型生成内容的随机性。如果希望生成内容保持一致，可以使用相同的 seed 参数值。             |
+| guidance_scale  | float  | 可选     | 2.5         | 模型输出结果与 prompt 的一致程度，即生成图像的自由度；值越大，模型自由度越小，与用户输入的提示词相关性越强。 |
+| negative_prompt | string | 可选     | -           | 负面提示词，用于指定不希望在生成图像中出现的内容                                                             |
+| response_format | string | 可选     | "url"       | 指定返回生成图像的格式，默认为 `url`，可选 `b64_json`                                                        |
 
 ## 响应参数
 
@@ -40,7 +40,7 @@
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/images/generations' \
---header 'Authorization: Bearer <你的API Key>' \
+--header "Authorization: Bearer $MODELVERSE_API_KEY" \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "gpt-image-1",
@@ -54,7 +54,7 @@ from openai import OpenAI
 
 client = OpenAI(
     base_url=os.getenv("BASE_URL", "https://api.modelverse.cn/v1"),
-    api_key=os.getenv("API_KEY", "<你的API Key>")
+    api_key=os.getenv("API_KEY", "$MODELVERSE_API_KEY")
 )
 
 response = client.images.generate(
@@ -93,8 +93,8 @@ print(response.data[0].url)
 }
 ```
 
-<!-- 
+<!--
 TODO:异步请求
 ### 异步请求
-  
+
 ``` -->
