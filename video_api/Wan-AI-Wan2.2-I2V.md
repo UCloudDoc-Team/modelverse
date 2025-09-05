@@ -22,7 +22,7 @@
 | parameters.seed       | int    | 否       | 随机数种子，范围`[0, 2147483647]`              |
 
 ### 请求示例
-
+⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
 ```shell
 curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --header 'Authorization: <YOUR_API_KEY>' \

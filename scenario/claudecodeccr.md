@@ -92,6 +92,7 @@ ccr code
 ```
 
 > **注意**: 
+> ⚠️ 如果您在`ccr ui`修改或直接修改了ccr的配置，请务必执行`ccr restart`进行重启，否则模型选择可能不生效！
 > 如果您是首次安装 Claude Code 时遇到反复弹出官方登录页面的问题，您可以通过以下方式临时解决：
 > 在终端中执行 ANTHROPIC_AUTH_TOKEN=token ccr code 命令，其中 token 参数可使用任意值填充，此操作旨在绕过官方账号登录验证流程。
 > 
@@ -120,10 +121,4 @@ ccr ui
 -   `longContext`: 用于处理长上下文（例如，> 60000 token）的模型。
 -   `longContextThreshold` (可选): 触发长上下文模型的令牌数阈值。如果未指定，默认为 60000。
 -   `webSearch`: 用于处理网络搜索任务，需要模型本身支持。
-
-
-您还可以使用 `/model` 命令在 Claude Code 中动态切换模型：
-`/model provider_name,model_name`
-示例: `/model ucloud,claude-4-sonnet`
-
 
