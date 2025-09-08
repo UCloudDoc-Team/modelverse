@@ -11,15 +11,15 @@
 ### 第二步：配置 Cherry Studio
 
 1.  点击界面右上角的齿轮图标进入设置，然后选择「模型服务」。
-    ![进入模型服务设置](/pics/cherry-studio/provider.png)
+    ![进入模型服务设置](/images/cherry-studio/provider.png)
 
 2.  在配置页面，填入以下信息：
     *   **API Address**: `https://api.modelverse.cn`
     *   **API Key**: 粘贴您在第一步获取的 API Key
-    ![填入API信息](/pics/cherry-studio/api.png)
+    ![填入API信息](/images/cherry-studio/api.png)
 
 3.  点击「管理」，系统将自动获取并加载所有可用的模型。
-    ![获取模型](/pics/cherry-studio/model.png)
+    ![获取模型](/images/cherry-studio/model.png)
 
 ### 第三步：开始使用
 
