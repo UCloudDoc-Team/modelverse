@@ -17,20 +17,20 @@ Open WebUI (https://github.com/open-webui/) 是一款适合企业内部部署的
 ### 第二步：配置 Open WebUI
 
 1.  登录 Open WebUI，点击左下角的用户头像，然后选择「设置」。
-    ![进入设置](/pics/openwebui/settings.png)
+    ![进入设置](/images/openwebui/settings.png)
 
 2.  在设置菜单中，点击「管理员设置」。
-    ![管理员设置](/pics/openwebui/admin.png)
+    ![管理员设置](/images/openwebui/admin.png)
 
 3.  在管理员设置页面，点击「外部连接」，然后点击「+」号按钮以添加新的外部模型服务。
-    ![外部链接](/pics/openwebui/external_connection.png)
+    ![外部链接](/images/openwebui/external_connection.png)
 
 4.  在弹出的表单中，填入以下信息：
     *   **Base URL**: `https://api.modelverse.cn/v1`
     *   **API Key**: 粘贴您在第一步获取的 API Key
 
     填写完毕后，Open WebUI 会自动获取可用的模型。
-    ![添加UCloud ModelVerse服务](/pics/openwebui/add_ucloud.png)
+    ![添加UCloud ModelVerse服务](/images/openwebui/add_ucloud.png)
 
 ### 第三步：开始聊天
 

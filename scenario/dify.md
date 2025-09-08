@@ -10,13 +10,13 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 
 2. 搜索**UCloud**，找到对应插件并安装
 
-![dify](/pics/dify/market.png)
+![dify](/images/dify/market.png)
 
 3. 输入UCloud模型API Key
 
-![dify](/pics/dify/api.png)
+![dify](/images/dify/api.png)
 
 4. 接入完成
 
-![dify](/pics/dify/complete.png)
+![dify](/images/dify/complete.png)
 
