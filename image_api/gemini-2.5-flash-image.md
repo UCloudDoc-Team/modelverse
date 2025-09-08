@@ -15,7 +15,13 @@
 | contents                            | array  | 必须     | -                 | 请求的内容，包含一个或多个部分。   |
 | contents.role                       | string | 必须     | "user"            | 内容的角色，此处固定为 "user"。    |
 | contents.parts                      | array  | 必须     | -                 | 内容的具体部分。                   |
-| contents.parts.text                 | string | 必须     | -                 | 提示词文本。                       |
+| contents.parts.text                 | string | 可选     | -                 | 提示词文本。                       |
+| contents.parts.inlineData           | object | 可选     | -                 | 内联数据（如图像）。 |
+| contents.parts.inlineData.mimeType  | string | 可选     | -                 | 数据的 MIME 类型。 |
+| contents.parts.inlineData.data      | string | 可选     | -                 | Base64 编码的数据。                |
+| contents.parts.fileData             | object | 可选     | -                 | 文件数据，支持 snake_case: file_data。 |
+| contents.parts.fileData.mimeType    | string | 可选     | -                 | 文件的 MIME 类型。 |
+| contents.parts.fileData.fileUri     | string | 可选     | -                 | 文件的 URI。 |
 | generationConfig                    | object | 可选     | -                 | 生成配置。                         |
 | generationConfig.responseModalities | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。 |
 
@@ -44,6 +50,7 @@
 ## 示例
 
 ### Gemini 兼容接口
+我们兼容gemini的 `{xxx}/v1beat/models`接口，您可以直接使用官方SDK调用，例如 [python-genai](https://github.com/googleapis/python-genai)
 
 `POST https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent`
 
@@ -83,66 +90,46 @@ curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:
 ##### ** python **
 
 ```python
+from google import genai
+from google.genai import types
+from PIL import Image
+from io import BytesIO
 import os
-import requests
-import json
-import base64
 
-api_key = os.getenv("API_KEY", "<your_api_key>")
 
-url = "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent"
+client = genai.Client(
+    api_key=os.getenv("Modelverse_API_KEY", "<UModelverse_API_KEY>"),  # 您的API_KEY
+    http_options=types.HttpOptions(
+        base_url="https://api.modelverse.cn"
+    ),
+)
 
-payload = json.dumps({
-    "contents": [
-        {
-            "role": "user",
-            "parts": [
-                {
-                    "text": "Create a picture of a nano banana dish in a fancy restaurant with a Gemini theme"
-                }
-            ]
-        }
-    ],
-    "generationConfig": {
-        "responseModalities": [
-            "TEXT",
-            "IMAGE"
-        ]
-    }
-})
+contents = [
+    {
+        "text": "Create a picture of a nano banana dish in a fancy restaurant with a Gemini theme.",
+    },
+]
 
-headers = {
-    'Authorization': f'Bearer {api_key}',
-    'Content-Type': 'application/json'
-}
+generation_config = types.GenerationConfig(
+    response_modalities=["text", "image"],
+)
 
-response = requests.request("POST", url, headers=headers, data=payload)
-response_data = response.json()
+response = client.models.generate_content(
+    model="gemini-2.5-flash-image",
+    contents=contents,
+    config={
+        "response_modalities": ["text", "image"],
+    },
+)
 
-# Extract and save the image from the response
-if "candidates" in response_data:
-    for candidate in response_data["candidates"]:
-        if "content" in candidate and "parts" in candidate["content"]:
-            for part in candidate["content"]["parts"]:
-                if "inlineData" in part:
-                    image_data = part["inlineData"]["data"]
-                    mime_type = part["inlineData"]["mimeType"]
+for part in response.candidates[0].content.parts:
+    if part.text is not None:
+        print(part.text)
+    elif part.inline_data is not None:
+        image = Image.open(BytesIO(part.inline_data.data))
+        image.save("modelverse_generated_image.png")
+)
 
-                    # Decode the base64 string
-                    image_bytes = base64.b64decode(image_data)
-
-                    # Determine the file extension
-                    extension = mime_type.split('/')[-1]
-                    file_name = f"modelverse_generated_image.{extension}"
-
-                    # Save the image to a file
-                    with open(file_name, "wb") as f:
-                        f.write(image_bytes)
-                    print(f"Image saved as {file_name}")
-
-                    # Stop after saving the first image
-                    break
-            break
 ```
 
 <!-- tabs:end -->
@@ -166,8 +153,8 @@ cat <<EOF | curl -X POST \
       "parts": [
         {"text": "Convert this photo to black and white, in a cartoonish style."},
         {
-          "inline_data": {
-            "mime_type": "image/jpeg",
+          "inlineData": {
+            "mimeType": "image/jpeg",
             "data": "$(curl -s https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg | base64 | tr -d '\n')"
           }
         }
@@ -184,71 +171,47 @@ EOF
 ##### ** python **
 
 ```python
+from google import genai
+from google.genai import types
+from PIL import Image
+from io import BytesIO
 import os
-import requests
-import json
-import base64
 
-api_key = os.getenv("API_KEY", "<your_api_key>")
-
-url = "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent"
-
-
-image_url = "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg"
-image_response = requests.get(image_url)
-image_response.raise_for_status()
-image_base64_data = base64.b64encode(image_response.content).decode("utf-8")
-
-
-payload = json.dumps(
-    {
-        "contents": [
-            {
-                "role": "user",
-                "parts": [
-                    {"text": "Convert this photo to black and white, in a cartoonish style."},
-                    {
-                        "inline_data": {
-                            "mime_type": "image/jpeg",
-                            "data": image_base64_data,
-                        }
-                    },
-                ],
-            }
-        ],
-        "generationConfig": {"responseModalities": ["TEXT", "IMAGE"]},
-    }
+client = genai.Client(
+    api_key=os.getenv("Modelverse_API_KEY", "<UModelverse_API_KEY>"),  # 您的API_KEY
+    http_options=types.HttpOptions(
+        base_url="https://api.modelverse.cn"
+    ),
 )
 
-headers = {"Authorization": f"Bearer {api_key}", "Content-Type": "application/json"}
+response = client.models.generate_content(
+    model="gemini-2.5-flash-image",
+    contents=[
+        types.Content(
+            role="user",
+            parts=[
+                types.Part(
+                    text="Convert this photo to black and white, in a cartoonish style."
+                ),
+                types.Part(
+                    file_data=types.FileData(
+                        mime_type="image/jpeg",
+                        file_uri="https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+                    )
+                ),
+            ],
+        )
+    ],
+    config=types.GenerateContentConfig(response_modalities=["TEXT", "IMAGE"]),
+)
 
-response = requests.request("POST", url, headers=headers, data=payload)
-response_data = response.json()
+for part in response.candidates[0].content.parts:
+    if part.text is not None:
+        print(part.text)
+    elif part.inline_data is not None:
+        image = Image.open(BytesIO(part.inline_data.data))
+        image.save("modelverse_generated_image.png")
 
-# Extract and save the image from the response
-if "candidates" in response_data:
-    for candidate in response_data["candidates"]:
-        if "content" in candidate and "parts" in candidate["content"]:
-            for part in candidate["content"]["parts"]:
-                if "inlineData" in part:
-                    image_data = part["inlineData"]["data"]
-                    mime_type = part["inlineData"]["mimeType"]
-
-                    # Decode the base64 string
-                    image_bytes = base64.b64decode(image_data)
-
-                    # Determine the file extension
-                    extension = mime_type.split("/")[-1]
-                    file_name = f"modelverse_generated_image.{extension}"
-
-                    # Save the image to a file
-                    with open(file_name, "wb") as f:
-                        f.write(image_bytes)
-                    print(f"Image saved as {file_name}")
-
-                    # Stop after saving the first image
-                    break
-            break
 ```
 
 <!-- tabs:end -->
