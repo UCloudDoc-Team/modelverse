@@ -10,7 +10,6 @@ UModelverse 平台提供了与 Google Gemini API 兼容的 **Models** 接口，�
 安装 python 语言的 sdk
 
 > 使用 Python 3.9 及更高版本，通过以下 pip 命令安装 google-genai 软件包：
->
 
 ```python
 pip install -q -U google-genai
@@ -116,3 +115,5 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
 
 ## 模型ID说明
 更多受支持的gemini模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
+
+> 更多字段详情，见[Gemini官方文档](https://ai.google.dev/api/models?hl=zh-cn)
