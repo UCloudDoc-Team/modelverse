@@ -20,6 +20,7 @@
   - [错误码](/modelverse/api_doc/error-code.md)
 - 文本生成
   - [OpenAI 兼容](/modelverse/text_api/openai_compatible.md)
+  - [OpenAI Response API 兼容](/modelverse/text_api/response_api.md)
   - [OpenAI 文本接口结构说明](/modelverse/text_api/struct.md)
   - [Gemini 兼容](/modelverse/text_api/gemini_compatible.md)
 - 图片生成
