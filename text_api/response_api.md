@@ -52,4 +52,4 @@ print(response.output_text)
 
 ## 模型ID说明
 
-更多受支持的gemini模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
+更多受支持的openai模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
