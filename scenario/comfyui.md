@@ -109,3 +109,8 @@ travel photography style
 
 **批量制作用**
 - **Multi-inputs版本**: 效率最高
+
+## 常见问题解答
+
+### 关于 import VideoFromFile 报错
+如果您在更新我们的 ComfyUI 插件后遇到 “import VideoFromFile Error” 报错，请将 ComfyUI 升级到最新版本后重试。
