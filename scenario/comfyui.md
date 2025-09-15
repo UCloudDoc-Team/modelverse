@@ -14,6 +14,7 @@ ComfyUI 是一个基于节点流程式界面的 Stable Diffusion GUI，通过将
 4. 重启ComfyUI。
 
 ### 第三步：新建 Modelverse Node 节点
+您可以在左侧节点列表中找到我们开发的自定义插件节点进行添加，或在画布空白处右键，选择“UCLOUD_MODELVERSE”分类下的相关节点进行添加。
 ![custome_nodes](/images/comfyui/custome_nodes.png)
 
 ### 第四步：获取UModelVerse API Key
