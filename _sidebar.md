@@ -41,13 +41,13 @@
 - 最佳实践
 
   - [Claude Code 接入指南](/modelverse/scenario/claudecodeccr.md)
-  - [通过 CLINE 接入 MCP 服务](/modelverse/mcp/MCPServer.md)
+  - [ComfyUI插件接入](/modelverse/scenario/comfyui.md)
   - 常见客户端接入 API
     - [Chatbox](/modelverse/scenario/chatbox.md)
     - [Open WebUI](/modelverse/scenario/open-webui.md)
     - [Dify](/modelverse/scenario/dify.md)
     - [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
-    - [ComfyUI](/modelverse/scenario/comfyui.md)
+  - [通过 CLINE 接入 MCP 服务](/modelverse/mcp/MCPServer.md)
 
 - MCP 说明
 
