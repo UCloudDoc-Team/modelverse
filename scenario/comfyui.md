@@ -13,12 +13,14 @@ ComfyUI 是一个基于节点流程式界面的 Stable Diffusion GUI，通过将
 3. 点击 **Install**。
 4. 重启ComfyUI。
 
-### 第三步：获取UModelVerse API Key
+### 第三步：新建 Modelverse Node 节点
+![custome_nodes](/images/comfyui/custome_nodes.png)
+
+### 第四步：获取UModelVerse API Key
 1. [点击这里获取您的 API Key](https://console.ucloud.cn/modelverse/experience/api-keys)。
 2. 将获取的 API Key 添加到 **Modelverse Client** 节点中。
-
-![api-key-1](/images/comfyui/api_key_1.png)
 ![api-key-2](/images/comfyui/api_key_2.png)
+
 
 ## 快速上手：自动加载工作流
 现在，你的笔记本也能轻松生成在自媒体上爆火的萌宠自拍图像，比如让一只橘猫去巴黎旅行：
