@@ -27,15 +27,38 @@ ComfyUI 是一个基于节点流程式界面的 Stable Diffusion GUI，通过将
 **提示词**：
 > This is an iPhone selfie perspective photograph, orange tabby cat wearing sunglasses, sitting in front of Eiffel Tower in Paris, happy expression, warm sunset lighting, travel photography style.
 
-## 进阶玩法
-### 多图批量处理
+## ModelVerse 核心节点介绍
+ModelVerse 插件不仅支持标准的文生图、图生图，还引入了**文本生成**功能，结合 AI 提示词优化，让您可以在 ComfyUI 中构建更强大的 AI 工作流。
+
+- **Modelverse Client**：配置 API Key 的入口，是所有工作流的起点。
+- **Modelverse Chat**：文本生成节点，可以用于生成、优化、改写提示词。
+- **Modelverse [Model Name] Text2Image**：文生图节点，支持`Flux Kontext Max`和`Flux Kontext Pro`等多种先进模型。
+- **Modelverse [Model Name] T2V/I2V**：视频生成节点，`T2V`支持文生视频，`I2V`支持图生视频，目前支持`Wan-AI`系列模型。
+- **Modelverse [Model Name] Edit**：图像编辑节点，用于对生成图片进行局部优化或风格调整，支持`Step1X Edit`等。
+
+## 文生图 (Text-to-Image)
+使用 ModelVerse 的`Text2Image`节点，可以轻松将文字创意变为高质量图片。
+
+![文生图工作流](/images/comfyui/text2image.png)
+
+## 文生视频 (Text-to-Video)
+通过`T2V`节点，现在可以直接在 ComfyUI 中将文本描述转换为动态视频。
+
+![文生视频工作流](/images/comfyui/text2video.png)
+
+## 高级工作流：文本生成 -> 图像/视频
+这是 ModelVerse 插件的独特优势。您可以先用`Modelverse Chat`节点（如选用`zai-org/glm-4.5`模型）生成或优化提示词，然后将输出的文本直接输入到`Text2Image`或`T2V`节点中，实现全自动的内容创作。
+
+这个工作流极大地提升了创作效率和创意的多样性。
+
+## 多图批量处理
 用 **Flux Kontext Pro (Multi-inputs)** 可以批量生成系列作品：
 ![multi-input](/images/comfyui/multi_input.png)
 
 一次输入，可以同时生成：
 ![multi-output](/images/comfyui/multi_output.png)
 
-### 细节优化：Step1X-Edit的威力
+## 细节优化与图像编辑
 对于不满意的细节，可以用 **Step1X-Edit** 精修：
 
 ```
