@@ -14,7 +14,8 @@ GET https://api.modelverse.cn/v1/models
 
 #### 请求示例
 
-您可以使用 `curl` 命令来调用此接口。请确保将 `{YOUR_API_KEY}` 替换为您自己的 API Key。
+您可以直接使用 `curl` 命令来调用此接口
+> ⚠️注意此接口只会返回文本生成的模型，若需要使用生图模型，请见【图片生成】
 
 ```bash
 curl https://api.modelverse.cn/v1/models \
@@ -75,7 +76,8 @@ GET https://api.modelverse.cn/v1beta/models
 
 #### 请求示例
 
-您可以使用 `curl` 命令来调用此接口。请确保将 `{YOUR_API_KEY}` 替换为您自己的 API Key。
+您可以使用 `curl` 命令来调用此接口。
+> ⚠️注意此接口只会返回支持gemini协议的模型
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1beta/models' \

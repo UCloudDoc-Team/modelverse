@@ -16,15 +16,17 @@ pip install -q -U google-genai
 ```
 
 
-
 ### 示例
 以下示例使用 generateContent 方法，通过`gemini-2.5-flash`模型向 UModelverse API 发送请求。
 
 > 请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key，获取 [API Key](https://console.ucloud.cn/modelverse/experience/api-keys)。
->
+
 
 #### 非流式调用
 您可以使用以下代码进行调用。请注意，我们需要通过 `http_options` 来指定 Modelverse 的 API 地址。
+
+<tabs>
+<tab name="python">
 
 ```python
 from google import genai
@@ -50,6 +52,9 @@ print(response.text)
 
 ```
 
+</tab>
+<tab name="curl">
+
 ```bash
 curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generateContent" \
     -H "x-goog-api-key: $MODELVERSE_API_KEY" \
@@ -73,9 +78,15 @@ curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generate
         }'
 ```
 
+</tab>
+</tabs>
 
 
 #### 流式调用
+
+<tabs>
+<tab name="python">
+
 ```python
 from google import genai
 from google.genai import types
@@ -95,6 +106,9 @@ for chunk in response:
 
 ```
 
+</tab>
+<tab name="curl">
+
 ```bash
 curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?alt=sse" \
     -H "Authorization: Bearer $MODELVERSE_API_KEY" \
@@ -113,8 +127,11 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
     }'
 ```
 
+</tab>
+</tabs>
+
 ## 模型ID说明
-更多受支持的gemini模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
+更多受支持的gemini模型，请参考【获取模型列表】
 
 
 > 更多字段详情，见[Gemini官方文档](https://ai.google.dev/api/models?hl=zh-cn)

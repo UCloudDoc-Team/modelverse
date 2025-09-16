@@ -14,33 +14,22 @@ UModelverse 平台提供了与 OpenAI Response API 兼容的接口，开发者�
 pip install openai
 ```
 
-### 配置 API
-
-在使用 Response API 之前，您需要：
-
-1. 获取 [API Key](https://console.ucloud.cn/modelverse/experience/api-keys)
-2. 将 BASE_URL 设置为 `https://api.modelverse.cn/v1`
-
-## 示例代码
-
-### 基础调用
+### 调用示例
 
 以下示例展示了如何使用 Response API 进行基本的对话：
 
 ```python
 from openai import OpenAI
+import os
 
 API_SECRET_KEY = "<YOUR_MODELVERSE_API_KEY>"
-BASE_URL = "https://api.modelverse.cn/v1"
 
 client = OpenAI(
-    api_key=API_SECRET_KEY,
-    base_url=BASE_URL
+    api_key=os.getenv("MODELVERSE_API_KEY", "<YOUR_MODELVERSE_API_KEY>"),
+    base_url="https://api.modelverse.cn/v1/",
 )
 
-input_list = [
-    {"role": "user", "content": "解释一下人工智能是如何工作的？"}
-]
+input_list = [{"role": "user", "content": "解释一下人工智能是如何工作的？"}]
 
 response = client.responses.create(
     model="openai/gpt-4.1",
@@ -48,8 +37,9 @@ response = client.responses.create(
 )
 
 print(response.output_text)
+
 ```
 
 ## 模型ID说明
 
-更多受支持的openai模型，请参考[获取模型ID](/modelverse/api_doc/models.md)
+更多受支持的openai模型，请参考【获取模型列表】

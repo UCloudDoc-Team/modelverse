@@ -6,9 +6,12 @@ UModelverse 平台提供了与 OpenAI API 兼容的接口，开发者可以使�
 
 您可以使用 `curl` 命令或任何支持 OpenAI API 的客户端库来调用 Modelverse API。
 
-### Curl 示例
+### 调用示例
 
-下面是一个使用 `curl` 调用聊天接口的示例：
+请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key。
+
+<tabs>
+<tab name="curl">
 
 ```bash
 curl https://api.modelverse.cn/v1/chat/completions \
@@ -30,32 +33,34 @@ curl https://api.modelverse.cn/v1/chat/completions \
   }'
 ```
 
-请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key。
-
-### Python 示例
+</tab>
+<tab name="python">
 
 ```python
 from openai import OpenAI
+import os
 
 client = OpenAI(
-    api_key="YOUR_MODELVERSE_API_KEY",
-    base_url="https://api.modelverse.cn/v1/"
+    api_key=os.getenv("MODELVERSE_API_KEY", "<YOUR_MODELVERSE_API_KEY>"),
+    base_url="https://api.modelverse.cn/v1/",
 )
 
 chat_completion = client.chat.completions.create(
     messages=[
         {
             "role": "user",
-            "content": "Say this is a test",
+            "content": "Say hello world",
         }
     ],
     model="{model_name}",
 )
 
 print(chat_completion.choices[0].message.content)
+
 ```
 
-### Node.js 示例
+</tab>
+<tab name="node.js">
 
 ```javascript
 const OpenAI = require("openai");
@@ -76,3 +81,6 @@ async function main() {
 
 main();
 ```
+
+</tab>
+</tabs>
