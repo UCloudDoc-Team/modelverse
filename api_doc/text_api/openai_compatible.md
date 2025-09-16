@@ -10,6 +10,95 @@ UModelverse 平台提供了与 OpenAI API 兼容的接口，开发者可以使�
 
 请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key。
 
+
+ <!-- tabs:start -->
+#### ** curl **
+```bash
+curl https://api.modelverse.cn/v1/chat/completions \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $MODELVERSE_API_KEY" \
+  -d '{
+    "model": "{model_name}",
+    "messages": [
+      {
+        "role": "system",
+        "content": "You are a helpful assistant."
+      },
+      {
+        "role": "user",
+        "content": "Hello!"
+      }
+    ],
+    "stream": true
+  }'
+```
+    
+#### ** python **
+```python
+from openai import OpenAI
+import os
+
+client = OpenAI(
+    api_key=os.getenv("MODELVERSE_API_KEY", "<YOUR_MODELVERSE_API_KEY>"),
+    base_url="https://api.modelverse.cn/v1/",
+)
+
+chat_completion = client.chat.completions.create(
+    messages=[
+        {
+            "role": "user",
+            "content": "Say hello world",
+        }
+    ],
+    model="{model_name}",
+)
+
+print(chat_completion.choices[0].message.content)
+
+```
+    
+#### ** node.js **
+```javascript
+const OpenAI = require("openai");
+
+const openai = new OpenAI({
+  apiKey: "YOUR_MODELVERSE_API_KEY",
+  baseURL: "https://api.modelverse.cn/v1/",
+});
+
+async function main() {
+  const chatCompletion = await openai.chat.completions.create({
+    messages: [{ role: "user", content: "Say this is a test" }],
+    model: "{model_name}",
+  });
+
+  console.log(chatCompletion.choices[0].message.content);
+}
+
+main();
+```
+<!-- tabs:end -->
+
+
+
+<!-- tabs:start -->
+
+<!-- tab:English -->
+
+Hello!
+
+<!-- tab:French -->
+
+Bonjour!
+
+<!-- tab:Italian -->
+
+Ciao!
+
+<!-- tabs:end -->
+Copy to clipboardErrorCopied
+
+
 <tabs>
 <tab name="curl">
 
