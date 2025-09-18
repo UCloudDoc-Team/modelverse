@@ -15,7 +15,7 @@ export MODELVERSE_API_KEY=<YOUR_API_KEY_HERE>
 ## 第三步：Chat API 调用
 
 ## 请求
-### LLM model id list
+## LLM model id list
 | 厂商/系列         | 模型 ID |
 |------------------|--------------------------------------------------|
 | **OpenAI**       | openai/gpt-4o |
