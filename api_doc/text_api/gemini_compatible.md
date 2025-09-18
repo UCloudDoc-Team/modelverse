@@ -25,8 +25,8 @@ pip install -q -U google-genai
 #### 非流式调用
 您可以使用以下代码进行调用。请注意，我们需要通过 `http_options` 来指定 Modelverse 的 API 地址。
 
-<tabs>
-<tab name="python">
+ <!-- tabs:start -->
+#### ** python **
 
 ```python
 from google import genai
@@ -52,8 +52,7 @@ print(response.text)
 
 ```
 
-</tab>
-<tab name="curl">
+#### ** curl **
 
 ```bash
 curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generateContent" \
@@ -77,15 +76,13 @@ curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generate
           }
         }'
 ```
-
-</tab>
-</tabs>
+<!-- tabs:end -->
 
 
 #### 流式调用
 
-<tabs>
-<tab name="python">
+ <!-- tabs:start -->
+#### ** python **
 
 ```python
 from google import genai
@@ -106,8 +103,7 @@ for chunk in response:
 
 ```
 
-</tab>
-<tab name="curl">
+#### ** curl **
 
 ```bash
 curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?alt=sse" \
@@ -126,9 +122,7 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?a
       ]
     }'
 ```
-
-</tab>
-</tabs>
+<!-- tabs:end -->
 
 ## 模型ID说明
 更多受支持的gemini模型，请参考【获取模型列表】

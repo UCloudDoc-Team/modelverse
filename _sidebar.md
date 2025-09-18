@@ -14,9 +14,9 @@
   - [快速开始](/modelverse/api_doc/quick-start.md)
   - 通用说明
     - [认证鉴权](/modelverse/api_doc/common/certificate.md)
-    - [获取模型列表](/modelverse/api_doc/common/models.md)
     - [错误码](/modelverse/api_doc/common/error-code.md)
   - 文本生成
+    - [模型列表](/modelverse/api_doc/text_api/models.md)
     - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
     - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
@@ -40,19 +40,17 @@
 
 - 最佳实践
 
-  - [Claude Code 接入指南](/modelverse/best_practice/scenario/claudecodeccr.md)
+  - [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
   - [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
   - 常见客户端接入 API
     - [Chatbox](/modelverse/best_practice/scenario/chatbox.md)
     - [Open WebUI](/modelverse/best_practice/scenario/open-webui.md)
     - [Dify](/modelverse/best_practice/scenario/dify.md)
     - [Cherry-Studio](/modelverse/best_practice/scenario/cherry-studio.md)
-  - [通过 CLINE 接入 MCP 服务](/modelverse/best_practice/mcp/MCPServer.md)
-
-- MCP 说明
-
-  - [MCP 简介](/modelverse/best_practice/mcp/mcpgeneral.md)
-  - [通过 UCloud API 实现 MCP Client](/modelverse/best_practice/mcp/MCPClient.md)
+  - MCP 说明
+    - [MCP 简介](/modelverse/best_practice/mcp/mcpgeneral.md)
+    - [通过 CLINE 接入 MCP 服务](/modelverse/best_practice/mcp/MCPServer.md)
+    - [通过 UCloud API 实现 MCP Client](/modelverse/best_practice/mcp/MCPClient.md)
 
 - [模型广场](/modelverse/guide/model-marketplace.md)
 - [模型管理](/modelverse/guide/model-manage.md)

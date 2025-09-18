@@ -15,48 +15,46 @@
 
 - [快速开始](/modelverse/api_doc/quick-start.md)
 - 通用说明
-  - [认证鉴权](/modelverse/api_doc/certificate.md)
-  - [获取模型列表](/modelverse/api_doc/models.md)
-  - [错误码](/modelverse/api_doc/error-code.md)
+  - [认证鉴权](/modelverse/api_doc/common/certificate.md)
+  - [错误码](/modelverse/api_doc/common/error-code.md)
 - 文本生成
-  - [OpenAI 兼容](/modelverse/text_api/openai_compatible.md)
-  - [OpenAI Response API 兼容](/modelverse/text_api/response_api.md)
-  - [OpenAI 文本接口结构说明](/modelverse/text_api/struct.md)
-  - [Gemini 兼容](/modelverse/text_api/gemini_compatible.md)
+  - [模型列表](/modelverse/api_doc/text_api/models.md)
+  - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
+  - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
+  - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
+  - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
 - 图片生成
-  - [gemini-2.5-flash-image](/modelverse/image_api/gemini-2.5-flash-image.md)
-  - [black-forest-labs/flux.1-dev](/modelverse/image_api/black-forest-labs-flux.1-dev.md)
-  - [black-forest-labs/flux-kontext-pro](/modelverse/image_api/black-forest-labs-flux-kontext-pro.md)
-  - [black-forest-labs/flux-kontext-pro/multi](/modelverse/image_api/black-forest-labs-flux-kontext-pro-multi.md)
-  - [black-forest-labs/flux-kontext-pro/text-to-image](/modelverse/image_api/black-forest-labs-flux-kontext-pro-text-to-image.md)
-  - [stepfun-ai/step1x-edit](/modelverse/image_api/stepfun-ai-step1x-edit.md)
-  - [black-forest-labs/flux-kontext-max](/modelverse/image_api/black-forest-labs-flux-kontext-max.md)
-  - [black-forest-labs/flux-kontext-max/multi](/modelverse/image_api/black-forest-labs-flux-kontext-max-multi.md)
-  - [black-forest-labs/flux-kontext-max/text-to-image](/modelverse/image_api/black-forest-labs-flux-kontext-max-text-to-image.md)
-  - [Qwen/Qwen-Image-Edit](/modelverse/image_api/Qwen-Qwen-Image-Edit.md)
-  - [Qwen/Qwen-Image](/modelverse/image_api/Qwen-Qwen-Image.md)
-  - [gpt-image-1](/modelverse/image_api/gpt-image-1.md)
+  - [gemini-2.5-flash-image ( nano banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
+  - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
+  - [black-forest-labs/flux-kontext-pro](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro.md)
+  - [black-forest-labs/flux-kontext-pro/multi](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro-multi.md)
+  - [black-forest-labs/flux-kontext-pro/text-to-image](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro-text-to-image.md)
+  - [stepfun-ai/step1x-edit](/modelverse/api_doc/image_api/stepfun-ai-step1x-edit.md)
+  - [black-forest-labs/flux-kontext-max](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-max.md)
+  - [black-forest-labs/flux-kontext-max/multi](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-max-multi.md)
+  - [black-forest-labs/flux-kontext-max/text-to-image](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-max-text-to-image.md)
+  - [Qwen/Qwen-Image-Edit](/modelverse/api_doc/image_api/Qwen-Qwen-Image-Edit.md)
+  - [Qwen/Qwen-Image](/modelverse/api_doc/image_api/Qwen-Qwen-Image.md)
+  - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
 - 视频生成
-  - [Wan-AI/Wan2.2-I2V](/modelverse/video_api/Wan-AI-Wan2.2-I2V.md)
-  - [Wan-AI/Wan2.2-T2V](/modelverse/video_api/Wan-AI-Wan2.2-T2V.md)
+  - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
+  - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
 
 ## 最佳实践
 
-- [Claude Code 接入指南](/modelverse/scenario/claudecodeccr.md)
-- [通过 CLINE 接入 MCP 服务](/modelverse/mcp/MCPServer.md)
+- [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
+- [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
 - 常见客户端接入 API
-  - [Chatbox](/modelverse/scenario/chatbox.md)
-  - [Open WebUI](/modelverse/scenario/open-webui.md)
-  - [Dify](/modelverse/scenario/dify.md)
-  - [Cherry-Studio](/modelverse/scenario/cherry-studio.md)
-  - [ComfyUI](/modelverse/scenario/comfyui.md)
+  - [Chatbox](/modelverse/best_practice/scenario/chatbox.md)
+  - [Open WebUI](/modelverse/best_practice/scenario/open-webui.md)
+  - [Dify](/modelverse/best_practice/scenario/dify.md)
+  - [Cherry-Studio](/modelverse/best_practice/scenario/cherry-studio.md)
+- MCP 说明
+  - [MCP 简介](/modelverse/best_practice/mcp/mcpgeneral.md)
+  - [通过 CLINE 接入 MCP 服务](/modelverse/best_practice/mcp/MCPServer.md)
+  - [通过 UCloud API 实现 MCP Client](/modelverse/best_practice/mcp/MCPClient.md)
 
-## MCP 说明
-
-- [MCP 简介](/modelverse/mcp/mcpgeneral.md)
-- [通过 UCloud API 实现 MCP Client](/modelverse/mcp/MCPClient.md)
-
-## 控制台其他功能
+## 控制台功能
 
 - [模型广场](/modelverse/guide/model-marketplace.md)
 - [模型管理](/modelverse/guide/model-manage.md)
