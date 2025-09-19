@@ -33,22 +33,20 @@ from google import genai
 from google.genai import types
 
 client = genai.Client(
-    api_key="<MODELVERSE_API_KEY>",
-    http_options=types.HttpOptions(
-        base_url="https://api.modelverse.cn"
-    ),
+   api_key="<MODELVERSE_API_KEY>",
+   http_options=types.HttpOptions(
+       base_url="https://api.modelverse.cn"
+   ),
 )
 
 response = client.models.generate_content(
-    model="gemini-2.5-flash",
-    contents=[
-        {"text": "How does AI work?"},
-    ],
-    config=types.GenerateContentConfig(
-        thinking_config=types.ThinkingConfig(
-            thinking_budget=0
-        ),
-    ),
+   model="gemini-2.5-flash",
+   contents=[
+       {"text": "How does AI work?"},
+   ],
+   config=types.GenerateContentConfig(
+       thinking_config=types.ThinkingConfig(thinking_budget=0),
+   ),
 )
 print(response.text)
 ```
