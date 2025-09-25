@@ -39,6 +39,8 @@
 - 视频生成
   - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
+  - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
+  - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
 
 ## 最佳实践
 
