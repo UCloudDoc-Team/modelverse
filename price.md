@@ -31,16 +31,16 @@
 
 **生图模型 API 定价**
 
-于 2025 年 6 月 30 日开始收费。免费额度：根据不同的模型区分免费次数，详情请参考[图片生成 API](https://docs.ucloud.cn/modelverse/api_doc/image-generation)
+于 2025 年 6 月 30 日开始收费。免费额度：免费5张图片/模型，详情请参考[图片生成 API](https://docs.ucloud.cn/modelverse/api_doc/image-generation)
 
 | 模型名称                    | 价格（元/张） | 分类     |
 | --------------------------- | ------------- | -------- |
 | Flux Kontext Pro Text2Image | 0.35          | 文生图   |
 | Flux Kontext Max Text2Image | 0.70          | 文生图   |
 | Flux Dev                    | 0.10          | 文生图   |
-| Step1X Edit                 | 0.30          | 图片编辑 |
-| Flux Kontext Pro            | 0.35          | 图片编辑 |
-| Flux Kontext Max            | 0.70          | 图片编辑 |
+| Step1X Edit                 | 0.30          | 图生图 |
+| Flux Kontext Pro            | 0.35          | 图生图 |
+| Flux Kontext Max            | 0.70          | 图生图 |
 | Flux Kontext Max Multi      | 0.70          | 多图编辑 |
 | Flux Kontext Pro Multi      | 0.35          | 多图编辑 |
 
@@ -50,9 +50,17 @@
 
 **视频模型 API 定价**
 
+## 视频生成 API 定价
+
 | 模型名称          | 分辨率 | 价格（元/秒） | 分类     |
 | ----------------- | ------ | ------------- | -------- |
 | Wan-AI/Wan2.2-I2V | 720p   | 0.35          | 图生视频 |
 | Wan-AI/Wan2.2-I2V | 480p   | 0.18          | 图生视频 |
 | Wan-AI/Wan2.2-T2V | 720p   | 0.35          | 文生视频 |
 | Wan-AI/Wan2.2-T2V | 480p   | 0.18          | 文生视频 |
+| Wan-AI/Wan2.5-I2V | 1080p   |1.095          | 图生视频 |
+| Wan-AI/Wan2.5-I2V | 720p   | 0.73          | 图生视频 |
+| Wan-AI/Wan2.5-I2V | 480p   | 0.365         | 图生视频 |
+| Wan-AI/Wan2.2-T2V | 1080p  | 1.095          | 文生视频 |
+| Wan-AI/Wan2.2-T2V | 720p   | 0.73          | 文生视频 |
+| Wan-AI/Wan2.2-T2V | 480p   | 0.365          | 文生视频 |
