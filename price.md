@@ -28,6 +28,7 @@
 | GLM-4.5                        | tokens 后付费 | 输入 2 元/百万 tokens，输出 8/百万 tokens      |
 | GLM-4.5V                       | tokens 后付费 | 输入 2 元/百万 tokens，输出 6/百万 tokens      |
 | DeepSeek-V3.1                  | tokens 后付费 | 输入 4 元/百万 tokens，输出 12/百万 tokens     |
+| DeepSeek-V3.2                  | tokens 后付费 | 输入 2 元/百万 tokens，输出 3/百万 tokens     |
 
 **生图模型 API 定价**
 
