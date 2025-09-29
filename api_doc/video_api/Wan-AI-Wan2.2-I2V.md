@@ -18,7 +18,7 @@
 | input.prompt          | string | 是       | 提示词，用于指导视频生成                       |
 | input.negative_prompt | string | 否       | 反向提示词，用于限制不希望出现的内容           |
 | parameters.resolution | string | 否       | 生成视频的分辨率档位，当前仅支持`720P`、`480P` |
-| parameters.duration   | int    | 否       | 视频生成时长（秒），当前固定为`5`              |
+| parameters.duration   | int    | 否       | 视频生成时长（秒），支持`5` `8`               |
 | parameters.seed       | int    | 否       | 随机数种子，范围`[0, 2147483647]`              |
 
 ### 请求示例
