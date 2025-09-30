@@ -36,19 +36,19 @@ curl https://api.modelverse.cn/v1/models \
       "created": 1756119051,
       "id": "Wan-AI/Wan2.2-I2V",
       "object": "model",
-      "owned_by": "Uloud_UModelverse"
+      "owned_by": "UCloud_UModelverse"
     },
     {
       "created": 1756119051,
       "id": "Wan-AI/Wan2.2-T2V",
       "object": "model",
-      "owned_by": "Uloud_UModelverse"
+      "owned_by": "UCloud_UModelverse"
     },
     {
       "created": 1755859769,
       "id": "openai/gpt-4.1",
       "object": "model",
-      "owned_by": "Uloud_UModelverse"
+      "owned_by": "UCloud_UModelverse"
     }
   ],
   "object": "list"
@@ -57,12 +57,12 @@ curl https://api.modelverse.cn/v1/models \
 
 #### 响应体参数说明
 
-| 参数 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| `id` | string | 模型的唯一标识符。 |
-| `object` | string | 对象类型，此处恒为 `model`。 |
-| `created` | integer | 模型创建时间的 Unix 时间戳。 |
-| `owned_by` | string | 模型所有者。 |
+| 参数       | 类型    | 描述                         |
+| :--------- | :------ | :--------------------------- |
+| `id`       | string  | 模型的唯一标识符。           |
+| `object`   | string  | 对象类型，此处恒为 `model`。 |
+| `created`  | integer | 模型创建时间的 Unix 时间戳。 |
+| `owned_by` | string  | 模型所有者。                 |
 
 ## Gemini 兼容格式
 
@@ -136,13 +136,13 @@ curl --location 'https://api.modelverse.cn/v1beta/models' \
 
 #### 响应体参数说明
 
-| 参数 | 类型 | 描述 |
-| :--- | :--- | :--- |
-| `name` | string | 模型的完整资源名称。 |
-| `baseModelId` | string | 基础模型的 ID。 |
-| `version` | string | 模型版本号。 |
-| `displayName` | string | 模型的显示名称。 |
-| `description` | string | 模型的描述信息。 |
-| `inputTokenLimit` | integer | 输入 Token 的最大限制。 |
+| 参数               | 类型    | 描述                    |
+| :----------------- | :------ | :---------------------- |
+| `name`             | string  | 模型的完整资源名称。    |
+| `baseModelId`      | string  | 基础模型的 ID。         |
+| `version`          | string  | 模型版本号。            |
+| `displayName`      | string  | 模型的显示名称。        |
+| `description`      | string  | 模型的描述信息。        |
+| `inputTokenLimit`  | integer | 输入 Token 的最大限制。 |
 | `outputTokenLimit` | integer | 输出 Token 的最大限制。 |
-| `supportedActions` | array | 模型支持的操作列表。 |
+| `supportedActions` | array   | 模型支持的操作列表。    |
