@@ -11,24 +11,34 @@
 
 于 2025 年 3 月 31 日开始收费。免费额度：50 万 tokens，额度使用完后，根据 token 使用情况按量后付费。
 
-| **模型名称**                   | **计费方式**  | **计费说明**                                   |
-| ------------------------------ | ------------- | ---------------------------------------------- |
-| deepseek-ai/DeepSeek-R1        | tokens 后付费 | 输入 4 元/百万 tokens，输出 16/百万 tokens     |
-| deepseek-ai/DeepSeek-V3        | tokens 后付费 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens   |
-| deepseek-ai/DeepSeek-Prover-V2 | tokens 后付费 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
-| Qwen/QwQ-32B                   | tokens 后付费 | 输入 2 元/百万 tokens，输出 6 元/百万 tokens   |
-| Qwen/Qwen3-235B-A22B           | tokens 后付费 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens   |
-| Qwen3-Coder                    | tokens 后付费 | 输入 4 元/百万 tokens，输出 16/百万 tokens     |
-| Qwen2.5-VL-72B-Instruct        | tokens 后付费 | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
-| Kimi-K2-Instruct               | tokens 后付费 | 输入 4 元/百万 tokens，输出 16/百万 tokens     |
-| ERNIE-X1-Turbo-32K             | tokens 后付费 | 输入 1 元/百万 tokens，输出 4/百万 tokens      |
-| ERNIE-4.5-Turbo-128K           | tokens 后付费 | 输入 0.8 元/千 tokens，输出 0.32/千 tokens     |
-| ERNIE-4.5-Turbo-VL-32K         | tokens 后付费 | 输入 3 元/百万 tokens，输出 9/百万 tokens      |
-| DeepSeek-R1-Distill-Llama-70B  | tokens 后付费 | 输入 1 元/百万 tokens，输出 3/百万 tokens      |
-| GLM-4.5                        | tokens 后付费 | 输入 2 元/百万 tokens，输出 8/百万 tokens      |
-| GLM-4.5V                       | tokens 后付费 | 输入 2 元/百万 tokens，输出 6/百万 tokens      |
-| DeepSeek-V3.1                  | tokens 后付费 | 输入 4 元/百万 tokens，输出 12/百万 tokens     |
-| DeepSeek-V3.2                  | tokens 后付费 | 输入 2 元/百万 tokens，输出 3/百万 tokens     |
+| 厂商 | 模型 | 价格 |
+|------|------|------|
+| deepseek-ai | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+|              | DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              | DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
+|              | DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
+|              | DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
+|              | DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
+|              | DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
+| Qwen         | QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+|              | Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              | Qwen3-Coder | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+|              | Qwen3-32B |输入 1 元/百万 tokens，输出 4 元/百万 tokens  |
+|              | Qwen3-30B-A3B | 输入 3 元/百万 tokens，输出 12 元/百万 tokens |
+| qwen         | qwen2.5-vl-72b-instruct | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
+| moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+|              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
+| baidu        | ernie-x1-turbo-32k | 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
+|              | ernie-4.5-turbo-128k | 输入 0.8 元/千 tokens，输出 0.32 元/千 tokens |
+|              | ernie-4.5-turbo-vl-32k | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
+| zai-org      | glm-4.5 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              | glm-4.5v | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+| ByteDance    | doubao-seed-1.6 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
+|              | doubao-seed-1.6-thinking | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
+|              | doubao-1.5-thinking-vision-pro | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
+|              | doubao-1-5-pro-32k-250115 |输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
+|              | doubao-1-5-pro-256k-250115 | 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
+
 
 **生图模型 API 定价**
 
