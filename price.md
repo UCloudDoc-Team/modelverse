@@ -22,9 +22,13 @@
 |              | DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
 | Qwen         | QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
 |              | Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              | Qwen3-Coder | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
-|              | Qwen3-32B |输入 1 元/百万 tokens，输出 4 元/百万 tokens  |
-|              | Qwen3-30B-A3B | 输入 3 元/百万 tokens，输出 12 元/百万 tokens |
+|              |Qwen3-235B-A22B-Thinking-2507 | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
+|              | Qwen3-Coder | 输入 9 元/百万 tokens，输出 36 元/百万 tokens |
+|              | Qwen3-32B |输入 2 元/百万 tokens，输出 8 元/百万 tokens  |
+|              | Qwen3-32B-Thinking |输入 2 元/百万 tokens，输出 20 元/百万 tokens  |
+|              | Qwen3-30B-A3B | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens |
+|              | Qwen3-30B-A3B-Thinking-2507 | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
+|              | qwen2.5-vl-72b-instruct | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
 |              | qwen2.5-vl-72b-instruct | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
 | moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
