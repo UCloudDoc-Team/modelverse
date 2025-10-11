@@ -25,7 +25,7 @@
 |              | Qwen3-Coder | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | Qwen3-32B |输入 1 元/百万 tokens，输出 4 元/百万 tokens  |
 |              | Qwen3-30B-A3B | 输入 3 元/百万 tokens，输出 12 元/百万 tokens |
-| qwen         | qwen2.5-vl-72b-instruct | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
+|              | qwen2.5-vl-72b-instruct | 输入 16 元/百万 tokens，输出 48 元/百万 tokens |
 | moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
 | baidu        | ernie-x1-turbo-32k | 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
