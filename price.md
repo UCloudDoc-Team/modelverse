@@ -42,6 +42,9 @@
 |              | doubao-1.5-thinking-vision-pro | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
 |              | doubao-1-5-pro-32k-250115 |输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
 |              | doubao-1-5-pro-256k-250115 | 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
+| StreamLake   |kat-coder-32k | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens |
+|              |kat-coder-128k | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens |
+|              |kat-coder-256k | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens |
 
 
 **生图模型 API 定价**
