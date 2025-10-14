@@ -13,14 +13,14 @@
 
 | 厂商 | 模型 | 价格 |
 |------|------|------|
-| deepseek-ai | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+| deepseek | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
 |              | DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
 |              | DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
 |              | DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
 |              | DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
-| Qwen         | QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+| qwen         | QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
 |              | Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              |Qwen3-235B-A22B-Thinking-2507 | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
 |              | Qwen3-Coder | 输入 9 元/百万 tokens，输出 36 元/百万 tokens |
@@ -37,12 +37,12 @@
 |              | ernie-4.5-turbo-vl-32k | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
 | zai-org      | glm-4.5 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | glm-4.5v | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
-| ByteDance    | doubao-seed-1.6 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
+| bytedance    | doubao-seed-1.6 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
 |              | doubao-seed-1.6-thinking | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
 |              | doubao-1.5-thinking-vision-pro | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
 |              | doubao-1-5-pro-32k-250115 |输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
 |              | doubao-1-5-pro-256k-250115 | 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
-| StreamLake   |kat-coder-32k | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens |
+| streamlake   |kat-coder-32k | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens |
 |              |kat-coder-128k | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens |
 |              |kat-coder-256k | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens |
 
