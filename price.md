@@ -37,6 +37,7 @@
 |              | ernie-4.5-turbo-vl-32k | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
 | zai-org      | glm-4.5 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | glm-4.5v | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+|              | glm-4.6v | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 | bytedance    | doubao-seed-1.6 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
 |              | doubao-seed-1.6-thinking | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
 |              | doubao-1.5-thinking-vision-pro | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
