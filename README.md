@@ -24,7 +24,6 @@
   - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
   - thinking思考功能开关
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
-    - [DeepSeek V3.1模型思考开关](/modelverse/api_doc/text_api/thinking/deepseek.md)
   - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
 - 图片生成
   - [gemini-2.5-flash-image ( nano banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
@@ -40,6 +39,10 @@
   - [Qwen/Qwen-Image](/modelverse/api_doc/image_api/Qwen-Qwen-Image.md)
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
 - 视频生成
+  - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
+  - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
+  - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
+  - [OpenAI/Sora2-I2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V-Pro.md)
   - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
   - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
