@@ -79,6 +79,12 @@
 | Wan-AI/Wan2.5-I2V | 1080p   |1.095          | 图生视频 |
 | Wan-AI/Wan2.5-I2V | 720p   | 0.73          | 图生视频 |
 | Wan-AI/Wan2.5-I2V | 480p   | 0.365         | 图生视频 |
-| Wan-AI/Wan2.2-T2V | 1080p  | 1.095          | 文生视频 |
-| Wan-AI/Wan2.2-T2V | 720p   | 0.73          | 文生视频 |
-| Wan-AI/Wan2.2-T2V | 480p   | 0.365          | 文生视频 |
+| Wan-AI/Wan2.5-T2V | 1080p  | 1.095          | 文生视频 |
+| Wan-AI/Wan2.5-T2V | 720p   | 0.73          | 文生视频 |
+| Wan-AI/Wan2.5-T2V | 480p   | 0.365          | 文生视频 |
+|openai/sora-2/text-to-video| 720p  |0.71 | 文生视频 |
+|openai/sora-2/text-to-video-pro| 720p  |2.14 | 文生视频 |
+|openai/sora-2/text-to-video-pro| 1080p  |3.56 | 文生视频 |
+|openai/sora-2/image-to-video| 720p  |0.71 |  图生视频 |
+|openai/sora-2/image-to-video-pro| 720p  |2.14 |  图生视频 |
+|openai/sora-2/image-to-video-pro| 1080p  |3.56 |  图生视频 |
