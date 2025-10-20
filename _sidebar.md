@@ -20,8 +20,7 @@
     - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
     - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
-    - thinking思考功能开关
-      - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
+    - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
     - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
   - 图片生成
     - [gemini-2.5-flash-image ( nano banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
