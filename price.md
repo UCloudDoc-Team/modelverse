@@ -13,7 +13,8 @@
 
 | 厂商 | 模型 | 价格 |
 |------|------|------|
-| deepseek | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+| deepseek| DeepSeek-R1 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens | 
+|              | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
 |              | DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
