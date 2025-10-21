@@ -32,7 +32,7 @@
 | moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
 | baidu        | ernie-x1-turbo-32k | 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
-|              | ernie-4.5-turbo-128k | 输入 0.8 元/千 tokens，输出 0.32 元/千 tokens |
+|              | ernie-4.5-turbo-128k | 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
 |              | ernie-4.5-turbo-vl-32k | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
 | zai-org      | glm-4.5 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | glm-4.5v | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
