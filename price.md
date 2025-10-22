@@ -18,6 +18,7 @@
 |              | DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              | DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
 |              | DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
+|              | DeepSeek-V3.1-Think |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
 |              | DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
 |              | DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
 |              | DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
@@ -30,6 +31,8 @@
 |              | Qwen3-30B-A3B | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens |
 |              | Qwen3-30B-A3B-Thinking-2507 | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
 |              | qwen2.5-vl-72b-instruct | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens |
+|              | Qwen3-VL-235B-A22B-Instruct | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              | Qwen3-VL-235B-A22B-Thinking | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
 | moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
 | baidu        | ernie-x1-turbo-32k | 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
@@ -62,6 +65,8 @@
 | Flux Kontext Max            | 0.70          | 图生图 |
 | Flux Kontext Max Multi      | 0.70          | 多图编辑 |
 | Flux Kontext Pro Multi      | 0.35          | 多图编辑 |
+| Qwen-Image|0.25|文生图|
+| Qwen-Image-Edit|0.3|图生图 |
 
 | **模型名称**           | **计费方式**  | **计费说明**                                       |
 | ---------------------- | ------------- | -------------------------------------------------- |
