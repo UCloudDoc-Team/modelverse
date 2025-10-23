@@ -13,39 +13,39 @@
 
 | 厂商 | 模型 | 价格 |
 |------|------|------|
-| deepseek| DeepSeek-R1 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens | 
-|              | DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
-|              | DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              | DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
-|              | DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
-|              | DeepSeek-V3.1-Think |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
-|              | DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
-|              | DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
-|              | DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
-| qwen         | QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
-|              | Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+| deepseek     |deepseek-ai/DeepSeek-R1 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens | 
+|              |deepseek-ai/DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+|              |deepseek-ai/DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              |deepseek-ai/DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
+|              |deepseek-ai/DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
+|              |deepseek-ai/DeepSeek-V3.1-Think |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
+|              |deepseek-ai/DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
+|              |deepseek-ai/DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
+|              |deepseek-ai/DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
+| qwen         |Qwen/QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+|              |Qwen/Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
 |              |Qwen3-235B-A22B-Thinking-2507 | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
-|              | Qwen3-Coder | 输入 9 元/百万 tokens，输出 36 元/百万 tokens |
-|              | Qwen3-32B |输入 2 元/百万 tokens，输出 8 元/百万 tokens  |
+|              |Qwen/Qwen3-Coder| 输入 9 元/百万 tokens，输出 36 元/百万 tokens |
+|              |Qwen/Qwen3-32B |输入 2 元/百万 tokens，输出 8 元/百万 tokens  |
 |              | Qwen3-32B-Thinking |输入 2 元/百万 tokens，输出 20 元/百万 tokens  |
-|              | Qwen3-30B-A3B | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens |
+|              |Qwen/Qwen3-30B-A3B | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens |
 |              | Qwen3-30B-A3B-Thinking-2507 | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
-|              | qwen2.5-vl-72b-instruct | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens |
-|              | Qwen3-VL-235B-A22B-Instruct | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              | Qwen3-VL-235B-A22B-Thinking | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
-| moonshotai   | Kimi-K2-Instruct | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
-|              | Kimi-K2-Instruct-0905 |输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
-| baidu        | ernie-x1-turbo-32k | 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
-|              | ernie-4.5-turbo-128k | 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
-|              | ernie-4.5-turbo-vl-32k | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
-| zai-org      | glm-4.5 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              | glm-4.5v | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
-|              | glm-4.6v | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-| bytedance    | doubao-seed-1.6 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
-|              | doubao-seed-1.6-thinking | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
-|              | doubao-1.5-thinking-vision-pro | 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
-|              | doubao-1-5-pro-32k-250115 |输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
-|              | doubao-1-5-pro-256k-250115 | 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
+|              |qwen/qwen2.5-vl-72b-instruct | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens |
+|              |Qwen/Qwen3-VL-235B-A22B-Instruct| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              |Qwen/Qwen3-VL-235B-A22B-Thinking| 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
+| moonshotai   |moonshotai/Kimi-K2-Instruct| 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
+|              |moonshotai/Kimi-K2-Instruct-0905|输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
+| baidu        |baidu/ernie-x1-turbo-32k| 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
+|              |baidu/ernie-4.5-turbo-128k| 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
+|              |baidu/ernie-4.5-turbo-vl-32k| 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
+| zai-org      |zai-org/glm-4.5| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+|              |zai-org/glm-4.5v| 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
+|              |zai-org/glm-4.6| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
+| bytedance    |ByteDance/doubao-seed-1.6| 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
+|              |ByteDance/doubao-seed-1.6-thinking| 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
+|              |ByteDance/doubao-1.5-thinking-vision-pro| 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
+|              |ByteDance/doubao-1-5-pro-32k-250115|输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
+|              |ByteDance/doubao-1-5-pro-256k-250115| 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
 | streamlake   |kat-coder-32k | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens |
 |              |kat-coder-128k | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens |
 |              |kat-coder-256k | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens |
@@ -57,20 +57,21 @@
 
 | 模型名称                    | 价格（元/张） | 分类     |
 | --------------------------- | ------------- | -------- |
-| Flux Kontext Pro Text2Image | 0.35          | 文生图   |
-| Flux Kontext Max Text2Image | 0.70          | 文生图   |
-| Flux Dev                    | 0.10          | 文生图   |
-| Step1X Edit                 | 0.30          | 图生图 |
-| Flux Kontext Pro            | 0.35          | 图生图 |
-| Flux Kontext Max            | 0.70          | 图生图 |
-| Flux Kontext Max Multi      | 0.70          | 多图编辑 |
-| Flux Kontext Pro Multi      | 0.35          | 多图编辑 |
-| Qwen-Image|0.25|文生图|
-| Qwen-Image-Edit|0.3|图生图 |
+|black-forest-labs/flux-kontext-pro/text-to-image| 0.35          | 文生图   |
+|black-forest-labs/flux-kontext-max/text-to-image| 0.70          | 文生图   |
+|black-forest-labs/flux.1-dev                    | 0.10          | 文生图   |
+|stepfun-ai/step1x-edit                          | 0.30          | 图生图 |
+|black-forest-labs/flux-kontext-pro              | 0.35          | 图生图 |
+|black-forest-labs/flux-kontext-max              | 0.70          | 图生图 |
+|black-forest-labs/flux-kontext-max/multi        | 0.70          | 多图编辑 |
+|black-forest-labs/flux-kontext-pro/multi        | 0.35          | 多图编辑 |
+| Qwen/Qwen-Image                                |0.25           |文生图|
+|Qwen/Qwen-Image-Edit                            |0.3            |图生图 |
 
 | **模型名称**           | **计费方式**  | **计费说明**                                       |
 | ---------------------- | ------------- | -------------------------------------------------- |
 | gemini-2.5-flash-image | tokens 后付费 | 输入 2.2 元/百万 tokens，输出 18.25 元/百万 tokens |
+| gpt-image-1            | tokens 后付费 | 输入 35 元/百万 tokens，输出 280 元/百万 tokens |
 
 **视频模型 API 定价**
 
