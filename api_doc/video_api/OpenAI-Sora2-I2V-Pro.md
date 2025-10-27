@@ -10,13 +10,13 @@
 
 ### 输入
 
-| 参数                  | 类型   | 是否必选 | 描述                                                                                                                        |
-| :-------------------- | :----- | :------- | :-------------------------------------------------------------------------------------------------------------------------- |
-| model                 | string | 是       | 模型名称，此处为 `openai/sora-2/image-to-video-pro`                                                                         |
-| input.first_frame_url | string | 是       | 视频首帧图片 URL，可为 URL 或 Base64                                                                                        |
-| input.prompt          | string | 否       | 提示词，用于指导视频生成                                                                                                    |
-| parameters.size       | string | 否       | 生成视频的尺寸。 <br>可选的分辨率： <br>- `720x1280`<br>- `1280x720`<br>- `1024x1792`<br>- `1792x1024`<br>默认为 `720x1280` |
-| parameters.duration   | int    | 否       | 视频生成时长（秒），可选值 `4`, `8`, `12`，默认为 `4`                                                                       |
+| 参数                  | 类型   | 是否必选 | 描述                                                                       |
+| :-------------------- | :----- | :------- | :------------------------------------------------------------------------- |
+| model                 | string | 是       | 模型名称，此处为 `openai/sora-2/image-to-video-pro`                        |
+| input.first_frame_url | string | 是       | 视频首帧图片 URL，可为 URL 或 Base64                                       |
+| input.prompt          | string | 否       | 提示词，用于指导视频生成                                                   |
+| parameters.resolution | string | 否       | 生成视频的分辨率。 <br>可选值： <br>- `720p`<br>- `1080p`<br>默认为 `720p` |
+| parameters.duration   | int    | 否       | 视频生成时长（秒），可选值 `4`, `8`, `12`，默认为 `4`                      |
 
 ### 请求示例
 ⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
@@ -31,7 +31,7 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
       "prompt": "The image is coming to life"
     },
     "parameters": {
-      "size": "720x1280",
+      "resolution": "720p",
       "duration": 4
     }
   }'
