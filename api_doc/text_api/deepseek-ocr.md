@@ -7,9 +7,13 @@ DeepSeek-OCR 是一款先进的 OCR 模型，能够识别图片中的文字并�
 您可以通过向 `https://api.modelverse.cn/v1/chat/completions` 端点发送请求来使用 DeepSeek-OCR 模型。
 
 > **说明：**
-> DeepSeek-OCR 支持 `max_tokens` 参数最大设置为 **8192**。当前该模型不收费，免费开放使用。
-> 
-> **注意：** 目前该模型仅支持 base64 编码的图片输入（即 "data:image/..." 格式），不支持直接通过 image_url 链接远程图片。
+> DeepSeek-OCR 支持 `max_tokens` 参数最大设置为 **8192**。当前该模型免费开放使用，无需付费。
+>
+> **注意：** 该模型输入仅支持 base64 编码的图片（即 "data:image/..." 格式），不支持直接通过 image_url 远程图片地址。如果你的图片在远程地址，可以通过如下命令一键获取 base64 字符串：
+>
+> ```bash
+> curl -s https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg | base64 | tr -d '\n'
+> ```
 
 
 ### 非流式请求
@@ -33,7 +37,7 @@ curl https://api.modelverse.cn/v1/chat/completions \
           {
             "type": "image_url",
             "image_url": {
-              "url": "data:image/jpeg;base64,'$(openssl base64 -A -in ~/Downloads/ocr.png)'"
+              "url": "data:image/jpeg;base64,'$(curl -s https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg | base64 | tr -d '\n')'"
             }
           }
         ]
@@ -53,7 +57,7 @@ def encode_image(image_path):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Path to your image
-image_path = os.path.expanduser("~/Downloads/ocr.png")
+image_path = os.path.expanduser("ucloud.png")
 
 # Getting the base64 string
 base64_image = encode_image(image_path)
@@ -111,7 +115,7 @@ curl https://api.modelverse.cn/v1/chat/completions \
           {
             "type": "image_url",
             "image_url": {
-              "url": "data:image/jpeg;base64,'$(openssl base64 -A -in ~/Downloads/ocr.png)'"
+              "url": "data:image/jpeg;base64,'$(curl -s https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg | base64 | tr -d '\n')'"
             }
           }
         ]
@@ -132,7 +136,7 @@ def encode_image(image_path):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
 # Path to your image
-image_path = os.path.expanduser("~/Downloads/ocr.png")
+image_path = os.path.expanduser("ucloud.png")
 
 # Getting the base64 string
 base64_image = encode_image(image_path)
