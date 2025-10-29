@@ -1,6 +1,5 @@
 
 
-
 - [概览](/modelverse/README.md)
 
 - 产品简介
@@ -21,7 +20,6 @@
     - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
     - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
-    - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
     - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
   - 图片生成
@@ -46,6 +44,8 @@
     - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
     - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
     - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
+  - 音频生成
+    - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
 
 - 最佳实践
 
