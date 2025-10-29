@@ -21,6 +21,7 @@
   - [模型列表](/modelverse/api_doc/text_api/models.md)
   - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
   - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
+  - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
   - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - thinking思考功能开关
