@@ -1,5 +1,6 @@
 
 
+
 - [概览](/modelverse/README.md)
 
 - 产品简介
@@ -20,6 +21,7 @@
     - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
     - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
+    - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
     - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
   - 图片生成
