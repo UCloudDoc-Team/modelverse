@@ -10,11 +10,11 @@ UModelverse 平台提供了与 OpenAI TTS（Text-to-Speech）API 完全兼容的
 
 ## 请求参数
 
-| 参数  | 类型   | 必填 | 说明                                                |
-| ----- | ------ | ---- | --------------------------------------------------- |
-| model | string | 是   | 要使用的 TTS 模型名称，例如：`IndexTeam/IndexTTS-2` |
-| input | string | 是   | 要转换为语音的文本内容（最大支持 600 字符）         |
-| voice | string | 是   | 使用的语音类型，可选值：`jay_klee`, `xxx`           |
+| 参数  | 类型   | 必填 | 说明                                                                                                                                |
+| ----- | ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| model | string | 是   | 要使用的 TTS 模型名称，例如：`IndexTeam/IndexTTS-2`                                                                                 |
+| input | string | 是   | 要转换为语音的文本内容（最大支持 600 字符）                                                                                         |
+| voice | string | 是   | 使用的音色，可选值：`jack_cheng`, `sales_voice`, `crystla_liu`, `stephen_chow`, `xiaoyueyue`, `mkas`, `entertain`, `novel`, `movie` |
 
 ## 调用示例
 
