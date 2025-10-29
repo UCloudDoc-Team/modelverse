@@ -8,17 +8,12 @@
 
 ### 请求体
 
-| 字段名          | 类型   | 是否必须 | 默认值 | 描述                                                                                                                                    |
-| --------------- | ------ | -------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------- |
-| prompt          | string | 必须     | -      | 提示词                                                                                                                                  |
-| model           | string | 必须     | -      | 本次请求使用的模型名称，此处为 `Qwen/Qwen-Image`。                                                                                      |
-| n               | int    | 可选     | 1      | 生成图片数量，取值范围 1~4                                                                                                              |
-| aspect_ratio    | string | 可选     | "1:1"  | 图像的宽高比，格式为 "宽度:高度"，例如 "16:9" 或 "1:1"。<br>支持尺寸："21:9", "16:9", "4:3", "3:2", "1:1", "2:3", "3:4", "9:16", "9:21" |
-| seed            | int    | 可选     | -1     | 随机数种子，用于控制模型生成内容的随机性。如果希望生成内容保持一致，可以使用相同的 seed 参数值。                                        |
-| steps           | int    | 可选     | 20     | 推理次数, 取值范围 1~50                                                                                                                 |
-| guidance_scale  | float  | 可选     | 2.5    | 模型输出结果与 prompt 的一致程度，即生成图像的自由度；值越大，模型自由度越小，与用户输入的提示词相关性越强。<br>取值[1, 10]。           |
-| negative_prompt | string | 可选     | -      | 负面提示词，用于指定不希望在生成图像中出现的内容                                                                                        |
-| response_format | string | 可选     | "url"  | 指定返回生成图像的格式，默认为 `url`，可选 `b64_json`                                                                                   |
+| 字段名 | 类型   | 是否必须 | 默认值 | 描述                                                                                             |
+| ------ | ------ | -------- | ------ | ------------------------------------------------------------------------------------------------ |
+| prompt | string | 必须     | -      | 提示词                                                                                           |
+| model  | string | 必须     | -      | 本次请求使用的模型名称，此处为 `Qwen/Qwen-Image`。                                               |
+| seed   | int    | 可选     | -1     | 随机数种子，用于控制模型生成内容的随机性。如果希望生成内容保持一致，可以使用相同的 seed 参数值。 |
+| size   | string | 可选     | -      | 生成图像的尺寸（宽x高），每个维度范围 256 ~ 1536。例如：`1024x1024`                              |
 
 ## 响应参数
 
@@ -46,7 +41,7 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
 --data '{
     "model": "Qwen/Qwen-Image",
     "prompt": "Convert to quick pencil sketch",
-    "aspect_ratio": "16:9"
+    "size": "1024x1024"
 }'
 ```
 
@@ -62,9 +57,7 @@ client = OpenAI(
 response = client.images.generate(
     model="Qwen/Qwen-Image",
     prompt="Convert to quick pencil sketch",
-    extra_body={
-        "aspect_ratio": "16:9"
-    }
+    size="1024x1024"
 )
 
 print(response.data[0].url)
