@@ -11,91 +11,91 @@
 
 于 2025 年 3 月 31 日开始收费。免费额度：50 万 tokens，额度使用完后，根据 token 使用情况按量后付费。
 
-| 厂商 | 模型 | 价格 |
-|------|------|------|
-| deepseek     |deepseek-ai/DeepSeek-R1 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens | 
-|              |deepseek-ai/DeepSeek-R1-0528 | 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
-|              |deepseek-ai/DeepSeek-V3-0324 | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              |deepseek-ai/DeepSeek-V3.1 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens |
-|              |deepseek-ai/DeepSeek-V3.1-Terminus |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
-|              |deepseek-ai/DeepSeek-V3.1-Think |输入 4 元/百万 tokens，输出 12 元/百万 tokens  |
-|              |deepseek-ai/DeepSeek-V3.2-Exp-Think | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
-|              |deepseek-ai/DeepSeek-V3.2-Exp | 输入 2 元/百万 tokens，输出 3 元/百万 tokens  |
-|              |deepseek-ai/DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens |
-| qwen         |Qwen/QwQ-32B | 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
-|              |Qwen/Qwen3-235B-A22B | 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              |Qwen3-235B-A22B-Thinking-2507 | 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
-|              |Qwen/Qwen3-Coder| 输入 9 元/百万 tokens，输出 36 元/百万 tokens |
-|              |Qwen/Qwen3-32B |输入 2 元/百万 tokens，输出 8 元/百万 tokens  |
-|              | Qwen3-32B-Thinking |输入 2 元/百万 tokens，输出 20 元/百万 tokens  |
-|              |Qwen/Qwen3-30B-A3B | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens |
-|              | Qwen3-30B-A3B-Thinking-2507 | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
-|              |qwen/qwen2.5-vl-72b-instruct | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens |
-|              |Qwen/Qwen3-VL-235B-A22B-Instruct| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              |Qwen/Qwen3-VL-235B-A22B-Thinking| 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
-|              |Qwen/Qwen3-max| 输入 6 元/百万 tokens，输出 24 元/百万 tokens |
-|              |Qwen/Qwen-Plus| 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
-|              |Qwen/Qwen-Plus-Thinking| 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
-|              |Qwen/Qwen3-235B-A22B-Thinking-2507| 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
-| moonshotai   |moonshotai/Kimi-K2-Instruct| 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
-|              |moonshotai/Kimi-K2-Instruct-0905|输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
-| baidu        |baidu/ernie-x1-turbo-32k| 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
-|              |baidu/ernie-4.5-turbo-128k| 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
-|              |baidu/ernie-4.5-turbo-vl-32k| 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
-| zai-org      |zai-org/glm-4.5| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-|              |zai-org/glm-4.5v| 输入 2 元/百万 tokens，输出 6 元/百万 tokens |
-|              |zai-org/glm-4.6| 输入 2 元/百万 tokens，输出 8 元/百万 tokens |
-| bytedance    |ByteDance/doubao-seed-1.6| 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
-|              |ByteDance/doubao-seed-1.6-thinking| 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
-|              |ByteDance/doubao-1.5-thinking-vision-pro| 输入 3 元/百万 tokens，输出 9 元/百万 tokens |
-|              |ByteDance/doubao-1-5-pro-32k-250115|输入 0.8 元/百万 tokens，输出 2 元/百万 tokens  |
-|              |ByteDance/doubao-1-5-pro-256k-250115| 输入 5 元/百万 tokens，输出 9 元/百万 tokens |
-| streamlake   |kat-coder-32k | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens |
-|              |kat-coder-128k | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens |
-|              |kat-coder-256k | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens |
+| 厂商       | 模型                                      | 价格                                              |
+| ---------- | ----------------------------------------- | ------------------------------------------------- |
+| deepseek   | deepseek-ai/DeepSeek-R1                   | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
+|            | deepseek-ai/DeepSeek-R1-0528              | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
+|            | deepseek-ai/DeepSeek-V3-0324              | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+|            | deepseek-ai/DeepSeek-V3.1                 | 输入 4 元/百万 tokens，输出 12 元/百万 tokens     |
+|            | deepseek-ai/DeepSeek-V3.1-Terminus        | 输入 4 元/百万 tokens，输出 12 元/百万 tokens     |
+|            | deepseek-ai/DeepSeek-V3.1-Think           | 输入 4 元/百万 tokens，输出 12 元/百万 tokens     |
+|            | deepseek-ai/DeepSeek-V3.2-Exp-Think       | 输入 2 元/百万 tokens，输出 3 元/百万 tokens      |
+|            | deepseek-ai/DeepSeek-V3.2-Exp             | 输入 2 元/百万 tokens，输出 3 元/百万 tokens      |
+|            | deepseek-ai/DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens      |
+| qwen       | Qwen/QwQ-32B                              | 输入 2 元/百万 tokens，输出 6 元/百万 tokens      |
+|            | Qwen/Qwen3-235B-A22B                      | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+|            | Qwen3-235B-A22B-Thinking-2507             | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
+|            | Qwen/Qwen3-Coder                          | 输入 9 元/百万 tokens，输出 36 元/百万 tokens     |
+|            | Qwen/Qwen3-32B                            | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+|            | Qwen3-32B-Thinking                        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
+|            | Qwen/Qwen3-30B-A3B                        | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens   |
+|            | Qwen3-30B-A3B-Thinking-2507               | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
+|            | qwen/qwen2.5-vl-72b-instruct              | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens  |
+|            | Qwen/Qwen3-VL-235B-A22B-Instruct          | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+|            | Qwen/Qwen3-VL-235B-A22B-Thinking          | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
+|            | Qwen/Qwen3-max                            | 输入 6 元/百万 tokens，输出 24 元/百万 tokens     |
+|            | Qwen/Qwen-Plus                            | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
+|            | Qwen/Qwen-Plus-Thinking                   | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens    |
+|            | Qwen/Qwen3-235B-A22B-Thinking-2507        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
+| moonshotai | moonshotai/Kimi-K2-Instruct               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
+|            | moonshotai/Kimi-K2-Instruct-0905          | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
+| baidu      | baidu/ernie-x1-turbo-32k                  | 输入 1 元/百万 tokens，输出 4 元/百万 tokens      |
+|            | baidu/ernie-4.5-turbo-128k                | 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
+|            | baidu/ernie-4.5-turbo-vl-32k              | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
+| zai-org    | zai-org/glm-4.5                           | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+|            | zai-org/glm-4.5v                          | 输入 2 元/百万 tokens，输出 6 元/百万 tokens      |
+|            | zai-org/glm-4.6                           | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
+| bytedance  | ByteDance/doubao-seed-1.6                 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
+|            | ByteDance/doubao-seed-1.6-thinking        | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens    |
+|            | ByteDance/doubao-1.5-thinking-vision-pro  | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
+|            | ByteDance/doubao-1-5-pro-32k-250115       | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
+|            | ByteDance/doubao-1-5-pro-256k-250115      | 输入 5 元/百万 tokens，输出 9 元/百万 tokens      |
+| streamlake | kat-coder-32k                             | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens   |
+|            | kat-coder-128k                            | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens   |
+|            | kat-coder-256k                            | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens   |
 
 
 **生图模型 API 定价**
 
-于 2025 年 6 月 30 日开始收费。免费额度：免费5张图片/模型，详情请参考[图片生成 API](https://docs.ucloud.cn/modelverse/api_doc/image-generation)
+于 2025 年 6 月 30 日开始收费。免费额度：免费5张图片/模型，详情请参考各模型的图片生成 API 文档
 
-| 模型名称                    | 价格（元/张） | 分类     |
-| --------------------------- | ------------- | -------- |
-|black-forest-labs/flux-kontext-pro/text-to-image| 0.35          | 文生图   |
-|black-forest-labs/flux-kontext-max/text-to-image| 0.70          | 文生图   |
-|black-forest-labs/flux.1-dev                    | 0.10          | 文生图   |
-|stepfun-ai/step1x-edit                          | 0.30          | 图生图 |
-|black-forest-labs/flux-kontext-pro              | 0.35          | 图生图 |
-|black-forest-labs/flux-kontext-max              | 0.70          | 图生图 |
-|black-forest-labs/flux-kontext-max/multi        | 0.70          | 多图编辑 |
-|black-forest-labs/flux-kontext-pro/multi        | 0.35          | 多图编辑 |
-| Qwen/Qwen-Image                                |0.25           |文生图|
-|Qwen/Qwen-Image-Edit                            |0.3            |图生图 |
+| 模型名称                                         | 价格（元/张） | 分类     |
+| ------------------------------------------------ | ------------- | -------- |
+| black-forest-labs/flux-kontext-pro/text-to-image | 0.35          | 文生图   |
+| black-forest-labs/flux-kontext-max/text-to-image | 0.70          | 文生图   |
+| black-forest-labs/flux.1-dev                     | 0.10          | 文生图   |
+| stepfun-ai/step1x-edit                           | 0.30          | 图生图   |
+| black-forest-labs/flux-kontext-pro               | 0.35          | 图生图   |
+| black-forest-labs/flux-kontext-max               | 0.70          | 图生图   |
+| black-forest-labs/flux-kontext-max/multi         | 0.70          | 多图编辑 |
+| black-forest-labs/flux-kontext-pro/multi         | 0.35          | 多图编辑 |
+| Qwen/Qwen-Image                                  | 0.25          | 文生图   |
+| Qwen/Qwen-Image-Edit                             | 0.3           | 图生图   |
 
 | **模型名称**           | **计费方式**  | **计费说明**                                       |
 | ---------------------- | ------------- | -------------------------------------------------- |
 | gemini-2.5-flash-image | tokens 后付费 | 输入 2.2 元/百万 tokens，输出 18.25 元/百万 tokens |
-| gpt-image-1            | tokens 后付费 | 输入 35 元/百万 tokens，输出 280 元/百万 tokens |
+| gpt-image-1            | tokens 后付费 | 输入 35 元/百万 tokens，输出 280 元/百万 tokens    |
 
 **视频模型 API 定价**
 
 ## 视频生成 API 定价
 
-| 模型名称          | 分辨率 | 价格（元/秒） | 分类     |
-| ----------------- | ------ | ------------- | -------- |
-| Wan-AI/Wan2.2-I2V | 720p   | 0.35          | 图生视频 |
-| Wan-AI/Wan2.2-I2V | 480p   | 0.18          | 图生视频 |
-| Wan-AI/Wan2.2-T2V | 720p   | 0.35          | 文生视频 |
-| Wan-AI/Wan2.2-T2V | 480p   | 0.18          | 文生视频 |
-| Wan-AI/Wan2.5-I2V | 1080p   |1.095          | 图生视频 |
-| Wan-AI/Wan2.5-I2V | 720p   | 0.73          | 图生视频 |
-| Wan-AI/Wan2.5-I2V | 480p   | 0.365         | 图生视频 |
-| Wan-AI/Wan2.5-T2V | 1080p  | 1.095          | 文生视频 |
-| Wan-AI/Wan2.5-T2V | 720p   | 0.73          | 文生视频 |
-| Wan-AI/Wan2.5-T2V | 480p   | 0.365          | 文生视频 |
-|openai/sora-2/text-to-video| 720p  |0.71 | 文生视频 |
-|openai/sora-2/text-to-video-pro| 720p  |2.14 | 文生视频 |
-|openai/sora-2/text-to-video-pro| 1080p  |3.56 | 文生视频 |
-|openai/sora-2/image-to-video| 720p  |0.71 |  图生视频 |
-|openai/sora-2/image-to-video-pro| 720p  |2.14 |  图生视频 |
-|openai/sora-2/image-to-video-pro| 1080p  |3.56 |  图生视频 |
+| 模型名称                         | 分辨率 | 价格（元/秒） | 分类     |
+| -------------------------------- | ------ | ------------- | -------- |
+| Wan-AI/Wan2.2-I2V                | 720p   | 0.35          | 图生视频 |
+| Wan-AI/Wan2.2-I2V                | 480p   | 0.18          | 图生视频 |
+| Wan-AI/Wan2.2-T2V                | 720p   | 0.35          | 文生视频 |
+| Wan-AI/Wan2.2-T2V                | 480p   | 0.18          | 文生视频 |
+| Wan-AI/Wan2.5-I2V                | 1080p  | 1.095         | 图生视频 |
+| Wan-AI/Wan2.5-I2V                | 720p   | 0.73          | 图生视频 |
+| Wan-AI/Wan2.5-I2V                | 480p   | 0.365         | 图生视频 |
+| Wan-AI/Wan2.5-T2V                | 1080p  | 1.095         | 文生视频 |
+| Wan-AI/Wan2.5-T2V                | 720p   | 0.73          | 文生视频 |
+| Wan-AI/Wan2.5-T2V                | 480p   | 0.365         | 文生视频 |
+| openai/sora-2/text-to-video      | 720p   | 0.71          | 文生视频 |
+| openai/sora-2/text-to-video-pro  | 720p   | 2.14          | 文生视频 |
+| openai/sora-2/text-to-video-pro  | 1080p  | 3.56          | 文生视频 |
+| openai/sora-2/image-to-video     | 720p   | 0.71          | 图生视频 |
+| openai/sora-2/image-to-video-pro | 720p   | 2.14          | 图生视频 |
+| openai/sora-2/image-to-video-pro | 1080p  | 3.56          | 图生视频 |
