@@ -32,7 +32,7 @@ curl https://api.modelverse.cn/v1/audio/speech \
     "input": "你好！欢迎使用 Modelverse 语音合成服务。",
     "voice": "jack_cheng"
   }' \
-  --output speech.mp3
+  --output speech.wav
 ```
     
 #### ** python **
@@ -45,7 +45,7 @@ client = OpenAI(
     base_url="https://api.modelverse.cn/v1/",
 )
 
-speech_file_path = Path(__file__).parent / "generated-speech.mp3"
+speech_file_path = Path(__file__).parent / "generated-speech.wav"
 
 with client.audio.speech.with_streaming_response.create(
     model="IndexTeam/IndexTTS-2",
@@ -63,13 +63,13 @@ print(f"Audio saved to {speech_file_path}")
 
 API 返回二进制音频文件流。
 
-- **音频格式**：目前仅支持 **MP3** 格式输出
-- **Content-Type**：`audio/mpeg`
+- **音频格式**：目前仅支持 **WAV** 格式输出
+- **Content-Type**：`audio/wav`
 
 ## 注意事项
 
 1. **限时免费**：当前 TTS 服务限时免费开放，正式计费标准后续将另行通知
-2. **音频格式**：响应的二进制流格式目前仅支持 MP3，暂不支持其他音频格式
+2. **音频格式**：响应的二进制流格式目前仅支持 WAV，暂不支持其他音频格式
 3. **文本长度限制**：单次请求的文本长度限制因具体模型而异，`IndexTeam/IndexTTS-2` 模型通常支持 600 字符以内的文本
 4. **语音类型**：不同的 `voice` 参数会产生不同音色和风格的语音效果，建议根据实际场景选择合适的语音类型
 
