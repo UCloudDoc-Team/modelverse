@@ -36,6 +36,7 @@
 |              |Qwen/Qwen3-max| 输入 6 元/百万 tokens，输出 24 元/百万 tokens |
 |              |Qwen/Qwen-Plus| 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens |
 |              |Qwen/Qwen-Plus-Thinking| 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens |
+|              |Qwen/Qwen3-235B-A22B-Thinking-2507| 输入 2 元/百万 tokens，输出 20 元/百万 tokens |
 | moonshotai   |moonshotai/Kimi-K2-Instruct| 输入 4 元/百万 tokens，输出 16 元/百万 tokens |
 |              |moonshotai/Kimi-K2-Instruct-0905|输入 4 元/百万 tokens，输出 16 元/百万 tokens  |
 | baidu        |baidu/ernie-x1-turbo-32k| 输入 1 元/百万 tokens，输出 4 元/百万 tokens |
