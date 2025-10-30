@@ -30,7 +30,7 @@ curl https://api.modelverse.cn/v1/audio/speech \
   -d '{
     "model": "IndexTeam/IndexTTS-2",
     "input": "你好！欢迎使用 Modelverse 语音合成服务。",
-    "voice": "jay_klee"
+    "voice": "jack_cheng"
   }' \
   --output speech.mp3
 ```
