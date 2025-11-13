@@ -85,11 +85,4 @@ for chunk in stream:
         print(chunk.choices[0].delta.content, end="")
 ```
 
-### 注意事项
--  **令牌管理**：监控usage，避免超出模型上下文限制。
--  **错误处理**：常见如429（速率限制），参考[OpenAI错误指南](https://platform.openai.com/docs/guides/error-codes)。
--  **最佳实践**：使用seed确保一致性；启用tools实现函数调用。
--  **兼容性**：我们的接口兼容OpenAI，但某些高级功能（如特定模型参数）请验证官方文档。
-
 更多示例和高级用法，请直接参考[OpenAI官方文档](https://platform.openai.com/docs/api-reference/chat/create)。
-

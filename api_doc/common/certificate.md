@@ -10,7 +10,7 @@ ModelVerse API 使用 API Key 进行认证。所有 API 请求都必须在 HTTP 
 
 > 注意：请妥善保管您的 API Key，不要泄露给他人。
 
-![API Key 页面](/images/api-doc/certificate-page.png)
+![API Key 页面](/modelverse/images/api-doc/certificate-page.png)
 
 ## 最简调用
 
@@ -31,7 +31,7 @@ curl --location 'https://api.modelverse.cn/v1/chat/completions' \
 }' | jq .
 ```
 
-你可能看到返回结果。
+你可能看到的返回结果。
 
 ```
 {

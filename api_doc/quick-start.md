@@ -12,7 +12,7 @@ OpenAI 兼容接口当前支持：
 
 ## 第一步：获取API密钥
 
-在调用任何API之前，您需要一个有效的API密钥。请前往【[认证鉴权](./common/certificate.md)】文档，查看如何获取和管理您的密钥。
+在调用任何API之前，您需要一个有效的API密钥。请前往【[认证鉴权](/modelverse/api_doc/common/certificate.md)】文档，查看如何获取和管理您的密钥。
 
 ## 第二步：选择模型
 
