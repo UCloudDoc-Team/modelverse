@@ -16,13 +16,13 @@
     - [认证鉴权](/modelverse/api_doc/common/certificate.md)
     - [错误码](/modelverse/api_doc/common/error-code.md)
   - 文本生成
-    - [模型列表](/modelverse/api_doc/text_api/models.md)
-    - [OpenAI 兼容](/modelverse/api_doc/text_api/openai_compatible.md)
-    - [OpenAI Response API 兼容](/modelverse/api_doc/text_api/response_api.md)
+    - [如何获取模型列表](/modelverse/api_doc/text_api/models.md)
+    - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
+    - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
     - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
-    - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md)
+    <!-- - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md) -->
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
-    - [Gemini 兼容](/modelverse/api_doc/text_api/gemini_compatible.md)
+    - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
   - 图片生成
     - [gemini-2.5-flash-image ( nano banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
     - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
