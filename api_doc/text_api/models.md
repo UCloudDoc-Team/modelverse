@@ -1,6 +1,6 @@
 # 获取模型列表
 
-您可以通过 API 端点获取当前所有可用模型的列表。我们同时支持 OpenAI 和 Gemini 两种格式的 API。
+您可以通过 API 端点获取当前所有可用模型的列表。我们同时支持 OpenAI 和 Gemini 两种格式的 API（并非所有模型都支持 Gemini）。
 
 ## OpenAI 兼容模型列表
 
