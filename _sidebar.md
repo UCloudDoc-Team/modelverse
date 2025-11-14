@@ -17,6 +17,7 @@
     - [错误码](/modelverse/api_doc/common/error-code.md)
   - 文本生成
     - [如何获取模型列表](/modelverse/api_doc/text_api/models.md)
+    - [API支持与UCloud扩展字段说明](/modelverse/api_doc/text_api/api-expand.md)
     - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
     - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
