@@ -4,7 +4,7 @@
 
 | HTTP 状态码 | 类型                  | 错误码                | 错误信息                                                  | 描述                                                                                      |
 | ----------- | --------------------- | --------------------- | --------------------------------------------------------- | ----------------------------------------------------------------------------------------- |
-| 400         | invalid_request_error | param_error           | Invalid param                                             | 参数不合法                                                                                |
+| 400         | invalid_request_error | param_error           | Invalid param                                             | 参数不合法，调用我们未支持的接口时会触发                                                                                |
 | 400         | invalid_request_error | invalid_messages      | Sensitive chat messages                                   | 对话内容触发敏感词/合规校验                                                               |
 | 400         | invalid_request_error | sensitive_check_error | Sensitive check error                                     | 合规/敏感内容检测失败                                                                     |
 | 400         | invalid_request_error | websearch_error       | Web search error                                          | 联网搜索失败或不可用                                                                      |

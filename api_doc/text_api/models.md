@@ -1,8 +1,8 @@
 # 获取模型列表
 
-您可以通过 API 端点获取当前所有可用模型的列表。我们同时支持 OpenAI 和 Gemini 两种格式的 API。
+您可以通过 API 端点获取当前所有可用模型的列表。我们同时支持 OpenAI 和 Gemini 两种格式的 API（并非所有模型都支持 Gemini）。
 
-## OpenAI 兼容格式
+## OpenAI 兼容模型列表
 
 ### 请求
 
@@ -19,7 +19,7 @@ GET https://api.modelverse.cn/v1/models
 
 ```bash
 curl https://api.modelverse.cn/v1/models \
-  -H "Content-Type: application/json" 
+  -H "Content-Type: application/json" | jq .
 ```
 
 
@@ -33,23 +33,18 @@ curl https://api.modelverse.cn/v1/models \
 {
   "data": [
     {
-      "created": 1756119051,
-      "id": "Wan-AI/Wan2.2-I2V",
+      "created": 1762741377,
+      "id": "deepseek-ai/DeepSeek-R1",
       "object": "model",
       "owned_by": "UCloud_UModelverse"
     },
     {
-      "created": 1756119051,
-      "id": "Wan-AI/Wan2.2-T2V",
+      "created": 1762741326,
+      "id": "gpt-5",
       "object": "model",
       "owned_by": "UCloud_UModelverse"
     },
-    {
-      "created": 1755859769,
-      "id": "openai/gpt-4.1",
-      "object": "model",
-      "owned_by": "UCloud_UModelverse"
-    }
+    ......
   ],
   "object": "list"
 }
@@ -64,7 +59,7 @@ curl https://api.modelverse.cn/v1/models \
 | `created`  | integer | 模型创建时间的 Unix 时间戳。 |
 | `owned_by` | string  | 模型所有者。                 |
 
-## Gemini 兼容格式
+## Gemini 兼容模型列表
 
 ### 请求
 
