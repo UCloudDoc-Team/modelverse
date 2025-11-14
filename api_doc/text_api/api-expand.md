@@ -23,4 +23,3 @@
 | --- | --- | --- | --- |
 | `web_search` | `POST /v1/chat/completions` | 控制是否启用联网搜索能力，并选择搜索供应商。默认关闭。支持的 `vendor`：`tencent_sougo`（腾讯搜狗，默认）、`bocha`（博查 API）、`bing`。 | 在请求 JSON 根节点加入<br/>```json<br/>"web_search": {<br/>  "enable": true,<br/>  "vendor": "tencent_sougo"<br/>}``` |
 | `thinking_enabled` | `POST /v1/chat/completions` | 内部的「思考模式」开关，影响模型侧推理策略。默认关闭。 | 与 OpenAI 请求一同提交：<br/>`"thinking_enabled": true` |
-| `enbale_ai_water_mark` | `POST /v1/images/generations`、`/v1/images/edits` | 生成图片时是否自动添加“AI 生成”水印。默认关闭。 | 在图片请求体中追加：<br/>`"enbale_ai_water_mark": true` |
