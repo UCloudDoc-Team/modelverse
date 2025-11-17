@@ -4,37 +4,64 @@
 
 ModelVerse API 使用 API Key 进行认证。所有 API 请求都必须在 HTTP 请求头中包含有效的 API Key。
 
-## 获取 API Key
+## 获取API Key
 
 请访问 [ModelVerse 控制台](https://console.ucloud.cn/modelverse/experience/api-keys) 来创建和管理您的 API Key。
 
-![](https://www-s.ucloud.cn/2025/03/a427b4a6c0ff2d4dc2f2ee3cdad95098_1743154241648.png)
+> 注意：请妥善保管您的 API Key，不要泄露给他人。
 
-## 将 API 密钥设置为环境变量
+![API Key 页面](/modelverse/images/api-doc/certificate-page.png)
 
-以下是 API 密钥在本地设置为环境变量 MODELVERSE_API_KEY 的方法。
+## 最简调用
 
-```bash
-export MODELVERSE_API_KEY=<YOUR_API_KEY_HERE>
-```
-
-### 请求示例
-
-这是一个使用 `curl` 命令调用 API 的示例，展示了如何在请求头中加入 API Key：
+请将 `{api_key}` 替换为您的 API Key。
 
 ```bash
 curl --location 'https://api.modelverse.cn/v1/chat/completions' \
---header "Authorization: Bearer $MODELVERSE_API_KEY" \
+--header "Authorization: Bearer {api_key}" \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "deepseek-ai/DeepSeek-R1",
     "messages": [
         {
             "role": "user",
-            "content": "say hello to ucloud"
+            "content": "一句话描述UCloud这家公司。"
         }
     ]
-}'
+}' | jq .
 ```
 
-请将 `$MODELVERSE_API_KEY` 替换为您在 ModelVerse 控制台中获取的实际 API Key。
+你可能看到的返回结果。
+
+```
+{
+  "id": "0a7919c4-981e-438b-ad30-e943b96882b6",
+  "object": "chat.completion",
+  "created": 1763015400,
+  "model": "deepseek-r1-250528",
+  "choices": [
+    {
+      "index": 0,
+      "message": {
+        "role": "assistant",
+        "content": "用中立、安全、本土化的云计算服务，专注服务中国企业数字化转型的科创板上市云服务商。"
+      },
+      "finish_reason": "stop"
+    }
+  ],
+  "usage": {
+    "prompt_tokens": 10,
+    "completion_tokens": 348,
+    "total_tokens": 358,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "audio_tokens": 0,
+      "reasoning_tokens": 185,
+      "accepted_prediction_tokens": 0,
+      "rejected_prediction_tokens": 0
+    }
+  },
+  "system_fingerprint": "",
+  "search_result": null
+}
+```
