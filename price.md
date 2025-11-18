@@ -39,6 +39,7 @@
 |            | Qwen/Qwen3-235B-A22B-Thinking-2507        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 | moonshotai | moonshotai/Kimi-K2-Instruct               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 |            | moonshotai/Kimi-K2-Instruct-0905          | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
+|            | moonshotai/Kimi-K2-Thinking               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 | baidu      | baidu/ernie-x1-turbo-32k                  | 输入 1 元/百万 tokens，输出 4 元/百万 tokens      |
 |            | baidu/ernie-4.5-turbo-128k                | 输入 0.8 元/百万 tokens，输出 0.32 元/百万 tokens |
 |            | baidu/ernie-4.5-turbo-vl-32k              | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
