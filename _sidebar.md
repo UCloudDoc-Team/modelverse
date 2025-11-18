@@ -46,6 +46,10 @@
     - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
     - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
     - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
+    - [Vidu/文生视频](/modelverse/api_doc/video_api/vidu/Vidu-Text2Video.md)
+    - [Vidu/图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Img2Video.md)
+    - [Vidu/参考图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Reference2Video.md)
+    - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
     - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - 音频生成
     - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
