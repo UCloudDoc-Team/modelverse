@@ -53,7 +53,7 @@
     - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - 音频生成
     - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
-    
+  -  [常见问题答疑](/modelverse/api_doc/qa.md)
 - 最佳实践
 
   - [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
