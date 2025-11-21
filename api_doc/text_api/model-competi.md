@@ -4,9 +4,9 @@
 约定：
 
 - ✅：当前推荐、经过验证的主要调用方式。
-- 空白：可以尝试，但未充分验证或可能不稳定或完全无法使用，使用前建议在测试环境验证，我们不维护其稳定性。
+- 空白：可以尝试，但未充分验证或可能不稳定或完全无法使用，使用前建议在测试环境验证，不保证其兼容性。
 
-> 说明：实际兼容性可能会随官方协议演进而调整，请以最新文档和测试结果为准。
+> 说明：实际兼容性可能会随官方协议演进而调整，请以官方最新文档和测试结果为准。
 
 ## 如何查看支持的模型列表
 
@@ -50,7 +50,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Claude 系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | claude-opus-4-1-20250805 | ✅ |  |  |  |
 | claude-sonnet-4-5-20250929-thinking | ✅ |  |  | temperature 和 top_p 只能指定一个，temperature 取值范围为[0,1) |
@@ -69,7 +69,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Grok 系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | grok-4-1-fast-reasoning | ✅ |  |  |  |
 | grok-4-1-fast-non-reasoning | ✅ |  |  |  |
@@ -79,7 +79,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Qwen 系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | Qwen/Qwen3-vl-Plus | ✅ | |  |  |
 | Qwen/Qwen3-235B-A22B-Thinking-2507 | ✅ |  |  |  |
@@ -97,11 +97,11 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Gemini 系列（支持 `/v1beta/models`）
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
-| gemini-3-pro-preview | （可能的参数错误） |  | ✅ | 推荐使用 /v1beta/models 接口 |
-| gemini-2.5-pro | （可能的参数错误） |  | ✅ | 推荐使用 /v1beta/models 接口 |
-| gemini-2.5-flash | （可能的参数错误） |  | ✅ | 推荐使用 /v1beta/models 接口 |
+| gemini-3-pro-preview |  |  | ✅ | 推荐使用 /v1beta/models 接口 |
+| gemini-2.5-pro |  |  | ✅ | 推荐使用 /v1beta/models 接口 |
+| gemini-2.5-flash |  |  | ✅ | 推荐使用 /v1beta/models 接口 |
 
 > **思考过程配置**：使用 Gemini 协议的 `v1beta/models` 接口，可通过 `thinkingConfig` 参数开启/关闭思考过程。详见 [Gemini 协议兼容](https://docs.ucloud.cn/modelverse/api_doc/text_api/gemini_compatible)
 > 
@@ -109,7 +109,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## DeepSeek 系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | deepseek-ai/DeepSeek-OCR | ✅ |  |  |  |
 | deepseek-ai/DeepSeek-V3.1-Think | ✅ |  |  |  |
@@ -124,7 +124,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Doubao（豆包）系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | ByteDance/doubao-1-5-pro-32k-250115 | ✅ |  |  |  |
 | ByteDance/doubao-1-5-pro-256k-250115 | ✅ |  |  |  |
@@ -134,7 +134,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## Baidu 系列
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | baidu/ernie-x1-turbo-32k | ✅ |  |  |  |
 | baidu/ernie-4.5-turbo-128k | ✅ |  |  |  |
@@ -142,7 +142,7 @@ curl https://api.modelverse.cn/v1/models \
 
 ## 其他模型
 
-| 模型 ID | `/v1/chat/completions` | `/v1/responses` | `/v1beta/models` | 备注 |
+| 模型 ID | `OpenAI Chat 协议 /v1/chat/completions` | `OpenAI Response 协议/v1/responses` | `Gemini协议 /v1beta/models` | 备注 |
 | --- | --- | --- | --- | --- |
 | moonshotai/Kimi-K2-Thinking | ✅ |  |  |  |
 | moonshotai/Kimi-K2-Instruct-0905 | ✅ |  |  |  |
