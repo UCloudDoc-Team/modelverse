@@ -51,6 +51,7 @@
   - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
 - 音频生成
   - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
+  - [自定义音色](/modelverse/api_doc/audio_api/custom_voice.md)
 
 ## 最佳实践
 
