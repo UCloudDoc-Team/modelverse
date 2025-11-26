@@ -28,6 +28,7 @@
 | 字段 | 类型   | 必填 | 说明 |
 | ---- | ------ | ---- | ---- |
 | name | string | 是   | 音色名称，用于列表展示，例如「温柔女声」「客服音色A」。 |
+| model | string | 是   | 使用该音色时对应的 TTS 模型名称，例如 `IndexTeam/IndexTTS-2`。与后续 `/v1/audio/speech` 请求中的 `model` 保持一致。 |
 
 #### Speaker（音色语料音频，三选一，必填其一）
 
@@ -73,6 +74,7 @@ curl -X POST "https://api.modelverse.cn/v1/audio/voice/upload" \
   -H "Authorization: Bearer $MODELVERSE_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F "name=温柔女声" \
+  -F "model=IndexTeam/IndexTTS-2" \
   -F "speaker_file=@/path/to/speaker.wav" \
   -F "emotion_file=@/path/to/emotion.wav"
 ```
