@@ -22,6 +22,7 @@
   - [API支持与UCloud扩展字段说明](/modelverse/api_doc/text_api/api-expand.md)
   - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
   - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
+  - [Embeddings 向量嵌入](/modelverse/api_doc/text_api/embeddings.md)
   - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
   - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
