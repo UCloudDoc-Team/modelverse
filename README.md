@@ -52,7 +52,7 @@
 - 音频生成
   - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
   - [自定义音色](/modelverse/api_doc/audio_api/custom_voice.md)
-
+  - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
 ## 最佳实践
 
 - [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
