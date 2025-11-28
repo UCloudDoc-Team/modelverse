@@ -25,7 +25,7 @@
 | qwen       | Qwen/QwQ-32B                              | 输入 2 元/百万 tokens，输出 6 元/百万 tokens      |
 |            | Qwen/Qwen3-235B-A22B                      | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
 |            | Qwen3-235B-A22B-Thinking-2507             | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
-|            | Qwen/Qwen3-Coder                          | Tokens为单次请求的输入token数：<br>Tokens ≤ 32K：8元<br>32K < Tokens ≤ 128K：9元<br>128K < Tokens ≤ 200K：15元<br><br>Tokens为单次请求的输入token数：<br>Tokens ≤ 32K：24元<br>32K < Tokens ≤ 128K：36元<br>128K < Tokens ≤ 200K：60元 |
+|            | Qwen/Qwen3-Coder                          | Tokens为单次请求的输入token数，输入价格：<br>Tokens ≤ 32K：8元<br>32K < Tokens ≤ 128K：9元<br>128K < Tokens ≤ 200K：15元<br><br>Tokens为单次请求的输入token数，输出价格：<br>Tokens ≤ 32K：24元<br>32K < Tokens ≤ 128K：36元<br>128K < Tokens ≤ 200K：60元 |
 |            | Qwen/Qwen3-32B                            | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
 |            | Qwen3-32B-Thinking                        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen/Qwen3-30B-A3B                        | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens   |
