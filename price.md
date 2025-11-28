@@ -30,7 +30,7 @@
 |            | Qwen3-32B-Thinking                        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen/Qwen3-30B-A3B                        | 输入 0.75 元/百万 tokens，输出 3 元/百万 tokens   |
 |            | Qwen3-30B-A3B-Thinking-2507               | 输入 0.75 元/百万 tokens，输出 7.5 元/百万 tokens |
-|            | qwen/qwen2.5-vl-72b-instruct              | 输入 4.5 元/百万 tokens，输出 4.5 元/百万 tokens  |
+|            | qwen/qwen2.5-vl-72b-instruct              | 输入 16 元/百万 tokens，输出 48 元/百万 tokens    |
 |            | Qwen/Qwen3-VL-235B-A22B-Instruct          | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
 |            | Qwen/Qwen3-VL-235B-A22B-Thinking          | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen/Qwen3-max                            | 输入<=32k：输入 6 元/百万 tokens，输出 24 元/百万 tokens <br>32k<输入<=128k：输入 10 元/百万 tokens，输出 40 元/百万 tokens <br>128k<输入<=256k：输入 15 元/百万 tokens，输出 60 元/百万 tokens |
