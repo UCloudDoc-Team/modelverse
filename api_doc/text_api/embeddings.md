@@ -110,7 +110,6 @@ OpenAI 提供两个强大的第三代嵌入模型（模型 ID 中用 `-3` 表示
 
 | 模型 | 每美元约页数 | MTEB 评估性能 | 最大输入 |
 |------|-------------|--------------|---------|
-| text-embedding-3-small | 62,500 | 62.3% | 8192 |
 | text-embedding-3-large | 9,615 | 64.6% | 8192 |
 | text-embedding-ada-002 | 12,500 | 61.0% | 8192 |
 
@@ -205,7 +204,7 @@ res = search_reviews(df, 'delicious beans', n=3)
 
 ### 3. 代码搜索
 
-代码搜索的工作方式类似于基于嵌入的文本搜索。我们提供了一种从给定存储库中的所有 Python 文件中提取 Python 函数的方法。然后，每个函数都由 `text-embedding-3-small` 模型索引。
+代码搜索的工作方式类似于基于嵌入的文本搜索。我们提供了一种从给定存储库中的所有 Python 文件中提取 Python 函数的方法。然后，每个函数都由 `text-embedding-3-large` 模型索引。
 
 ```python
 from openai.embeddings_utils import get_embedding, cosine_similarity
@@ -328,7 +327,7 @@ def num_tokens_from_string(string: str, encoding_name: str) -> int:
 num_tokens_from_string("tiktoken is great!", "cl100k_base")
 ```
 
-对于第三代嵌入模型（如 `text-embedding-3-small`），使用 `cl100k_base` 编码。
+对于第三代嵌入模型（如 `text-embedding-3-large`），使用 `cl100k_base` 编码。
 
 ### 如何快速检索 K 个最近的嵌入向量？
 
