@@ -372,12 +372,9 @@ print(num_tokens_from_string("tiktoken is great!"))  # 输出: 4
 
 ### 如何快速检索 K 个最近的嵌入向量？
 
-为了快速搜索大量向量，建议使用向量数据库，如：
-- Pinecone
-- Milvus
-- Weaviate
-- Qdrant
-- pgvector (PostgreSQL)
+为了快速搜索大量向量，建议您使用向量数据库，如：
+- AI 数据库（参考文档：[AI数据库](https://docs.ucloud.cn/aidb/README)）
+- pgvector (参考文档：[PostgreSQL](https://docs.ucloud.cn/upgsql/README))
 
 ### 应该使用哪个距离函数？
 
