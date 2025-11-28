@@ -105,7 +105,6 @@ curl https://api.modelverse.cn/v1/embeddings \
 | 模型 | 默认维度 | 最大输入 | MTEB 评估性能 |
 |------|---------|---------|--------------|
 | text-embedding-3-large | 3072 | 8192 | 64.6% |
-| text-embedding-3-small | 1536 | 8192 | 62.3% |
 | text-embedding-ada-002 | 1536 | 8192 | 61.0% |
 
 ## 降低嵌入维度
