@@ -61,6 +61,7 @@
 ## 最佳实践
 
 - [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
+- [OpenAI Codex 接入指南](/modelverse/best_practice/codex.md)
 - [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
 - 常见客户端接入 API
   - [Chatbox](/modelverse/best_practice/scenario/chatbox.md)
