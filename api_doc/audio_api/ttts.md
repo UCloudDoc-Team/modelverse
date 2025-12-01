@@ -14,7 +14,7 @@ UModelverse 平台提供了与 OpenAI TTS（Text-to-Speech）API 完全兼容的
 | ----- | ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
 | model | string | 是   | 要使用的 TTS 模型名称，例如：`IndexTeam/IndexTTS-2`                                                                                 |
 | input | string | 是   | 要转换为语音的文本内容（最大支持 600 字符）                                                                                         |
-| voice | string | 是   | 使用的音色，可选值：`jack_cheng`, `sales_voice`, `crystla_liu`, `stephen_chow`, `xiaoyueyue`, `mkas`, `entertain`, `novel`, `movie` |
+| voice | string | 是   | 使用的音色，可选值包括：内置音色（`jack_cheng`, `sales_voice`, `crystla_liu`, `stephen_chow`, `xiaoyueyue`, `mkas`, `entertain`, `novel`, `movie`），也可以填写自定义音色 ID（形如 `uspeech:xxxx`，详见下文「使用自定义音色」） |
 
 ## 调用示例
 
@@ -49,7 +49,7 @@ speech_file_path = Path(__file__).parent / "generated-speech.wav"
 
 with client.audio.speech.with_streaming_response.create(
     model="IndexTeam/IndexTTS-2",
-    voice="jay_klee",
+    voice="jack_cheng",
     input="你好！欢迎使用 Modelverse 语音合成服务。",
 ) as response:
     response.stream_to_file(speech_file_path)
@@ -59,7 +59,50 @@ print(f"Audio saved to {speech_file_path}")
 
 <!-- tabs:end -->
 
-## 响应格式
+## 使用自定义音色（可选）
+
+除了使用内置的 `voice` 名称外，您还可以上传自己的音色（甚至带有特定情绪的样例语音），生成一个专属的 `voice_id`，在 TTS 请求中通过 `voice` 字段进行引用。
+
+> 注意：当前自定义音色资源会在上传 **7 天** 后自动清理，如需长期使用请注意提前备份或重新上传。（可联系商务团队咨询长期保存需求）
+
+使用方式可以简单理解为 **三步**：
+
+1. **上传音色，获取 `voice_id`**  
+   调用 `POST /v1/audio/voice/upload` 上传一段符合要求的示例语音，接口会返回一个 `id` 作为自定义音色 ID。  
+   详细的请求参数与返回结构请参考《[自定义音色管理 API 文档](/modelverse/api_doc/audio_api/custom_voice_api.md)》。
+2. **在 TTS 请求中使用 `voice_id`**  
+   在 `/v1/audio/speech` 请求中，把 `voice` 字段设置为步骤一返回的 `id`，下文会给出完整示例。
+3. **管理已有的自定义音色（可选）**  
+   如需查看或删除已有音色，可调用 `GET /v1/audio/voice/list` 和 `POST /v1/audio/voice/delete`。  
+   具体请求/返回格式同样见《[自定义音色管理 API 文档](/modelverse/api_doc/audio_api/custom_voice_api.md)》。
+
+> 提示：自定义音色完全兼容 OpenAI 协议，只是复用了 `voice` 这个字段，不需要学习新的参数名。
+
+### 在 TTS 请求中使用自定义 voice_id
+
+当您已经拿到一个自定义音色 `id`（例如 `uspeech:xxxx`）后，只需要在 `/v1/audio/speech` 请求中把 `voice` 字段改成该 `id` 即可。
+
+```bash
+VOICE_ID="uspeech:xxxx-xxxx-xxxx-xxxx"
+
+curl https://api.modelverse.cn/v1/audio/speech \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $MODELVERSE_API_KEY" \
+  -d "{
+    \"model\": \"IndexTeam/IndexTTS-2\",\
+    \"input\": \"你好，我是自定义的温柔女声。\",\
+    \"voice\": \"$VOICE_ID\"\
+  }" \
+  --output speech-custom.wav
+```
+
+行为说明：
+
+- `voice` 为空：使用默认音色或模型自带的默认配置。
+- `voice` 为内置名称（如 `jack_cheng` 等）：使用平台内置的预置音色。
+- `voice` 为形如 `uspeech:xxxx` 的值：表示使用你上传的自定义音色，平台会根据该 ID 查找并应用对应的音色/情绪素材，无需额外配置。
+
+  ## 响应格式
 
 API 返回二进制音频文件流。
 
@@ -87,3 +130,19 @@ API 返回二进制音频文件流。
   }
 }
 ```
+
+### 常见问题（FAQ）
+
+- **Q：我上传的音频有什么要求？**  
+  A：必须是 MP3/WAV，单个文件 ≤ 20MB，时长 5–30 秒，采样率至少 16kHz，不符合要求会返回 4xx 错误，并在 `error.code` 中标明原因。
+
+- **Q：`voice` 字段应该填什么？**  
+  A：
+  - 想直接用平台提供的固定音色：填写内置名称（如 `jack_cheng`）；
+  - 想用自己录制的音色：先调用上传接口拿到 `id`，然后在 TTS 请求中把 `voice` 设置为这个 `id`（例如 `uspeech:xxxx`）。
+
+- **Q：出现 `invalid_voice_id` / `voice_not_found` 等错误怎么办？**  
+  A：说明当前账号下找不到这个 `voice_id`，或者已被删除。可以先调用 `/v1/audio/voice/list` 确认当前可用的 ID，再在请求里使用正确的值。
+
+- **Q：不同账号之间能共享自定义音色吗？**  
+  A：同一组织下所有子账号，自定义音色可以共享。非同一账号下，无法共享。
