@@ -17,7 +17,7 @@
 
 | 字段                  | 类型          | 是否必需 | 默认值       | 含义与说明 |
 |-----------------------|---------------|----------|--------------|------------|
-| input_items          | string/array | 否      | 无          | 输入内容（文本/图像/文件）。含义：模型生成响应的基础，支持多模态。示例：`[{"type": "text", "text": "Hello!"}]`。 |
+| input          | string | 否      | 无          | 输入内容（文本/图像/文件）。 |
 | model                | string       | 是      | 无          | 模型ID，如`gpt-4o`或`o3`。含义：指定响应生成模型。 |
 | instructions         | string       | 否      | 无          | 系统消息。含义：指导模型行为，可覆盖先前指令。 |
 | max_tokens           | integer      | 否      | 无          | 最大输出token数（包括推理）。含义：控制响应长度。 |
@@ -60,7 +60,7 @@ curl https://api.modelverse.cn/v1/responses \
   -H "Authorization: Bearer {api_key}" \
   -d '{
     "model": "{model_name}",
-    "input_items": [{"type": "text", "text": "Hello!"}]
+    "input": "Hello! Who are you?"
   }'
 ```
 

@@ -17,15 +17,18 @@
     - [错误码](/modelverse/api_doc/common/error-code.md)
   - 文本生成
     - [如何获取模型列表](/modelverse/api_doc/text_api/models.md)
+    - [模型协议支持说明](/modelverse/api_doc/text_api/model-competi.md)
     - [API支持与UCloud扩展字段说明](/modelverse/api_doc/text_api/api-expand.md)
     - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
+    - [Embeddings 向量嵌入](/modelverse/api_doc/text_api/embeddings.md)
     - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
     <!-- - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md) -->
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
     - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
   - 图片生成
-    - [gemini-2.5-flash-image ( nano banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
+    - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
+    - [gemini-3-pro-image ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
     - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
     - [black-forest-labs/flux-kontext-pro](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro.md)
     - [black-forest-labs/flux-kontext-pro/multi](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro-multi.md)
@@ -46,15 +49,21 @@
     - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
     - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
     - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
+    - [Vidu/文生视频](/modelverse/api_doc/video_api/vidu/Vidu-Text2Video.md)
+    - [Vidu/图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Img2Video.md)
+    - [Vidu/参考图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Reference2Video.md)
+    - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
     - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - 音频生成
     - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
     - [自定义音色](/modelverse/api_doc/audio_api/custom_voice.md)
-    - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
-    
+    - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md) 
+  -  [常见问题答疑](/modelverse/api_doc/qa.md)
+
 - 最佳实践
 
   - [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
+  - [OpenAI Codex 接入指南](/modelverse/best_practice/codex.md)
   - [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
   - 常见客户端接入 API
     - [Chatbox](/modelverse/best_practice/scenario/chatbox.md)
