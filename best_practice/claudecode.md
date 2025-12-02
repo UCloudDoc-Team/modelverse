@@ -1,130 +1,139 @@
-## Claude Code 接入指南
+# Claude Code 接入指南
 
-> 现在你可以通过 [UModelverse 平台](https://console.ucloud.cn/modelverse/model-center) 使用 `claude-4-sonnet`、`claude-4-opus` 等模型接入 Claude Code。
+> 现在你可以通过 [UModelverse 平台](https://console.ucloud.cn/modelverse/model-center) 使用 Claude 系列模型。
 
-## 🚀 快速入门
+## 系统要求
 
-### 1. 安装
+| 平台    | 要求                                |
+| ------- | ----------------------------------- |
+| Windows | Windows 10 或 Windows 11            |
+| macOS   | macOS 10.15 (Catalina) 或更高版本   |
+| Linux   | Ubuntu 18.04+, CentOS 7+, Debian 9+ |
 
-1. 请确保您已安装 npm，请参考 [Node.js 官方网站](https://nodejs.org/zh-cn/download)。
+所有平台均需要：
+- Node.js 18+
+- 网络连接
 
-2. 安装 [Claude Code](https://docs.anthropic.com/en/docs/claude-code/quickstart)：
+## 1. 安装 Node.js
 
-```shell
+请确保您已安装 Node.js 18+，请参考 [Node.js 官方网站](https://nodejs.org/zh-cn/download)。
+
+验证安装：
+```bash
+node --version
+npm --version
+```
+
+> **提示：** 建议使用 LTS（长期支持）版本以获得最佳稳定性。
+
+## 2. 安装 Claude Code CLI
+
+打开终端/命令提示符，执行以下命令：
+
+```bash
 npm install -g @anthropic-ai/claude-code
 ```
 
-### 2. 配置
-
-Claude Code 支持通过环境变量配置自定义 API 端点。
-
-#### 2.1 环境变量配置
-
-在 Mac 或 Linux 环境下，将以下内容添加到您的 `~/.bashrc` 或 `~/.zshrc` 文件中：
-
+验证安装：
 ```bash
-export ANTHROPIC_BASE_URL="https://api.modelverse.cn"
-export ANTHROPIC_API_KEY="your-umodelverse-api-key"
+claude --version
 ```
 
-配置完成后，执行以下命令使配置生效：
+> **注意：** Windows 用户如遇到权限问题，请确保以管理员身份运行命令提示符。
 
-```bash
-source ~/.bashrc  # 或 source ~/.zshrc
-```
+## 3. 配置 UModelverse API
 
-#### 2.2 临时配置（单次运行）
+### 3.1 获取 API Key
 
-如果您只想临时使用，可以在运行时直接设置环境变量：
+访问 [UModelverse 控制台](https://console.ucloud.cn/modelverse/api) 获取您的 API 密钥。
 
-```bash
-ANTHROPIC_BASE_URL="https://api.modelverse.cn" ANTHROPIC_API_KEY="your-umodelverse-api-key" claude
-```
+### 3.2 配置环境变量
 
-### 3. 使用 Claude Code
+> **重要提示：** 请将下方的 `ANTHROPIC_AUTH_TOKEN` 替换为您在 UModelverse 平台获取的实际 API Key！
 
-配置完成后，您可以直接在终端中运行 Claude Code：
+> **⚠️ 注意：** 由于部分实验性功能存在 API 兼容性问题，建议通过 `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS` 参数禁用这些功能以确保稳定运行。
 
-```shell
-claude
-```
+<!-- tabs:start -->
+#### **Windows**
 
-#### 常用命令
-
-- `claude` - 启动交互式 REPL
-- `claude "your question"` - 直接提问
-- `claude -p "your prompt"` - 使用 print 模式（非交互式）
-- `claude -c` - 继续上一次对话
-
-#### 在 VS Code 中使用
-
-1. 安装 Claude Code VS Code 扩展
-2. 确保环境变量已正确配置
-3. 在 VS Code 中使用 `Ctrl+Shift+P`（Mac: `Cmd+Shift+P`）打开命令面板
-4. 搜索并选择 "Claude Code" 相关命令
-
-### 4. 模型选择
-
-在 Claude Code 中，您可以通过 `/model` 命令切换模型：
-
-```
-/model claude-4-sonnet
-```
-
-支持的模型包括：
-- `claude-4-sonnet` - 平衡性能与成本
-- `claude-4-opus` - 最强推理能力
-
-### 5. 高级配置
-
-#### 5.1 配置文件
-
-Claude Code 支持通过配置文件进行更细粒度的控制。创建 `~/.claude/settings.json`：
+配置位置：`%USERPROFILE%\.claude\settings.json`
 
 ```json
 {
-  "permissions": {
-    "allow": [
-      "Bash(npm install)",
-      "Bash(npm run)",
-      "Read(*)",
-      "Write(*)"
-    ],
-    "deny": []
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
+    "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
   }
 }
 ```
 
-#### 5.2 项目级配置
+#### **macOS**
 
-在项目根目录创建 `.claude/settings.json` 可以为特定项目配置权限和行为。
+配置位置：`~/.claude/settings.json`
 
-## 常见问题
-
-### Q: 遇到认证错误怎么办？
-
-确保您的 API Key 正确配置：
-
-```bash
-echo $ANTHROPIC_API_KEY
-echo $ANTHROPIC_BASE_URL
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
+    "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
+  }
+}
 ```
 
-### Q: 如何查看当前使用的模型？
+#### **Linux**
 
-在 Claude Code 交互界面中输入 `/model` 即可查看当前模型。
+配置位置：`~/.claude/settings.json`
 
-### Q: 支持哪些功能？
+```json
+{
+  "env": {
+    "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
+    "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
+    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
+    "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
+  }
+}
+```
+<!-- tabs:end -->
 
-通过 UModelverse 接入的 Claude Code 支持：
-- ✅ 代码生成与编辑
-- ✅ 文件读写操作
-- ✅ 终端命令执行
-- ✅ 多轮对话
-- ✅ 上下文理解
+**配置参数说明：**
 
-## 相关链接
+| 参数                                     | 说明                                          |
+| ---------------------------------------- | --------------------------------------------- |
+| `ANTHROPIC_MODEL`                        | 指定默认使用的模型                            |
+| `ANTHROPIC_DEFAULT_*_MODEL`              | 将 Haiku、Sonnet 等模型统一指向平台支持的模型 |
+| `CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS` | 禁用实验性功能，避免 API 兼容性问题           |
 
-- [UModelverse API Key 获取](https://console.ucloud.cn/modelverse/experience/api-keys)
-- [Claude Code 官方文档](https://docs.anthropic.com/en/docs/claude-code)
-- [Anthropic API 文档](https://docs.anthropic.com/en/api/messages)
+> **注意：** 配置文件更加安全且便于管理，需要重启 Claude Code 才生效。
+
+## 4. 启动 Claude Code
+
+配置完成后，先进入到工程目录：
+
+```bash
+cd your-project-folder
+```
+
+然后，运行以下命令启动：
+
+```bash
+claude
+```
+
+首次启动后需要先进行主题的选择等操作：
+
+1. 选择喜欢的主题（回车）
+2. 确认安全须知（回车）
+3. 使用默认 Terminal 配置（回车）
+4. 信任工作目录（回车）
+5. 开始编程！🚀

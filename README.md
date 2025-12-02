@@ -26,6 +26,7 @@
   - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
   - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
+  - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
 
 ## 图片生成
   - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
@@ -61,7 +62,7 @@
   - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
 ## 最佳实践
 
-- [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
+- [Claude Code 接入指南](/modelverse/best_practice/claudecode.md)
 - [OpenAI Codex 接入指南](/modelverse/best_practice/codex.md)
 - [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
 - 常见客户端接入 API
