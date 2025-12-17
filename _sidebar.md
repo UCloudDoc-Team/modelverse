@@ -76,12 +76,5 @@
     - [通过 CLINE 接入 MCP 服务](/modelverse/best_practice/mcp/MCPServer.md)
     - [通过 UCloud API 实现 MCP Client](/modelverse/best_practice/mcp/MCPClient.md)
 
-- [模型广场](/modelverse/guide/model-marketplace.md)
-- [模型管理](/modelverse/guide/model-manage.md)
-- [模型微调](/modelverse/guide/model-finetuning.md)
-- [模型评估](/modelverse/guide/model-evaluation.md)
-- [服务部署](/modelverse/guide/service-manage.md)
-- [数据集管理](/modelverse/guide/dataset-manage.md)
-
 - UModelVerse 协议
   - [UModelVerse 隐私政策](/modelverse/private.md)
