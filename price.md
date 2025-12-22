@@ -38,6 +38,7 @@
 |            | Qwen/Qwen-Plus-Thinking                   | 输入<=128k：输入 0.8 元/百万 tokens，输出 8 元/百万 tokens <br>128k<输入<=256k：输入 2.4 元/百万 tokens，输出 24 元/百万 tokens <br>256k<输入<=1024k：输入 4.8 元/百万 tokens，输出 64 元/百万 tokens |
 |            | Qwen/Qwen3-235B-A22B-Thinking-2507        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen3-vl-Plus                             | 输入<=32k：输入 1 元/百万 tokens，输出 10 元/百万 tokens <br>32k<输入<=128k：输入 1.5 元/百万 tokens，输出 15 元/百万 tokens <br>128k<输入<=256k：输入 3 元/百万 tokens，输出 30 元/百万 tokens |
+|            | qwen3-vl-flash                             | 输入<=32k：输入 0.15 元/百万 tokens，输出 1.5 元/百万 tokens（batch半价） <br>32k<输入<=128k：输入 0.3 元/百万 tokens，输出 3 元/百万 tokens（batch半价） <br>128k<输入<=256k：输入 0.6 元/百万 tokens，输出 6 元/百万 tokens（batch半价） |
 | moonshotai | moonshotai/Kimi-K2-Instruct               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 |            | moonshotai/Kimi-K2-Instruct-0905          | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 |            | moonshotai/Kimi-K2-Thinking               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
