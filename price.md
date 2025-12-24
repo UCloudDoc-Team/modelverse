@@ -49,6 +49,7 @@
 |            | zai-org/glm-4.5v                          | 输入 2 元/百万 tokens，输出 6 元/百万 tokens      |
 |            | zai-org/glm-4.6                           | 输入 2 元/百万 tokens，输出 8 元/百万 tokens      |
 |           | zai-org/glm-4.6v                           | 输入 ≤ 32k：输入 1 元 / 次，输出 3 元 / 次<br>32k < 输入 ≤ 128k：输入 2 元 / 次，输出 6 元 / 次 |
+|           | zai-org/glm-4.7                            | 上下文(输入)<32K：输入3元/百万 tokens，输出14元/百万 tokens<br>32K≤上下文(输入)<200K：输入4元/百万 tokens，输出16元/百万 tokens |
 | bytedance  | ByteDance/doubao-seed-1.6                 | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
 |            | ByteDance/doubao-seed-1.6-thinking        | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens    |
 |            | ByteDance/doubao-1.5-thinking-vision-pro  | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
