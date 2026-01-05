@@ -20,6 +20,9 @@ OpenAI 兼容接口当前支持：
 
 ```
 GET https://api.modelverse.cn/v1/models
+
+#主要用于海外无法使用`.cn`域名场景
+GET https://api.umodelverse.ai/v1/models
 ```
 
 请求示例：

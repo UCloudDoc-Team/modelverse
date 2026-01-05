@@ -12,6 +12,22 @@ ModelVerse API 使用 API Key 进行认证。所有 API 请求都必须在 HTTP 
 
 ![API Key 页面](/modelverse/images/api-doc/certificate-page.png)
 
+## 调用地址
+
+Modelverse API地址提供两种方式，两个地址调用内容一样。
+
+调用地址1：
+```
+GET https://api.modelverse.cn/v1/models
+```
+
+调用地址2：
+
+主要用于海外无法使用`.cn`域名场景
+```
+GET https://api.umodelverse.ai/v1/models
+```
+
 ## 最简调用
 
 请将 `{api_key}` 替换为您的 API Key。
