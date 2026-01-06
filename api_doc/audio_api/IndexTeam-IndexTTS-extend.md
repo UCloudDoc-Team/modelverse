@@ -113,7 +113,7 @@ curl https://api.modelverse.cn/v1/audio/speech \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $MODELVERSE_API_KEY" \
   -d '{
-    "model": "IndexTeam/IndexTTS-shizhenfei",
+    "model": "IndexTeam/IndexTTS-2",
     "input": "你好，我是带情绪的自定义音色示例。",
     "voice": "'$VOICE_ID'",
 
