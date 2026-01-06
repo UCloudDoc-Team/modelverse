@@ -18,7 +18,7 @@
 | input.prompt          | string | 是       | 提示词，用于指导视频生成                       |
 | input.negative_prompt | string | 否       | 反向提示词，用于限制不希望出现的内容           |
 | parameters.resolution | string | 否       | 生成视频的分辨率档位，当前仅支持`720P`、`480P` |
-| parameters.duration   | int    | 否       | 视频生成时长（秒），支持`5` `8`               |
+| parameters.duration   | int    | 否       | 视频生成时长（秒），支持`5` `8`                |
 | parameters.seed       | int    | 否       | 随机数种子，范围`[0, 2147483647]`              |
 
 ### 请求示例
@@ -84,7 +84,7 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
 | usage.duration       | integer | 任务执行时长（秒）                                |
 | request_id           | string  | 请求的唯一标识                                    |
 
-### 响应示例
+### 响应示例（成功）
 
 ```json
 {
@@ -94,6 +94,24 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
     "urls": ["https://xxxxx/xxxx.mp4"],
     "submit_time": 1756959000,
     "finish_time": 1756959050
+  },
+  "usage": {
+    "duration": 5
+  },
+  "request_id": ""
+}
+```
+
+### 响应示例（失败）
+
+```json
+{
+  "output": {
+    "task_id": "task_id",
+    "task_status": "Failure",
+    "submit_time": 1756959000,
+    "finish_time": 1756959019,
+    "error_message": "error_message"
   },
   "usage": {
     "duration": 5
