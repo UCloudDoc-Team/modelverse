@@ -42,7 +42,7 @@
   - [Qwen/Qwen-Image-Edit](/modelverse/api_doc/image_api/Qwen-Qwen-Image-Edit.md)
   - [Qwen/Qwen-Image](/modelverse/api_doc/image_api/Qwen-Qwen-Image.md)
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
-  - [gpt-iamge-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
+  - [gpt-image-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
 - 视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
@@ -52,6 +52,8 @@
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
   - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
   - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
+  - [Wan-AI/Wan2.6-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.6-I2V.md)
+  - [Wan-AI/Wan2.6-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.6-T2V.md)
   - [Vidu/文生视频](/modelverse/api_doc/video_api/vidu/Vidu-Text2Video.md)
   - [Vidu/图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Img2Video.md)
   - [Vidu/参考图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Reference2Video.md)
