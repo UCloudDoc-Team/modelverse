@@ -43,6 +43,7 @@
   - [Qwen/Qwen-Image](/modelverse/api_doc/image_api/Qwen-Qwen-Image.md)
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
   - [gpt-image-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
+  - [doubao-seedream-4.5](/modelverse/api_doc/image_api/doubao-seedream-4.5.md)
 - 视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
