@@ -25,7 +25,7 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 在Dify的工作室中单击**导入DSL文件**并选择下载好的模板文件
 
 ### 第二步：配置API Key
-在**请求设置**模块中将Authorization的值替换成您的API-Key。
+在**请求设置**模块中将Authorization的值替换成您的API Key。
 
 ![dify](/images/dify/request_set.png)
 
