@@ -27,8 +27,7 @@
   - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
   - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
   - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
-
-## 图片生成
+-图片生成
   - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
   - [gemini-3-pro-image ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
   - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
@@ -44,8 +43,7 @@
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
   - [gpt-image-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
   - [doubao-seedream-4.5](/modelverse/api_doc/image_api/doubao-seedream-4.5.md)
-
-##  视频生成
+ -视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
   - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
@@ -65,12 +63,11 @@
   - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
   - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
-
-## 音频生成
+ -音频生成
   - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
   - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
   - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
-  
+
 ## 最佳实践
 
 - [Claude Code 接入指南](/modelverse/best_practice/claudecode.md)
