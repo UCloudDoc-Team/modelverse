@@ -44,7 +44,8 @@
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
   - [gpt-image-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
   - [doubao-seedream-4.5](/modelverse/api_doc/image_api/doubao-seedream-4.5.md)
-- 视频生成
+
+##  视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
   - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
@@ -63,11 +64,13 @@
   - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
   - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
-  - [doubao-seedance-1-5-pro-251215](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
-- 音频生成
+  - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
+
+## 音频生成
   - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
   - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
   - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
+  
 ## 最佳实践
 
 - [Claude Code 接入指南](/modelverse/best_practice/claudecode.md)
