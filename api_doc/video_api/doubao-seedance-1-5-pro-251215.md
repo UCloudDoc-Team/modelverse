@@ -1,4 +1,4 @@
-# doubao-seedance-1-5-pro-251215
+# doubao-seedance-1-5-pro
 
 文图生视频模型
 
