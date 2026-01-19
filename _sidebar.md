@@ -61,6 +61,8 @@
     - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
     - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
     - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
+    - [MiniMax/Hailuo-2.3-I2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-I2V.md)
+    - [MiniMax/Hailuo-2.3-T2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-T2V.md)
   - 音频生成
     - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
     - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
