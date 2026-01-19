@@ -45,7 +45,7 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
     "model": "viduq2",
     "input": {
       "images": [
-        "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+        "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg"
       ],
       "prompt": "make it dance."
     },
