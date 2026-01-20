@@ -21,7 +21,10 @@ Dify 是一款开源的大语言模型(LLM) 应用开发平台。它融合了后
 ![dify](/images/dify/complete.png)
 
 ## 在Dify中实现文生图
-### 第一步：[下载工作流模版](/modelverse/best_practice/scenario/ucloud-image-template.yml)
+### 第一步：下载工作流模版，浏览器输入如下地址即可下载
+```
+https://docs.ucloud.cn/modelverse/best_practice/scenario/ucloud-image-template.yml
+```
 在Dify的工作室中单击**导入DSL文件**并选择下载好的模板文件
 
 ### 第二步：配置API Key
