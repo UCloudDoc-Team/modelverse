@@ -30,6 +30,9 @@
   - 图片生成
     - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
     - [gemini-3-pro-image ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
+    - [flux-2-pro](/modelverse/api_doc/image_api/flux-2-pro.md)
+    - [flux-kontext-pro](/modelverse/api_doc/image_api/flux-kontext-pro.md)
+    - [flux-pro-1.1](/modelverse/api_doc/image_api/flux-pro-1.1.md)
     - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
     - [black-forest-labs/flux-kontext-pro](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro.md)
     - [black-forest-labs/flux-kontext-pro/multi](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro-multi.md)
