@@ -69,7 +69,7 @@ headers = {
 payload = {
     "prompt": "A photograph of a red fox in an autumn forest",
     "width": 1024,
-    "height": 1024,
+    "height": 1024
 }
 
 response = requests.post(url, headers=headers, json=payload)
