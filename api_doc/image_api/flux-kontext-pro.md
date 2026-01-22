@@ -52,7 +52,7 @@ curl -X POST "https://api.modelverse.cn/v1/flux-kontext-pro" \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $MODELVERSE_API_KEY" \
   -d '{
-     "prompt" : "A photograph of a red fox in an autumn forest",
+     "prompt" : "A photograph of a red fox in an autumn forest"
     }' | jq -r '.data[0].b64_json' | base64 --decode > flux-pro-1.1.png
 ```
 

@@ -52,7 +52,7 @@ curl -X POST "https://api.modelverse.cn/v1/flux-pro-1.1" \
   -d '{
      "prompt" : "A photograph of a red fox in an autumn forest",
      "width": 1024,
-     "height": 1024,
+     "height": 1024
     }' | jq -r '.data[0].b64_json' | base64 --decode > flux-pro-1.1.png
 ```
 
