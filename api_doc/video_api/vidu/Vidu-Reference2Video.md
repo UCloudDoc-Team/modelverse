@@ -13,7 +13,63 @@
 | 参数                          | 类型     | 是否必选 | 描述                                                                                                |
 | :---------------------------- | :------- | :------- | :-------------------------------------------------------------------------------------------------- |
 | model                         | string   | 是       | 模型名称，可选值：`viduq2`                                                                          |
-| input.images                  | []string | 是       | 参考图像数组，viduq2/viduq1 支持 1-7 张，vidu2.0/vidu1.5 支持 1-3 张，支持图片 URL 或 Base64 编码   |
+| input.prompt                  | string   | 是       | 文本提示词，用于指导视频生成，最长 2000 字符                                                        |
+| input.subjects                  | []object | 是       | 图片主体信息支持1-7个主体   |
+| input.subjects.id               | string | 是       | 主体id，后续生成时可以通过`@主体id`的方式使用   |
+| input.subjects.images           | []string | 是       | 该主体对应的图片url，每个主体最多支持3张图片 <br> 注：支持传入图片 Base64 编码或图片URL（确保可访问）   |
+| input.subjects.voice_id         | string   | 是       | 音色id <br> 用来决定视频中的声音音色，为空时系统会自动推荐，可选枚举值参考列表：[新音色列表](https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg)                                                        |
+| parameters.vidu_type          | string   | 是       | Vidu 接口类型，此处为 `reference2video`                                                             |
+| parameters.duration           | int      | 否       | 视频时长参数，默认值依据模型而定： <br> viduq2：默认5秒，可选：1-10                                 |
+| parameters.seed               | int      | 否       | 随机种子，默认 0 表示使用随机数                                                                     |
+| parameters.aspect_ratio       | string   | 否       | 长宽比，可选值：`16:9`、`9:16`、`4:3`、`3:4`、`1:1`，默认 `16:9`，注：4:3、3:4 仅支持 q2            |
+| parameters.resolution         | string   | 否       | 分辨率参数，默认值依据模型和视频时长而定：<br> viduq2 （1-8秒）：默认 720p, 可选：540p、720p、1080p |
+| parameters.movement_amplitude | string   | 否       | 运动幅度，可选值：`auto`、`small`、`medium`、`large`，默认 `auto`，注：q2 模型不支持该参数          |
+| parameters.bgm                | bool     | 否       | 是否添加背景音乐，默认 `false`                                                                      |
+| parameters.audio                | bool     | 否       | 是否使用音视频直出能力，默认false，可选值 true、false <br> - true：使用音视频直出能力。<br> - false：不使用音视频直出能力。                                                                      |
+
+### 请求示例
+
+⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
+
+```shell
+curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
+--header 'Authorization: <YOUR_API_KEY>' \
+--header 'Content-Type: application/json' \
+--data '{
+    "model": "viduq2",
+    "input": {
+      "prompt": "让@1与@2一起跑步,一起喊加油",
+      "subjects": [
+      {
+        "id": "1",
+        "images" : ["https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg"],
+        "voice_id":""
+      },
+      {
+        "id": "2",
+        "images" : ["https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg"],
+        "voice_id":""
+      }
+      ]
+    },
+    "parameters": {
+      "vidu_type": "reference2video",
+      "duration": 5,
+      "aspect_ratio": "16:9",
+      "resolution": "720p",
+      "movement_amplitude": "auto",
+      "bgm": false,
+      "audio": true
+    }
+  }'
+```
+
+### 兼容旧接口-输入
+
+| 参数                          | 类型     | 是否必选 | 描述                                                                                                |
+| :---------------------------- | :------- | :------- | :-------------------------------------------------------------------------------------------------- |
+| model                         | string   | 是       | 模型名称，可选值：`viduq2`                                                                          |
+| input.images                  | []string | 是       | 参考图像数组，viduq2 支持 1-7 张，支持图片 URL 或 Base64 编码   |
 | input.prompt                  | string   | 是       | 文本提示词，用于指导视频生成，最长 2000 字符                                                        |
 | parameters.vidu_type          | string   | 是       | Vidu 接口类型，此处为 `reference2video`                                                             |
 | parameters.duration           | int      | 否       | 视频时长参数，默认值依据模型而定： <br> viduq2：默认5秒，可选：1-10                                 |
@@ -24,8 +80,7 @@
 | parameters.bgm                | bool     | 否       | 是否添加背景音乐，默认 `false`                                                                      |
 
 **注意事项：**
-- viduq2/viduq1 模型支持 1-7 张参考图片
-- vidu2.0/vidu1.5 模型支持 1-3 张参考图片
+- viduq2 模型支持 1-7 张参考图片
 - 模型将以参考图片中的主题为参考生成具备主体一致的视频
 - 图片支持 png、jpeg、jpg、webp 格式
 - 图片像素不能小于 128×128

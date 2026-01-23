@@ -21,6 +21,8 @@
 | parameters.resolution         | string | 否       | 分辨率，<br>- viduq2-pro-fast：默认 720p，可选：720p、1080p <br> - viduq2-pro：默认 720p，可选：540p、720p、1080p <br >- viduq2-turbo：默认 720p，可选：540p、720p、1080p                                                                                                                                                                 |
 | parameters.movement_amplitude | string | 否       | 运动幅度，可选值：`auto`、`small`、`medium`、`large`，默认 `auto`                                                                                                                                                                                                |
 | parameters.bgm                | bool   | 否       | 是否添加背景音乐，默认 `false`                                                                                                                                                                                                                                   |
+| parameters.audio | bool | 否       | 是否使用音视频直出能力，默认为false，枚举值为：<br> - false：不需要音视频直出，输出静音视频 <br> - true：需要音视频直出，输出带台词以及背景音的视频 <br> 注：该参数为true时，voice_id参数才生效                                                                                                              |
+| parameters.voice_id | string | 否       | 音色id <br> 用来决定视频中的声音音色，为空时系统会自动推荐，可选枚举值参考列表：[新音色列表](https://shengshu.feishu.cn/sheets/EgFvs6DShhiEBStmjzccr5gonOg)              |
 
 **注意事项：**
 - 图片支持 png、jpeg、jpg、webp 格式
