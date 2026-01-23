@@ -63,9 +63,6 @@ claude --version
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
     "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
-    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
     "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
   }
 }
@@ -80,9 +77,6 @@ claude --version
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
     "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
-    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
     "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
   }
 }
@@ -97,9 +91,6 @@ claude --version
   "env": {
     "ANTHROPIC_AUTH_TOKEN": "your-umodelverse-api-key",
     "ANTHROPIC_BASE_URL": "https://api.modelverse.cn",
-    "ANTHROPIC_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-sonnet-4-5-20250929",
-    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4-5-20250929",
     "CLAUDE_CODE_DISABLE_EXPERIMENTAL_BETAS": "1"
   }
 }
