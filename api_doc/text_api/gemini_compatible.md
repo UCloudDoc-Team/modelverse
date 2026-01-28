@@ -16,7 +16,7 @@ pip install google-genai
 ```
 
 ### 示例
-以下示例使用 generateContent 方法，通过`gemini-2.5-flash`模型向 UModelverse API 发送请求。
+以下示例使用 generateContent 方法，通过`gemini-3-flash-preview`模型向 UModelverse API 发送请求。
 
 > 请确保将 `$MODELVERSE_API_KEY` 替换为您自己的 API Key，获取 [API Key](https://console.ucloud.cn/modelverse/experience/api-keys)。
 
@@ -39,7 +39,7 @@ client = genai.Client(
 )
 
 response = client.models.generate_content(
-   model="gemini-2.5-flash",
+   model="gemini-3-flash-preview",
    contents=[
        {"text": "How does AI work?"},
    ],
@@ -64,7 +64,7 @@ config=types.GenerateContentConfig(
 #### ** curl **
 
 ```bash
-curl "https://api.modelverse.cn/v1beta/models/deepseek-ai/DeepSeek-V3.1:generateContent" \
+curl "https://api.modelverse.cn/v1beta/models/gemini-3-flash-preview:generateContent" \
     -H "x-goog-api-key: $MODELVERSE_API_KEY" \
     -H "Content-Type: application/json" \
     -X POST \
@@ -105,7 +105,7 @@ client = genai.Client(
 )
 
 response = client.models.generate_content_stream(
-    model="gemini-2.5-flash", contents=["Explain how AI works"]
+    model="gemini-3-flash-preview", contents=["Explain how AI works"]
 )
 for chunk in response:
     print(chunk.text, end="")
@@ -115,7 +115,7 @@ for chunk in response:
 #### ** curl **
 
 ```bash
-curl "https://api.modelverse.cn/v1beta/models/gemini-2.5-flash:GenerateContent?alt=sse" \
+curl "https://api.modelverse.cn/v1beta/models/gemini-3-flash-preview:GenerateContent?alt=sse" \
     -H "Authorization: Bearer $MODELVERSE_API_KEY" \
     -H "Content-Type: application/json" \
     -d '{
