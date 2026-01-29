@@ -57,6 +57,9 @@
 | streamlake | kat-coder-32k                             | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens   |
 |            | kat-coder-128k                            | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens   |
 |            | kat-coder-256k                            | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens   |
+| MiniMax    | MiniMax-M2.1                              | 输入 2.1 元/百万 tokens，输出 8.4 元/百万 tokens  |
+|            | MiniMax-M2.1-lightning                    | 输入 2.1 元/百万 tokens，输出 16.8 元/百万 tokens |
+|            | MiniMax-M2                                | 输入 2.1 元/百万 tokens，输出 8.4 元/百万 tokens  |
 
 
 ## 生图模型 API 定价
