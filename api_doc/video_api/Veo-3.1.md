@@ -92,7 +92,7 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
 | :------------------- | :------ | :------------------------------------------------ |
 | output.task_id       | string  | 异步任务的唯一标识                                |
 | output.task_status   | string  | 任务状态：`Pending`,`Running`,`Success`,`Failure` |
-| output.urls          | array   | 视频结果的 URL 列表                               |
+| output.urls          | array   | 视频结果的 URL 列表，默认保留24小时，请及时下载。                               |
 | output.submit_time   | integer | 任务提交时间戳                                    |
 | output.finish_time   | integer | 任务完成时间戳                                    |
 | output.error_message | string  | 失败时返回的错误信息                              |
