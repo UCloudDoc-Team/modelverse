@@ -51,7 +51,7 @@
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
   - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
   - [OpenAI/Sora2-I2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V-Pro.md)
-  - [Sora-2](/modelverse/api_doc/video_api/Sora-2.md)
+  - [OpenAI/Sora-2](/modelverse/api_doc/video_api/OpenAI-Sora-2.md)
   - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
   - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
