@@ -6,7 +6,7 @@
 
 ### 接口
 
-`http://api.modelverse.cn/v1/openai/videos`
+`http://api.modelverse.cn/v1/videos`
 
 ### 输入
 
@@ -21,7 +21,7 @@
 ### 请求示例
 ⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
 ```shell
-curl -X POST "http://api.modelverse.cn/v1/openai/videos" \
+curl -X POST "http://api.modelverse.cn/v1/videos" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F prompt="She turns around and smiles, then slowly walks out of the frame." \
@@ -62,12 +62,12 @@ curl -X POST "http://api.modelverse.cn/v1/openai/videos" \
 
 ### 接口
 
-`https://api.modelverse.cn/v1/openai/videos/<task_id>`
+`https://api.modelverse.cn/v1/videos/<task_id>`
 
 ### 请求示例
 
 ```shell
-curl --location 'https://api.modelverse.cn/v1/openai/videos/video_6982fa1cd4f081908b619dc53cfc2435' \
+curl --location 'https://api.modelverse.cn/v1/videos/video_6982fa1cd4f081908b619dc53cfc2435' \
 -H "Authorization: Bearer $OPENAI_API_KEY"
 ```
 
@@ -112,11 +112,11 @@ curl --location 'https://api.modelverse.cn/v1/openai/videos/video_6982fa1cd4f081
 
 ## 下载视频
 ### 接口
-`https://api.modelverse.cn/v1/openai/videos/<task_id>/content`
+`https://api.modelverse.cn/v1/videos/<task_id>/content`
 
 ### 请求示例
 ```shell
-curl --location 'https://api.modelverse.cn/v1/openai/videos/<task_id>/content' \
+curl --location 'https://api.modelverse.cn/v1/videos/<task_id>/content' \
 -H "Authorization: Bearer $OPENAI_API_KEY"
 --output video.mp4
 ```
@@ -136,11 +136,11 @@ curl --location 'https://api.modelverse.cn/v1/openai/videos/<task_id>/content' \
 ## remix
 
 ### 接口
-`https://api.modelverse.cn/v1/openai/videos/<task_id>/remix`
+`https://api.modelverse.cn/v1/videos/<task_id>/remix`
 
 ### 请求示例
 ```shell
-curl -X POST "https://api.openai.com/v1/videos/<task_id>/remix" \
+curl -X POST "https://api.modelverse.com/v1/videos/<task_id>/remix" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
