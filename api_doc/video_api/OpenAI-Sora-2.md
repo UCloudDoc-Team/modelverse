@@ -140,7 +140,7 @@ curl --location 'https://api.modelverse.cn/v1/videos/<task_id>/content' \
 
 ### 请求示例
 ```shell
-curl -X POST "https://api.modelverse.com/v1/videos/<task_id>/remix" \
+curl -X POST "https://api.modelverse.cn/v1/videos/<task_id>/remix" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -H "Content-Type: application/json" \
   -d '{
