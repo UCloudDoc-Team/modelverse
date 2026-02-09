@@ -134,7 +134,7 @@ curl --location 'https://api.modelverse.cn/v1/tasks/status?task_id=<task_id>' \
   "output": {
     "task_id": "task_id",
     "task_status": "Success",
-    "urls": ["https://xxxxx/xxxx.mp4"],
+    "urls": ["https://xxxxx/xxxx.mp3"],
     "submit_time": 1756959000,
     "finish_time": 1756959050
   },
