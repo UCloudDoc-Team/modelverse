@@ -60,6 +60,8 @@
   - [Wan-AI/Wan2.6-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.6-T2V.md)
   - [MiniMax/Hailuo-2.3-I2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-I2V.md)
   - [MiniMax/Hailuo-2.3-T2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-T2V.md)
+  - [MiniMax/Hailuo-2.3-Fast](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-Fast.md)
+  - [MiniMax/Hailuo-02](/modelverse/api_doc/video_api/MiniMax-Hailuo-02.md)
   - [Vidu/文生视频](/modelverse/api_doc/video_api/vidu/Vidu-Text2Video.md)
   - [Vidu/图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Img2Video.md)
   - [Vidu/参考图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Reference2Video.md)
