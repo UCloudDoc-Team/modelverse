@@ -53,7 +53,7 @@
 ⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
 ```shell
 curl --location --globoff 'https://api.modelverse.cn/v1/t2a_v2' \
---header 'Authorization: Bearer 1pUozzMYSELkn7PX71BcD64c-1926-42Bf-a494-6dE42d88' \
+--header 'Authorization: Bearer <YOUR_API_KEY>' \
 --header 'Content-Type: application/json' \
 --data '{
   "model": "speech-2.8-hd",
