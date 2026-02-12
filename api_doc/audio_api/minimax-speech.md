@@ -14,8 +14,8 @@
 
 | 参数                          | 类型   | 是否必选 | 描述                                                                                                                                                                                                                                                                                                          |
 | :---------------------------- | :----- | :------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| model                         | string | 是       | 请求的模型版本，可选范围：<br>`speech-2.8-hd`<br>`speech-2.6-hd`<br>`speech-02-hd`|
-| text                          | string | 是      | 需要合成语音的文本，长度限制小于`10000`字符，若文本长度大于`3000`字符，推荐使用流式输出<br> •段落切换用换行符标记<br> •停顿控制：支持自定义文本之间的语音时间间隔，以实现自定义文本语音停顿时间的效果。使用方式：在文本中增加`<#x#>`标记，`x` 为停顿时长（单位：秒），范围 `[0.01, 99.99]`，最多保留两位小数。文本间隔时间需设置在两个可以语音发音的文本之间，不可连续使用多个停顿标记<br> •语气词标签：仅当模型选择 `speech-2.8-hd`时，支持在文本中插入语气词标签。支持的语气词：`(laughs)（笑声）`、`(chuckle)（轻笑）`、`(coughs)（咳嗽）`、`(clear-throat)（清嗓子）`、`(groans)（呻吟）`、`(breath)（正常换气）`、`(pant)（喘气）`、`(inhale)（吸气）`、`(exhale)（呼气）`、`(gasps)（倒吸气）`、`(sniffs)（吸鼻子）`、`(sighs)（叹气）`、`(snorts)（喷鼻息）`、`(burps)（打嗝）`、`(lip-smacking)（咂嘴）`、`(humming)（哼唱）`、`(hissing)（嘶嘶声）`、`(emm)（嗯）`、`(sneezes)（喷嚏）`|
+| model                         | string | 是       | 请求的模型版本，可选范围：<br>`speech-2.8-hd`<br>`speech-2.6-hd`<br>`speech-02-hd`<br>`speech-2.8-turbo`<br>`speech-2.6-turbo`<br>`speech-02-turbo`|
+| text                          | string | 是      | 需要合成语音的文本，长度限制小于`10000`字符，若文本长度大于`3000`字符，推荐使用流式输出<br> •段落切换用换行符标记<br> •停顿控制：支持自定义文本之间的语音时间间隔，以实现自定义文本语音停顿时间的效果。使用方式：在文本中增加`<#x#>`标记，`x` 为停顿时长（单位：秒），范围 `[0.01, 99.99]`，最多保留两位小数。文本间隔时间需设置在两个可以语音发音的文本之间，不可连续使用多个停顿标记<br> •语气词标签：仅当模型选择 `speech-2.8-hd`,`speech-2.8-turbo`时，支持在文本中插入语气词标签。支持的语气词：`(laughs)（笑声）`、`(chuckle)（轻笑）`、`(coughs)（咳嗽）`、`(clear-throat)（清嗓子）`、`(groans)（呻吟）`、`(breath)（正常换气）`、`(pant)（喘气）`、`(inhale)（吸气）`、`(exhale)（呼气）`、`(gasps)（倒吸气）`、`(sniffs)（吸鼻子）`、`(sighs)（叹气）`、`(snorts)（喷鼻息）`、`(burps)（打嗝）`、`(lip-smacking)（咂嘴）`、`(humming)（哼唱）`、`(hissing)（嘶嘶声）`、`(emm)（嗯）`、`(sneezes)（喷嚏）`|
 | stream                        | boolean | 否       | 控制是否流式输出。默认 `false`，即不开启流式|
 | stream_options                | object | 否       | `stream`输出控制   |
 | stream_options.<br>exclude_aggregated_audio       | boolean | 否       | 设置最后一个 `chunk` 是否包含拼接后的语音 `hex` 数据。默认值为 `False`，即最后一个 `chunk` 中包含拼接后的完整语音 `hex` 数据        |
@@ -24,7 +24,7 @@
 | voice_setting.speed           | float   | 否       | 合成音频的语速，取值越大，语速越快。取值范围 `[0.5,2]`，默认值为`1.0` |
 | voice_setting.vol             | float | 否       | 合成音频的音量，取值越大，音量越高。取值范围 `(0,10]`，默认值为 `1.0`   |
 | voice_setting.pitch           | int | 否       | 合成音频的语调，取值范围 `[-12,12]`，默认值为 `0`，其中 `0` 为原音色输出         |
-| voice_setting.emotion         | enum<string>   | 否       | 控制合成语音的情绪，参数范围 `["happy", "sad", "angry", "fearful", "disgusted", "surprised", "calm", "fluent", "whisper"]`，分别对应 8 种情绪：`高兴，悲伤，愤怒，害怕，厌恶，惊讶，中性，生动，低语`<br> 选项 `fluent, whisper` 仅对 `speech-2.6-hd` 模型生效，`speech-2.8-hd` 模型不支持 `whisper`|
+| voice_setting.emotion         | enum<string>   | 否       | 控制合成语音的情绪，参数范围 `["happy", "sad", "angry", "fearful", "disgusted", "surprised", "calm", "fluent", "whisper"]`，分别对应 8 种情绪：`高兴，悲伤，愤怒，害怕，厌恶，惊讶，中性，生动，低语`<br> 选项 `fluent, whisper` 仅对 `speech-2.6-hd`,`speech-2.6-turbo` 模型生效，`speech-2.8-hd`,`speech-2.8-turbo` 模型不支持 `whisper`|
 | voice_setting.text_normalization | boolean | 否       | 是否启用中文、英语文本规范化，开启后可提升数字阅读场景的性能，但会略微增加延迟，默认值为 `false`   |
 | voice_setting.latex_read      | boolean | 否       | 控制是否朗读 `latex` 公式，默认为 `false`<br> •仅支持中文，开启该参数后，`language_boost` 参数会被设置为 `Chinese`<br> •请求中的公式需要在公式的首尾加上 $$<br> •请求中公式若有 `"\"`，需转义成 `"\\"`.|
 | audio_setting                 | object   | 否     | 音频设置 |
