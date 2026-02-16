@@ -83,7 +83,7 @@ curl https://api.modelverse.cn/v1/chat/completions \
      }
    ],
    "stream": true
- }' | jq .
+ }' 
 ```
 
 参数说明：
