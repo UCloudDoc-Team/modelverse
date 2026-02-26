@@ -37,7 +37,8 @@
 |            | Qwen/Qwen-Plus-Thinking                   | 输入<=128k：输入 0.8 元/百万 tokens，输出 8 元/百万 tokens <br>128k<输入<=256k：输入 2.4 元/百万 tokens，输出 24 元/百万 tokens <br>256k<输入<=1024k：输入 4.8 元/百万 tokens，输出 64 元/百万 tokens |
 |            | Qwen/Qwen3-235B-A22B-Thinking-2507        | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen3-vl-Plus                             | 输入<=32k：输入 1 元/百万 tokens，输出 10 元/百万 tokens <br>32k<输入<=128k：输入 1.5 元/百万 tokens，输出 15 元/百万 tokens <br>128k<输入<=256k：输入 3 元/百万 tokens，输出 30 元/百万 tokens |
-|            | qwen3-vl-flash                             | 输入<=32k：输入 0.15 元/百万 tokens，输出 1.5 元/百万 tokens（batch半价） <br>32k<输入<=128k：输入 0.3 元/百万 tokens，输出 3 元/百万 tokens（batch半价） <br>128k<输入<=256k：输入 0.6 元/百万 tokens，输出 6 元/百万 tokens（batch半价） |
+|            | qwen3-vl-flash                            | 输入<=32k：输入 0.15 元/百万 tokens，输出 1.5 元/百万 tokens（batch半价） <br>32k<输入<=128k：输入 0.3 元/百万 tokens，输出 3 元/百万 tokens（batch半价） <br>128k<输入<=256k：输入 0.6 元/百万 tokens，输出 6 元/百万 tokens（batch半价） |
+|            | qwen3.5-plus                              | 输入<=128K ：输入 0.8 元/百万 tokens，输出 4.8 元/百万 tokens  <br>128k<输入<=256k：输入 2 元/百万 tokens，输出 12 元/百万 tokens   <br>256k<输入<=1M：输入 4 元/百万 tokens，输出 24 元/百万 tokens |
 | moonshotai | moonshotai/Kimi-K2-Instruct               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 |            | moonshotai/Kimi-K2-Instruct-0905          | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
 |            | moonshotai/Kimi-K2-Thinking               | 输入 4 元/百万 tokens，输出 16 元/百万 tokens     |
@@ -56,6 +57,10 @@
 |            | ByteDance/doubao-1.5-thinking-vision-pro  | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
 |            | ByteDance/doubao-1-5-pro-32k-250115       | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
 |            | ByteDance/doubao-1-5-pro-256k-250115      | 输入 5 元/百万 tokens，输出 9 元/百万 tokens      |
+|            | doubao-seed-2-0-pro-260215                | 输入<=32K ：输入 3.2 元/百万 tokens，输出 16 元/百万 tokens  <br>32K<输入<=128K：输入 4.8 元/百万 tokens，输出 24 元/百万 tokens   <br>128K<输入<=256K：输入 9.6 元/百万 tokens，输出 48 元/百万 tokens  |
+|            | doubao-seed-2-0-lite-260215               | 输入<=32K ：输入 0.6 元/百万 tokens，输出 3.6 元/百万 tokens  <br>32K<输入<=128K：输入 0.9 元/百万 tokens，输出 5.4 元/百万 tokens   <br>128K<输入<=256K：输入 1.8 元/百万 tokens，输出 10.8 元/百万 tokens |
+|            | doubao-seed-2-0-mini-260215               | 输入<=32K ：输入 0.2 元/百万 tokens，输出 2 元/百万 tokens  <br>32K<输入<=128K：输入 0.4 元/百万 tokens，输出 4 元/百万 tokens   <br>128K<输入<=256K：输入 0.8 元/百万 tokens，输出 8 元/百万 tokens  |
+|            | doubao-seed-2-0-code-preview-260215       | 输入<=32K ：输入 3.2 元/百万 tokens，输出 16 元/百万 tokens  <br>32K<输入<=128K：输入 4.8 元/百万 tokens，输出 24 元/百万 tokens   <br>128K<输入<=256K：输入 9.6 元/百万 tokens，输出 48 元/百万 tokens |
 | streamlake | kat-coder-32k                             | 输入 5.5 元/百万 tokens，输出 22 元/百万 tokens   |
 |            | kat-coder-128k                            | 输入 6.5 元/百万 tokens，输出 26 元/百万 tokens   |
 |            | kat-coder-256k                            | 输入 9.5 元/百万 tokens，输出 38 元/百万 tokens   |
