@@ -1,4 +1,4 @@
-# gemini-3-pro-image ( nano banana 2 )
+# gemini-3-pro-image ( nano banana pro )
 
 本文介绍 `gemini-3-pro-image-preview` (模型ID: `gemini-3-pro-image-preview`) 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
