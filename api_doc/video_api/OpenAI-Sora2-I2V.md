@@ -26,7 +26,7 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --data '{
     "model": "openai/sora-2/image-to-video",
     "input": {
-      "first_frame_url": "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+      "first_frame_url": "https://test2-im.cn-bj.ufileos.com/image/Adobe%20Express%20-%20file.png",
       "prompt": "The image is coming to life"
     },
     "parameters": {
