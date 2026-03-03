@@ -21,7 +21,6 @@
 |            | deepseek-ai/DeepSeek-V3.1-Think           | 输入 4 元/百万 tokens，输出 12 元/百万 tokens     |
 |            | deepseek-ai/DeepSeek-V3.2-Exp-Think       | 输入 2 元/百万 tokens，输出 3 元/百万 tokens      |
 |            | deepseek-ai/DeepSeek-V3.2-Exp             | 输入 2 元/百万 tokens，输出 3 元/百万 tokens      |
-|            | deepseek-ai/DeepSeek-R1-Distill-Llama-70B | 输入 1 元/百万 tokens，输出 3 元/百万 tokens      |
 | qwen       | Qwen/QwQ-32B                              | 输入 2 元/百万 tokens，输出 6 元/百万 tokens      |
 |            | Qwen3-235B-A22B-Thinking-2507             | 输入 2 元/百万 tokens，输出 20 元/百万 tokens     |
 |            | Qwen/Qwen3-Coder                          | Tokens为单次请求的输入token数，输入价格：<br>Tokens ≤ 32K：8元<br>32K < Tokens ≤ 128K：9元<br>128K < Tokens ≤ 200K：15元<br><br>Tokens为单次请求的输入token数，输出价格：<br>Tokens ≤ 32K：24元<br>32K < Tokens ≤ 128K：36元<br>128K < Tokens ≤ 200K：60元 |
@@ -56,7 +55,6 @@
 |            | ByteDance/doubao-seed-1.6-thinking        | 输入 0.8 元/百万 tokens，输出 8 元/百万 tokens    |
 |            | ByteDance/doubao-1.5-thinking-vision-pro  | 输入 3 元/百万 tokens，输出 9 元/百万 tokens      |
 |            | ByteDance/doubao-1-5-pro-32k-250115       | 输入 0.8 元/百万 tokens，输出 2 元/百万 tokens    |
-|            | ByteDance/doubao-1-5-pro-256k-250115      | 输入 5 元/百万 tokens，输出 9 元/百万 tokens      |
 |            | doubao-seed-2-0-pro-260215                | 输入<=32K ：输入 3.2 元/百万 tokens，输出 16 元/百万 tokens  <br>32K<输入<=128K：输入 4.8 元/百万 tokens，输出 24 元/百万 tokens   <br>128K<输入<=256K：输入 9.6 元/百万 tokens，输出 48 元/百万 tokens  |
 |            | doubao-seed-2-0-lite-260215               | 输入<=32K ：输入 0.6 元/百万 tokens，输出 3.6 元/百万 tokens  <br>32K<输入<=128K：输入 0.9 元/百万 tokens，输出 5.4 元/百万 tokens   <br>128K<输入<=256K：输入 1.8 元/百万 tokens，输出 10.8 元/百万 tokens |
 |            | doubao-seed-2-0-mini-260215               | 输入<=32K ：输入 0.2 元/百万 tokens，输出 2 元/百万 tokens  <br>32K<输入<=128K：输入 0.4 元/百万 tokens，输出 4 元/百万 tokens   <br>128K<输入<=256K：输入 0.8 元/百万 tokens，输出 8 元/百万 tokens  |
