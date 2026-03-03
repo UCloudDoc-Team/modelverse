@@ -62,6 +62,7 @@
     - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
     - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
     - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
+    - [Vidu/一键生成MV](/modelverse/api_doc/video_api/vidu/Vidu-Mv.md)
     - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
     - [MiniMax/Hailuo-2.3-I2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-I2V.md)
     - [MiniMax/Hailuo-2.3-T2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-T2V.md)

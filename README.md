@@ -69,6 +69,7 @@
   - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
   - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
   - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
+  - [Vidu/一键生成MV](/modelverse/api_doc/video_api/vidu/Vidu-Mv.md)
   - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
   - [kling-video-o1](/modelverse/api_doc/video_api/Kling-O1.md)
   - [kling-v2-6/图生视频](/modelverse/api_doc/video_api/Kling-v2.6-I2V.md)
