@@ -1,6 +1,6 @@
-# doubao-seedream-4.5 API
+# doubao-seedream API
 
-本文介绍 `doubao-seedream-4.5` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
+本文介绍 `doubao-seedream-4.5`,`doubao-seedream-5-0-260128` 模型调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
 ---
 
@@ -10,9 +10,9 @@
 
 | 字段名                              | 类型   | 是否必须 | 默认值            | 描述                               |
 | ----------------------------------- | ------ | -------- | ----------------- | ---------------------------------- |
-| model                            | string  | 必须     | -                 | 本次请求使用的模型名称，此处为doubao-seedream-4.5   |
+| model                            | string  | 必须     | -                 | 本次请求使用的模型名称，此处可填：<br>`doubao-seedream-4.5`<br>`doubao-seedream-5-0-260128`   |
 | prompt                       | string | 必须     | -            | 用于生成图像的提示词，支持中英文，建议不超过300个汉字或600个英文单词。    |
-| images                     | array(string)  | 可选     | -                 | 输入的图片信息，支持 URL 或 Base64 编码。支持单图或多图输入，最多支持传入 14 张参考图。                   |
+| images                     | array(string)  | 可选     | -                 | 输入的图片信息，支持 URL 或 Base64 编码。支持单图或多图输入，最多支持传入 14 张参考图。<br>图片URL：请确保图片URL可被访问。<br>Base64编码：请遵循此格式data:image/<图片格式>;base64,<Base64编码>。注意 <图片格式> 需小写，如 data:image/png;base64,<base64_image>。                   |
 | size                 | string | 可选     | -                 | 指定生成图像的尺寸信息，支持以下两种方式，不可混用。<br>方式 1 ： 指定生成图像的分辨率，并在prompt中用自然语言描述图片宽高比、图片形状或图片用途，最终由模型判断生成图片的大小。可选值：2K、4K。<br>方式2：指定生成图像的宽高像素值，默认值：2048x2048，总像素取值范围：[2560x1440=3686400, 4096x4096=16777216] ，宽高比取值范围：[1/16, 16]，推荐：2048x2048，2304x1728，1728x2304，2560x1440，1440x2560，2496x1664，1664x2496，3024x1296                       |
 | sequential_image_generation          | string | 可选     | disabled                | 控制是否关闭组图功能。<br>auto：自动判断模式，模型会根据用户提供的提示词自主判断是否返回组图以及组图包含的图片数量。<br>disabled：关闭组图功能，模型只会生成一张图。 |
 | sequential_image_generation<br>_options  | object | 可选     | -                 | 组图功能的配置。仅当 sequential_image_generation 为 auto 时生效。 |
@@ -21,7 +21,10 @@
 | response_format    | string | 可选     | url                 | 指定生成图像的返回格式。<br>生成的图片为 jpeg 格式，支持以下两种返回方式：<br>url：返回图片下载链接；链接在图片生成后24小时内有效，请及时下载图片。<br>b64_json：以 Base64 编码字符串的 JSON 格式返回图像数据。 |
 | watermark     | Boolean | 可选     | true                 | 是否在生成的图片中添加水印。<br>false：不添加水印。<br>true：在图片右下角添加“AI生成”字样的水印标识。 |
 | optimize_prompt_options                    | object | 可选     | -                 | 提示词优化功能的配置。                         |
-| optimize_prompt_options.mode | string  | 可选     | standard | 设置提示词优化功能使用的模式。当前仅支持 standard 模式。 |
+| tools | array[object]  | 可选    | - | 配置模型要调用的工具。仅 `doubao-seedream-5-0-260128` 支持该参数   |
+| tools.type | string  | 可选     | web_search | `web_search`：联网搜索功能。<br>开启联网搜索后，模型会根据用户的提示词自主判断是否搜索互联网内容（如商品、天气等），提升生成图片的时效性，但也会增加一定的时延。 |
+| output_format | string  | 可选     | jpeg | 指定生成图像的文件格式。仅 `doubao-seedream-5-0-260128` 支持该参数。<br>可选值:<br>`png`<br>`jpeg` |
+
 
 ## 非stream响应参数
 
@@ -109,6 +112,25 @@ curl --location 'https://api.modelverse.cn/v1/images/generations' \
     "response_format":"url"
   }'
   ```
+  #### ** seedream-5.0联网搜索 **
+```bash
+curl --location 'https://api.modelverse.cn/v1/images/generations' \
+  -H "Content-Type: application/json" \
+  -H "Authorization: Bearer $MODELVERSE_API_KEY" \
+  -d '{
+    "model": "doubao-seedream-5-0-260128",
+    "prompt": "制作一张上海未来5日的天气预报图，采用现代扁平化插画风格，清晰展示每日天气、温度和穿搭建议。",
+    "size": "2k",
+    "tools": [
+      {
+          "type": "web_search"
+      }
+  ],
+    "output_format":"jpeg",
+    "response_format": "url",
+    "watermark": false
+}'
+  ```
 #### ** python **
 ```python
 import os
@@ -133,7 +155,7 @@ response = client.images.generate(
 print(response.data[0].url)
 ```
 <!-- tabs:end -->
-###响应
+### 响应
 ```json
 {
 	"model": "doubao-seedream-4-5-251128",
