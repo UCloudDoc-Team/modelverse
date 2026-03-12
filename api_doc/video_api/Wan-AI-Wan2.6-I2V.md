@@ -34,7 +34,7 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --data '{
     "model": "Wan-AI/Wan2.6-I2V",
     "input": {
-      "first_frame_url": "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
+      "img_url": "https://umodelverse-inference.cn-wlcb.ufileos.com/ucloud-maxcot.jpg",
       "prompt": "make it swim"
     },
     "parameters": {

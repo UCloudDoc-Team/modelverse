@@ -26,6 +26,7 @@
   - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
   - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
+  - [Gemini 批量任务](/modelverse/api_doc/text_api/gemini-batch.md)
   - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
 - 图片生成
   - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
