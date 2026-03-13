@@ -26,10 +26,15 @@
   - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
   - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
   - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
-
-## 图片生成
+  - [Gemini 批量任务](/modelverse/api_doc/text_api/gemini-batch.md)
+  - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
+- 图片生成
   - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
-  - [gemini-3-pro-image ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
+  - [gemini-3-pro-image ( Nano Banana Pro )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
+  - [gemini-3.1-flash-image-preview  ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3.1-flash-image.md)
+  - [flux-2-pro](/modelverse/api_doc/image_api/flux-2-pro.md)
+  - [flux-kontext-pro](/modelverse/api_doc/image_api/flux-kontext-pro.md)
+  - [flux-pro-1.1](/modelverse/api_doc/image_api/flux-pro-1.1.md)
   - [black-forest-labs/flux.1-dev](/modelverse/api_doc/image_api/black-forest-labs-flux.1-dev.md)
   - [black-forest-labs/flux-kontext-pro](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro.md)
   - [black-forest-labs/flux-kontext-pro/multi](/modelverse/api_doc/image_api/black-forest-labs-flux-kontext-pro-multi.md)
@@ -41,26 +46,46 @@
   - [Qwen/Qwen-Image-Edit](/modelverse/api_doc/image_api/Qwen-Qwen-Image-Edit.md)
   - [Qwen/Qwen-Image](/modelverse/api_doc/image_api/Qwen-Qwen-Image.md)
   - [gpt-image-1](/modelverse/api_doc/image_api/gpt-image-1.md)
+  - [gpt-image-1.5](/modelverse/api_doc/image_api/gpt-image-1.5.md)
+  - [doubao-seedream](/modelverse/api_doc/image_api/doubao-seedream.md)
 - 视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
   - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
   - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
   - [OpenAI/Sora2-I2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V-Pro.md)
+  - [OpenAI/Sora-2](/modelverse/api_doc/video_api/OpenAI-Sora-2.md)
   - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
   - [Wan-AI/Wan2.5-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-I2V.md)
   - [Wan-AI/Wan2.5-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.5-T2V.md)
+  - [Wan-AI/Wan2.6-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.6-I2V.md)
+  - [Wan-AI/Wan2.6-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.6-T2V.md)
+  - [MiniMax/Hailuo-2.3-I2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-I2V.md)
+  - [MiniMax/Hailuo-2.3-T2V](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-T2V.md)
+  - [MiniMax/Hailuo-2.3-Fast](/modelverse/api_doc/video_api/MiniMax-Hailuo-2.3-Fast.md)
+  - [MiniMax/Hailuo-02](/modelverse/api_doc/video_api/MiniMax-Hailuo-02.md)
   - [Vidu/文生视频](/modelverse/api_doc/video_api/vidu/Vidu-Text2Video.md)
   - [Vidu/图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Img2Video.md)
   - [Vidu/参考图生视频](/modelverse/api_doc/video_api/vidu/Vidu-Reference2Video.md)
   - [Vidu/首尾帧生视频](/modelverse/api_doc/video_api/vidu/Vidu-StartEnd2Video.md)
   - [Vidu/视频延长](/modelverse/api_doc/video_api/vidu/Vidu-Extend.md)
+  - [Vidu/对口型](/modelverse/api_doc/video_api/vidu/Vidu-LipSync.md)
+  - [Vidu/一键生成MV](/modelverse/api_doc/video_api/vidu/Vidu-Mv.md)
+  - [doubao-seedance-1-5-pro](/modelverse/api_doc/video_api/doubao-seedance-1-5-pro-251215.md)
+  - [kling-video-o1](/modelverse/api_doc/video_api/Kling-O1.md)
+  - [kling-v2-6/图生视频](/modelverse/api_doc/video_api/Kling-v2.6-I2V.md)
+  - [kling-v2-6/文生视频](/modelverse/api_doc/video_api/Kling-v2.6-T2V.md)
+  - [Veo-3.1/文图生视频](/modelverse/api_doc/video_api/Veo-3.1.md)
 - 音频生成
   - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
+  - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
+  - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
+  - [suno音乐生成](/modelverse/api_doc/audio_api/suno.md)
+  - [MiniMax/speech-hd](/modelverse/api_doc/audio_api/minimax-speech.md)
 
 ## 最佳实践
 
-- [Claude Code 接入指南](/modelverse/best_practice/claudecodeccr.md)
+- [Claude Code 接入指南](/modelverse/best_practice/claudecode.md)
 - [OpenAI Codex 接入指南](/modelverse/best_practice/codex.md)
 - [ComfyUI插件接入](/modelverse/best_practice/comfyui.md)
 - 常见客户端接入 API
@@ -72,15 +97,6 @@
   - [MCP 简介](/modelverse/best_practice/mcp/mcpgeneral.md)
   - [通过 CLINE 接入 MCP 服务](/modelverse/best_practice/mcp/MCPServer.md)
   - [通过 UCloud API 实现 MCP Client](/modelverse/best_practice/mcp/MCPClient.md)
-
-## 控制台功能
-
-- [模型广场](/modelverse/guide/model-marketplace.md)
-- [模型管理](/modelverse/guide/model-manage.md)
-- [模型微调](/modelverse/guide/model-finetuning.md)
-- [模型评估](/modelverse/guide/model-evaluation.md)
-- [服务部署](/modelverse/guide/service-manage.md)
-- [数据集管理](/modelverse/guide/dataset-manage.md)
 
 ## UModelVerse 协议
 

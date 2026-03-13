@@ -26,7 +26,7 @@
 
 ![model-evaluation2](https://www-s.ucloud.cn/2025/01/1cfda00b6d0d131e77f8b4802d2e2562_1736848161400.png)
 
-4. 存储设置：通过授权令牌，选择 bucket 关联的令牌列表，目前仅支持选择华北二区域下的存储空间。
+4. 存储设置：通过授权令牌，选择 bucket 关联的令牌列表，目前仅支持选择华北（乌兰察布）区域下的存储空间。
 
 ![model-evaluation2](https://www-s.ucloud.cn/2025/01/5c6aa18a3dd688bf1cdad6f2cdfbaf02_1736846738712.png)
 
