@@ -6,7 +6,7 @@
 
 `https://api.modelverse.cn/v1/audio/infer` <br> 注意：该接口请求体格式必须为 `multipart/form-data`（表单模式）
 
-## 表单文件参数（Form Data）
+## 请求参数：表单文件参数（Form Data）
 
 | 参数  | 类型   | 必填 | 说明                                                                                                                                |
 | ----- | ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
@@ -48,8 +48,14 @@ curl https://api.modelverse.cn/v1/audio/infer \
   --output 007_sad_08.wav
 ```
 
+## 响应格式
 
-## 兼容以下旧接口
+API 返回二进制音频文件流。
+
+- **音频格式**：目前仅支持 **WAV** 格式输出
+- **Content-Type**：`audio/wav`
+
+## 同时兼容以下接口
 
  接口地址：https://api.modelverse.cn/v1/audio/speech
 
