@@ -74,7 +74,7 @@
     - [kling-v2-6/文生视频](/modelverse/api_doc/video_api/Kling-v2.6-T2V.md)
     - [Veo-3.1/文图生视频](/modelverse/api_doc/video_api/Veo-3.1.md)
   - 音频生成
-    - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
+    - [IndexTTS](/modelverse/api_doc/audio_api/ttts.md)
     - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
     - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md) 
     - [suno音乐生成](/modelverse/api_doc/audio_api/suno.md)
