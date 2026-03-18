@@ -22,6 +22,7 @@
     - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
     - [Embeddings 向量嵌入](/modelverse/api_doc/text_api/embeddings.md)
+    - [Rerank 文本排序](/modelverse/api_doc/text_api/rerank.md)
     - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
     <!-- - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md) -->
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
