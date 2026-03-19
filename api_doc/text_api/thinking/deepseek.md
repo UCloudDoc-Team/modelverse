@@ -76,7 +76,7 @@ except requests.exceptions.RequestException as e:
 
 ```
 
-# DeepSeek V3.2 模型开启思考说明
+## DeepSeek V3.2 模型开启思考说明
 
 ### 参数说明
 
