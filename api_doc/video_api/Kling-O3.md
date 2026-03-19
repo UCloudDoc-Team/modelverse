@@ -77,6 +77,7 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
     },
     "parameters": {
       "mode": "pro",
+      "aspect_ratio": "16:9",
       "duration": 5,
       "image_list": [
         {"image_url": "https://example.com/first_frame.jpg", "type": "first_frame"},
@@ -118,9 +119,6 @@ curl --location --globoff 'https://api.modelverse.cn/v1/tasks/submit' \
 --header 'Content-Type: application/json' \
 --data '{
     "model": "kling-v3-omni",
-    "input": {
-      "prompt": ""
-    },
     "parameters": {
       "mode": "pro",
       "aspect_ratio": "16:9",
