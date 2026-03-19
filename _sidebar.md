@@ -22,6 +22,7 @@
     - [OpenAI Chat Completions 说明](/modelverse/api_doc/text_api/openai_compatible.md)
     - [OpenAI Response API 说明](/modelverse/api_doc/text_api/response_api.md)
     - [Embeddings 向量嵌入](/modelverse/api_doc/text_api/embeddings.md)
+    - [Rerank 文本排序](/modelverse/api_doc/text_api/rerank.md)
     - [DeepSeek-OCR 模型调用示例](/modelverse/api_doc/text_api/deepseek-ocr.md)
     <!-- - [OpenAI 文本接口结构说明](/modelverse/api_doc/text_api/struct.md) -->
     - [Doubao 豆包模型思考开关](/modelverse/api_doc/text_api/thinking/doubao.md)
@@ -75,7 +76,7 @@
     - [kling-v3-omni/多模态视频生成](/modelverse/api_doc/video_api/Kling-O3.md)
     - [Veo-3.1/文图生视频](/modelverse/api_doc/video_api/Veo-3.1.md)
   - 音频生成
-    - [OpenAI TTS 兼容](/modelverse/api_doc/audio_api/ttts.md)
+    - [IndexTTS](/modelverse/api_doc/audio_api/ttts.md)
     - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
     - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md) 
     - [suno音乐生成](/modelverse/api_doc/audio_api/suno.md)

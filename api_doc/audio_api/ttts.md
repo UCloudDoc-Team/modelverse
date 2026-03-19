@@ -1,12 +1,78 @@
-# OpenAI TTS API 调用文档
+# IndexTeam/IndexTTS-2文档
 
-UModelverse 平台提供了与 OpenAI TTS（Text-to-Speech）API 完全兼容的语音合成接口。开发者可以使用熟悉的 OpenAI SDK 或标准 HTTP 客户端，无缝调用 Modelverse 上部署的高质量 TTS 模型。
+本文介绍`modelverse`语音合成模型`IndexTeam/IndexTTS-2`调用 API 的输入输出参数，供您使用接口时查阅字段含义。
 
-> **🎉 限时免费**：TTS 语音合成服务现正限时免费开放，欢迎体验！
+## 接口地址
 
-## 快速开始
+`https://api.modelverse.cn/v1/audio/infer` <br> 注意：该接口请求体格式必须为 `multipart/form-data`（表单模式）
 
-您可以使用 `curl` 命令或任何支持 OpenAI API 的客户端库来调用 Modelverse TTS API。平台支持多种高质量语音合成模型，如 `IndexTeam/IndexTTS-2` 等。
+## 请求参数：表单文件参数（Form Data）
+
+| 参数  | 类型   | 必填 | 说明                                                                                                                                |
+| ----- | ------ | ---- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| model | string | 是   | 要使用的 TTS 模型名称，此处为：`IndexTeam/IndexTTS-2`                                                                                 |
+| spk_audio_file | 文件（二进制） | 是   | 说话人参考音频文件，用于提取音色特征，仅支持 MP3、WAV，文件小于20MB                                                                                        |
+| emo_audio_file | 文件（二进制） | 否   | 情感参考音频文件，用于提取语音的情感特征，仅支持 MP3、WAV，文件小于20MB |
+| payload | string | 是   | JSON 格式的配置参数字符串 |
+
+#### payload 配置参数（JSON 格式）
+
+| 参数 | 类型 | 必填 | 默认值 | 说明 |
+| ---- | ---- | ---- | ------ | ---- |
+| input | string | 是 | - | 需要合成的文本内容，最大支持 `600` 字符。 |
+| sample_rate | int | 否 | `22050` | 输出音频采样率，单位为 Hz。常见值：`22050`、`44100`、`48000`。 |
+| speed | float | 否 | `1` | 语速调整系数，接口限制范围：`0.25 <= 值 <= 4.0`。 |
+| gain | float | 否 | `1` | 音量调整系数，`1` 为原始音量，`>1` 表示增大，`<1` 表示减小。 |
+| emo_control_method | int | 否 | `0` | 情感控制方式：`0` = 无情感参考；`1` = 情感音频参考（需同时传 `emo_audio_file`）；`2` = 情感向量参考；`3` = 情感文本参考。 |
+| emo_alpha | float | 否 | `1` | 情感融合权重，用于控制情感特征对输出结果的影响程度。 |
+| emo_vec | array[float] | 否 | `[0, 0, 0, 0, 0, 0, 0, 0]` | 8 维情感向量，仅在 `emo_control_method = 2` 时生效；所有元素之和不能超过 `1.5`。示例：`[0.1, 0.2, 0.0, 0.3, 0.1, 0.0, 0.2, 0.4]`。 |
+| emo_text | string | 否 | `""` | 情感文本描述，仅在 `emo_control_method = 3` 时生效。示例：`"今天股票涨停了，好激动"`。 |
+| use_random | bool | 否 | `false` | 情感随机性开关。`true` 表示随机引入情感变化，`false` 表示严格按指定情感合成。 |
+| interval_silence | int | 否 | `200` | 文本分块合成时间隔静音时长，单位为毫秒。 |
+
+### 请求示例
+
+⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
+```bash
+curl https://api.modelverse.cn/v1/audio/infer \
+  -H "Authorization: Bearer $MODELVERSE_API_KEY" \
+  -H "Content-Type: multipart/form-data" \
+  -F "model=IndexTeam/IndexTTS-2" \
+  -F "spk_audio_file=@audio/klee.wav" \
+  -F "emo_audio_file=@audio/emo_sad.wav" \
+  -F "payload={
+    \"input\": \"酒楼丧尽天良，开始借机竞拍房间，哎，一群蠢货。\",
+    \"emo_weight\": 0.8,
+    \"emo_control_method\": 1
+  }" \
+  --output 007_sad_08.wav
+```
+
+## 响应格式
+
+API 返回二进制音频文件流。
+
+- **音频格式**：目前仅支持 **WAV** 格式输出
+- **Content-Type**：`audio/wav`
+  
+## 错误响应
+
+当请求失败时，API 会返回标准的 JSON 格式错误响应：
+
+```json
+{
+  "error": {
+    "message": "错误描述信息",
+    "type": "invalid_request_error",
+    "code": "error_code",
+    "param": "<请求 ID，用于反馈或排查错误原因>"
+  }
+}
+```
+
+## 同时兼容以下接口
+
+ 接口地址：https://api.modelverse.cn/v1/audio/speech
 
 ## 请求参数
 
@@ -111,10 +177,9 @@ API 返回二进制音频文件流。
 
 ## 注意事项
 
-1. **限时免费**：当前 TTS 服务限时免费开放，正式计费标准后续将另行通知
-2. **音频格式**：响应的二进制流格式目前仅支持 WAV，暂不支持其他音频格式
-3. **文本长度限制**：单次请求的文本长度限制因具体模型而异，`IndexTeam/IndexTTS-2` 模型通常支持 600 字符以内的文本
-4. **语音类型**：不同的 `voice` 参数会产生不同音色和风格的语音效果，建议根据实际场景选择合适的语音类型
+1. **音频格式**：响应的二进制流格式目前仅支持 WAV，暂不支持其他音频格式
+2. **文本长度限制**：单次请求的文本长度限制因具体模型而异，`IndexTeam/IndexTTS-2` 模型通常支持 600 字符以内的文本
+3. **语音类型**：不同的 `voice` 参数会产生不同音色和风格的语音效果，建议根据实际场景选择合适的语音类型
 
 ## 错误处理
 
