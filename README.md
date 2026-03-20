@@ -17,6 +17,7 @@
 - 通用说明
   - [认证鉴权](/modelverse/api_doc/common/certificate.md)
   - [错误码](/modelverse/api_doc/common/error-code.md)
+  - [API Key 精细化权限控制](/modelverse/api_doc/common/api-key.md)
 - 文本生成
   - [如何获取模型列表](/modelverse/api_doc/text_api/models.md)
   - [API支持与UCloud扩展字段说明](/modelverse/api_doc/text_api/api-expand.md)
