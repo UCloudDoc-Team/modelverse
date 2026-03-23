@@ -23,7 +23,7 @@
 | contents.parts.fileData.mimeType    | string | 可选     | -                 | 文件的 MIME 类型。 |
 | contents.parts.fileData.fileUri     | string | 可选     | -                 | 文件的 URI。 |
 | generationConfig                    | object | 可选     | -                 | 生成配置。                         |
-| generationConfig.response_modalities | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。 |
+| generationConfig.responseModalities | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。 |
 
 ## 响应参数
 
@@ -56,7 +56,7 @@
 
 #### 图片生成（文本转图片）
 
-> ⚠️ 注意：您必须在配置中添加 response_modalities: ["TEXT", "IMAGE"]。这些模型不支持仅图片输出。
+> ⚠️ 注意：您必须在配置中添加 responseModalities: ["TEXT", "IMAGE"]。这些模型不支持仅图片输出。
 
 <!-- tabs:start -->
 
@@ -78,12 +78,12 @@ curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:
         }
     ],
     "generationConfig": {
-        "response_modalities": [
+        "responseModalities": [
             "TEXT",
             "IMAGE"
         ]
     }
-}' | jq -r '.candidates[0].content.parts[1].inlineData.data' \
+}' | jq -r '.candidates[0].content.parts[] | select(.inlineData and (.thought | not)) | .inlineData.data' | head -1 \
 | base64 -d > modelverse_generated_image.png
 ```
 
@@ -98,7 +98,7 @@ import os
 
 
 client = genai.Client(
-    api_key=os.getenv("Modelverse_API_KEY", "<UModelverse_API_KEY>"),  # 您的API_KEY
+    api_key=os.getenv("MODELVERSE_API_KEY", "<MODELVERSE_API_KEY>"),  # 您的API_KEY
     http_options=types.HttpOptions(
         base_url="https://api.modelverse.cn"
     ),
@@ -123,12 +123,14 @@ response = client.models.generate_content(
 )
 
 for part in response.candidates[0].content.parts:
+    # 跳过思考过程中的中间图片，只保留最终输出图片
+    if getattr(part, "thought", False):
+        continue
     if part.text is not None:
         print(part.text)
     elif part.inline_data is not None:
         image = Image.open(BytesIO(part.inline_data.data))
         image.save("modelverse_generated_image.png")
-)
 
 ```
 
@@ -145,7 +147,7 @@ cat <<EOF | curl -X POST \
   --header "Authorization: Bearer ${MODELVERSE_API_KEY}" \
   --header "Content-Type: application/json" \
   --data @- \
-  https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent | jq -r '.candidates[0].content.parts[] | select(.inlineData) | .inlineData.data' | base64 --decode > modelverse_generated_image.png
+  https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:generateContent | jq -r '.candidates[0].content.parts[] | select(.inlineData and (.thought | not)) | .inlineData.data' | head -1 | base64 --decode > modelverse_generated_image.png
 {
   "contents": [
     {
@@ -162,7 +164,7 @@ cat <<EOF | curl -X POST \
     }
   ],
   "generationConfig": {
-    "response_modalities": ["TEXT", "IMAGE"]
+    "responseModalities": ["TEXT", "IMAGE"]
   }
 }
 EOF
@@ -178,7 +180,7 @@ from io import BytesIO
 import os
 
 client = genai.Client(
-    api_key=os.getenv("Modelverse_API_KEY", "<UModelverse_API_KEY>"),  # 您的API_KEY
+    api_key=os.getenv("MODELVERSE_API_KEY", "<MODELVERSE_API_KEY>"),  # 您的API_KEY
     http_options=types.HttpOptions(
         base_url="https://api.modelverse.cn"
     ),
@@ -206,6 +208,9 @@ response = client.models.generate_content(
 )
 
 for part in response.candidates[0].content.parts:
+    # 跳过思考过程中的中间图片，只保留最终输出图片
+    if getattr(part, "thought", False):
+        continue
     if part.text is not None:
         print(part.text)
     elif part.inline_data is not None:
