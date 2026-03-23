@@ -17,10 +17,10 @@
 | contents.parts                           | array  | 必须     | -                 | 内容的具体部分。                                                                           |
 | contents.parts.text                      | string | 可选     | -                 | 提示词文本。                                                                               |
 | generationConfig                         | object | 可选     | -                 | 生成配置。                                                                                 |
-| generationConfig.responseModalities      | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。                                                         |
-| generationConfig.imageConfig             | object | 可选     | -                 | 图片生成配置。                                                                             |
-| generationConfig.imageConfig.aspectRatio | string | 可选     | "1:1"             | 图片宽高比。支持 "1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"。 |
-| generationConfig.imageConfig.imageSize   | string | 可选     | "1K"              | 图片分辨率。支持 "1K", "2K", "4K"。                                                        |
+| generationConfig.response_modalities      | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。                                                         |
+| generationConfig.image_config             | object | 可选     | -                 | 图片生成配置。                                                                             |
+| generationConfig.image_config.aspect_ratio | string | 可选     | "1:1"             | 图片宽高比。支持 "1:1", "2:3", "3:2", "3:4", "4:3", "4:5", "5:4", "9:16", "16:9", "21:9"。 |
+| generationConfig.image_config.image_size   | string | 可选     | "1K"              | 图片分辨率。支持 "1K", "2K", "4K"。                                                        |
 
 ## 响应参数
 
@@ -45,7 +45,7 @@
 
 #### 图片生成（文本转图片）
 
-> ⚠️ 注意：您必须在配置中添加 responseModalities: ["TEXT", "IMAGE"]。
+> ⚠️ 注意：您必须在配置中添加 response_modalities: ["TEXT", "IMAGE"]。
 
 <!-- tabs:start -->
 
@@ -60,8 +60,8 @@ curl -s -X POST \
     "contents": [{"parts": [{"text": "Da Vinci style anatomical sketch of a dissected Monarch butterfly. Detailed drawings of the head, wings, and legs on textured parchment with notes in English."}]}],
     "tools": [{"google_search": {}}],
     "generationConfig": {
-      "responseModalities": ["TEXT", "IMAGE"],
-      "imageConfig": {"aspectRatio": "1:1", "imageSize": "1K"}
+      "response_modalities": ["TEXT", "IMAGE"],
+      "image_config": {"aspect_ratio": "1:1", "image_size": "1K"}
     }
   }' | jq -r '.candidates[0].content.parts[] | select(.inlineData) | .inlineData.data' | head -1 | base64 --decode > butterfly.png
 ```

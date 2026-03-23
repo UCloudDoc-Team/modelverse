@@ -133,6 +133,91 @@ curl "https://api.modelverse.cn/v1beta/models/gemini-3-flash-preview:GenerateCon
 ```
 <!-- tabs:end -->
 
+## Google Search（联网检索）使用说明
+
+Gemini 支持通过 `tools.google_search` 调用实时网络检索能力。启用后，模型会在需要时自动发起搜索，并在响应中返回可追溯的来源信息（`groundingMetadata`）。
+
+> 详细字段定义与能力说明可参考 Google Gemini 官方文档：https://ai.google.dev/gemini-api/docs/google-search?hl=zh-cn
+
+适用场景：
+
+*   需要最新信息（如近期事件、价格、公告）。
+*   需要可验证来源与引用链路。
+*   需要降低纯参数知识带来的幻觉风险。
+
+### 请求要点
+
+*   请求体中增加 `tools`，并传入 `{"google_search": {}}`。
+*   建议使用支持 Google Search 工具的 Gemini 模型（如 `gemini-3-flash-preview`）。
+*   使用 Modelverse 兼容地址与鉴权：
+    *   Base URL: `https://api.modelverse.cn`
+    *   API Key Header: `x-goog-api-key: $MODELVERSE_API_KEY`
+
+### 示例：Python SDK（Modelverse）
+
+```python
+from google import genai
+from google.genai import types
+
+client = genai.Client(
+    api_key="<MODELVERSE_API_KEY>",
+    http_options=types.HttpOptions(base_url="https://api.modelverse.cn"),
+)
+
+response = client.models.generate_content(
+    model="gemini-3-flash-preview",
+    contents="请告诉我今天 AI 领域最重要的三条新闻，并给出来源。",
+    config=types.GenerateContentConfig(
+        tools=[types.Tool(google_search=types.GoogleSearch())]
+    ),
+)
+
+print(response.text)
+
+# 可选：读取 grounding 元数据（若模型触发了搜索）
+if response.candidates and response.candidates[0].grounding_metadata:
+    gm = response.candidates[0].grounding_metadata
+    if gm.grounding_chunks:
+        for idx, chunk in enumerate(gm.grounding_chunks, 1):
+            if chunk.web:
+                print(f"[{idx}] {chunk.web.title}: {chunk.web.uri}")
+```
+
+### 示例：curl（Modelverse）
+
+```bash
+curl "https://api.modelverse.cn/v1beta/models/gemini-3-flash-preview:generateContent" \
+  -H "x-goog-api-key: $MODELVERSE_API_KEY" \
+  -H "Content-Type: application/json" \
+  -X POST \
+  -d '{
+    "contents": [
+      {
+        "parts": [
+          {
+            "text": "请基于网络信息，概括一下今天全球 AI 相关新闻，并附带来源。"
+          }
+        ]
+      }
+    ],
+    "tools": [
+      {
+        "google_search": {}
+      }
+    ]
+  }'
+```
+
+### 响应字段说明（重点）
+
+当请求触发联网检索时，`candidates[*].groundingMetadata` 常见字段包括：
+
+*   `webSearchQueries`：模型实际发起的搜索词。
+*   `groundingChunks`：候选来源列表（含 `uri`、`title`）。
+*   `groundingSupports`：回答片段与来源索引的映射，可用于做内联引用。
+
+> 建议在前端展示来源链接，提升回答可解释性与用户信任。
+
 ### 文档理解
 
 Gemini 模型可以处理 PDF 格式的文档，并使用原生视觉功能来理解整个文档的上下文。这不仅仅是提取文本，还让 Gemini 能够：
@@ -261,4 +346,3 @@ print(response.text)
 
 
 > 更多字段详情，见[Gemini官方文档](https://ai.google.dev/api/models?hl=zh-cn)
-

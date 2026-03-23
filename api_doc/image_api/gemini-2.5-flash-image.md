@@ -23,7 +23,7 @@
 | contents.parts.fileData.mimeType    | string | 可选     | -                 | 文件的 MIME 类型。 |
 | contents.parts.fileData.fileUri     | string | 可选     | -                 | 文件的 URI。 |
 | generationConfig                    | object | 可选     | -                 | 生成配置。                         |
-| generationConfig.responseModalities | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。 |
+| generationConfig.response_modalities | array  | 可选     | ["TEXT", "IMAGE"] | 期望的响应形式，可以是文本或图像。 |
 
 ## 响应参数
 
@@ -56,7 +56,7 @@
 
 #### 图片生成（文本转图片）
 
-> ⚠️ 注意：您必须在配置中添加 responseModalities: ["TEXT", "IMAGE"]。这些模型不支持仅图片输出。
+> ⚠️ 注意：您必须在配置中添加 response_modalities: ["TEXT", "IMAGE"]。这些模型不支持仅图片输出。
 
 <!-- tabs:start -->
 
@@ -78,7 +78,7 @@ curl --location 'https://api.modelverse.cn/v1beta/models/gemini-2.5-flash-image:
         }
     ],
     "generationConfig": {
-        "responseModalities": [
+        "response_modalities": [
             "TEXT",
             "IMAGE"
         ]
@@ -162,7 +162,7 @@ cat <<EOF | curl -X POST \
     }
   ],
   "generationConfig": {
-    "responseModalities": ["TEXT", "IMAGE"]
+    "response_modalities": ["TEXT", "IMAGE"]
   }
 }
 EOF
