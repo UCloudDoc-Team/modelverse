@@ -30,6 +30,7 @@
     - [Deepseek 思考开关](/modelverse/api_doc/text_api/thinking/deepseek.md)
     - [Gemini 快速开始](/modelverse/api_doc/text_api/gemini_compatible.md)
     - [Gemini 批量任务](/modelverse/api_doc/text_api/gemini-batch.md)
+    - [Gemini 媒体分析功能和上传文件到GCS](/modelverse/api_doc/text_api/gemini-media-analysis.md)
     - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
   - 图片生成
     - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)

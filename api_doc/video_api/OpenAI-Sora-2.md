@@ -6,7 +6,7 @@
 
 ### 接口
 
-`http://api.modelverse.cn/v1/videos`
+`https://api.modelverse.cn/v1/videos`
 
 ### 输入
 
@@ -21,7 +21,7 @@
 ### 请求示例
 ⚠️ 如果您使用 Windows 系统，建议使用 Postman 或其他 API 调用工具。
 ```shell
-curl -X POST "http://api.modelverse.cn/v1/videos" \
+curl -X POST "https://api.modelverse.cn/v1/videos" \
   -H "Authorization: Bearer $OPENAI_API_KEY" \
   -H "Content-Type: multipart/form-data" \
   -F prompt="She turns around and smiles, then slowly walks out of the frame." \
