@@ -12,7 +12,7 @@ vidu 首尾帧生成视频 接口文档
 
 | 参数                          | 类型   | 是否必选 | 描述                                                                                                                                                                 |
 | :---------------------------- | :----- | :------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| model                         | string | 是       | 模型名称，可选值：`viduq2-pro`、`viduq2-turbo`、`viduq2-pro-fast`  <br> - viduq2-pro：新模型，效果好，细节丰富 <br> - viduq2-turbo：新模型，效果好，生成快 <br> - viduq2-pro-fast：价格触底、效果稳定，生成速度较viduq2-turbo提高2-3倍                              |
+| model                         | string | 是       | 模型名称，可选值：`viduq2-pro`、`viduq2-turbo`、`viduq2-pro-fast`、`viduq3-pro`  <br> - viduq2-pro：新模型，效果好，细节丰富 <br> - viduq2-turbo：新模型，效果好，生成快 <br> - viduq2-pro-fast：价格触底、效果稳定，生成速度较viduq2-turbo提高2-3倍 <br> - viduq3-pro：高效生成优质音视频内容，让视频内容更生动、更形象、更立体，效果更好                         |
 | input.first_frame_url         | string | 是       | 首帧图片，支持图片 URL 或 Base64 编码                                                                                                                                |
 | input.last_frame_url          | string | 是       | 尾帧图片，支持图片 URL 或 Base64 编码                                                                                                                                |
 | input.prompt                  | string | 否       | 文本提示词，用于指导视频生成，最长 2000 字符。                                                                                                                       |
