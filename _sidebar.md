@@ -77,6 +77,8 @@
     - [kling-v2-6/图生视频](/modelverse/api_doc/video_api/Kling-v2.6-I2V.md)
     - [kling-v2-6/文生视频](/modelverse/api_doc/video_api/Kling-v2.6-T2V.md)
     - [kling-v3-omni/多模态视频生成](/modelverse/api_doc/video_api/Kling-O3.md)
+    - [kling-v3/文生视频&图生视频](/modelverse/api_doc/video_api/Kling-v3.md)
+    - [kling-v3/运动控制](/modelverse/api_doc/video_api/Kling-v3-Motion-Control.md)
     - [Veo-3.1/文图生视频](/modelverse/api_doc/video_api/Veo-3.1.md)
   - 音频生成
     - [IndexTTS](/modelverse/api_doc/audio_api/ttts.md)
