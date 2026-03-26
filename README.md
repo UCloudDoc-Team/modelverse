@@ -86,6 +86,7 @@
   - [自定义音色](/modelverse/api_doc/audio_api/custom_voice_api.md)
   - [IndexTeam/IndexTTS 扩展参数](/modelverse/api_doc/audio_api/IndexTeam-IndexTTS-extend.md)
   - [suno音乐生成](/modelverse/api_doc/audio_api/suno.md)
+  - [suno音乐翻唱](/modelverse/api_doc/audio_api/suno-cover.md)
   - [MiniMax/speech-hd](/modelverse/api_doc/audio_api/minimax-speech.md)
 
 ## 最佳实践
