@@ -10,7 +10,7 @@
 
 | 参数                          | 类型   | 是否必选 | 描述                                                                                                                                                                                                                                                                                                          |
 | :---------------------------- | :----- | :------- |:------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| model                | string | 是       | 模型名称，此处填：`suno-upload`|
+| model                | string | 是       | 模型名称，此处填：`suno-uploads`|
 | url                  | string | 是       | 需要上传的歌曲url |
 
 ### 请求示例
@@ -21,7 +21,7 @@ curl --location --request POST 'https://api.modelverse.cn/v1/suno/uploads/audio-
 --header 'Content-Type: application/json' \
 --header 'Authorization: Bearer <YOUR_API_KEY>' \
 -d '{
-    "model": "suno-upload",
+    "model": "suno-uploads",
     "url": "https://xxxx/test.mp3"
 }'
 ```
