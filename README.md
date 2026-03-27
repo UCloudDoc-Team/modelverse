@@ -54,9 +54,7 @@
   - [doubao-seedream](/modelverse/api_doc/image_api/doubao-seedream.md)
 - 视频生成
   - [OpenAI/Sora2-T2V](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V.md)
-  - [OpenAI/Sora2-T2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-T2V-Pro.md)
   - [OpenAI/Sora2-I2V](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V.md)
-  - [OpenAI/Sora2-I2V-Pro](/modelverse/api_doc/video_api/OpenAI-Sora2-I2V-Pro.md)
   - [OpenAI/Sora-2](/modelverse/api_doc/video_api/OpenAI-Sora-2.md)
   - [Wan-AI/Wan2.2-I2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-I2V.md)
   - [Wan-AI/Wan2.2-T2V](/modelverse/api_doc/video_api/Wan-AI-Wan2.2-T2V.md)
