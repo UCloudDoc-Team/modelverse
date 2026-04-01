@@ -10,6 +10,10 @@ OpenAI 兼容接口当前支持：
 - `/v1/response` OpenAI 最先进的模型响应生成接口。支持文本和图像输入，以及文本输出。
 - `/v1/models` 用于获取模型列表。
 
+> 当前支持节点：
+> - `api.modelverse.cn` - 中国大陆节点
+> - `api-us-ca.umodelverse.ai` - 美国洛杉矶节点（海外用户推荐，访问更快，数据不回国）
+
 ## 第一步：获取API密钥
 
 在调用任何API之前，您需要一个有效的API密钥。请前往【[认证鉴权](/modelverse/api_doc/common/certificate.md)】文档，查看如何获取和管理您的密钥。
@@ -21,8 +25,8 @@ OpenAI 兼容接口当前支持：
 ```
 GET https://api.modelverse.cn/v1/models
 
-#主要用于海外无法使用`.cn`域名场景
-GET https://api.umodelverse.ai/v1/models
+# 美国洛杉矶节点
+GET https://api-us-ca.umodelverse.ai/v1/models
 ```
 
 请求示例：
