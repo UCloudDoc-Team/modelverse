@@ -10,15 +10,19 @@ OpenAI 兼容接口当前支持：
 - `/v1/response` OpenAI 最先进的模型响应生成接口。支持文本和图像输入，以及文本输出。
 - `/v1/models` 用于获取模型列表。
 
-> 当前支持节点：
-> - `api.modelverse.cn` - 中国大陆节点
-> - `api-us-ca.umodelverse.ai` - 美国洛杉矶节点（海外用户推荐，访问更快，数据不回国）
 
 ## 第一步：获取API密钥
 
 在调用任何API之前，您需要一个有效的API密钥。请前往【[认证鉴权](/modelverse/api_doc/common/certificate.md)】文档，查看如何获取和管理您的密钥。
 
-## 第二步：选择模型
+## 第二步：选择API节点
+
+根据您的地理位置和访问需求，选择合适的API节点：
+
+- `api.modelverse.cn` - 中国大陆节点
+- `api-us-ca.umodelverse.ai` - 美国洛杉矶节点（海外用户推荐，访问更快，数据不回国）
+
+## 第三步：选择模型
 
 你可以通过下方API获取模型列表，选择你需要的模型。
 
@@ -31,7 +35,12 @@ GET https://api-us-ca.umodelverse.ai/v1/models
 
 请求示例：
 ```
-curl https://api.modelverse.cn/v1/models \
+# 默认使用中国大陆节点
+export ENDPOINT="https://api.modelverse.cn"
+# 或者使用美国洛杉矶节点
+export ENDPOINT="https://api-us-ca.umodelverse.ai"
+
+curl $ENDPOINT/v1/models \
   -H "Content-Type: application/json" | jq .
 ```
 
@@ -60,7 +69,7 @@ curl https://api.modelverse.cn/v1/models \
 
 其中`id`字段即为模型名称，以实际返回为准。
 
-## 第三步：调用API
+## 第四步：调用API
 
 ### 典型方式1 - 任何语言通过http调用
 
@@ -71,7 +80,11 @@ curl https://api.modelverse.cn/v1/models \
 请将`{api_key}`替换为您的API密钥，将`{model_name}`替换为您上一步获取到列表中的模型名称（选择一个即可）。
 
 ```bash
-curl https://api.modelverse.cn/v1/chat/completions \
+# or
+# export ENDPOINT="https://api.modelverse.cn"
+# export ENDPOINT="https://api-us-ca.umodelverse.ai"
+
+curl $ENDPOINT/v1/chat/completions \
  -H "Content-Type: application/json" \
  -H "Authorization: Bearer {api_key}" \
  -d '{
@@ -151,9 +164,15 @@ pip install -U openai
 from openai import OpenAI
 import os
 
+# or
+# export ENDPOINT="https://api.modelverse.cn"
+# export ENDPOINT="https://api-us-ca.umodelverse.ai"
+
+ENDPOINT = os.getenv("ENDPOINT", "https://api.modelverse.cn")
+
 client = OpenAI(
    api_key="{api_key}",
-   base_url="https://api.modelverse.cn/v1/",
+   base_url=ENDPOINT + "/v1/",
 )
 
 chat_completion = client.chat.completions.create(
@@ -181,10 +200,16 @@ from langchain_openai import ChatOpenAI
 from langchain import LLMChain
 from langchain.prompts import ChatPromptTemplate
 
+# or
+# export ENDPOINT="https://api.modelverse.cn"
+# export ENDPOINT="https://api-us-ca.umodelverse.ai"
+
+ENDPOINT = os.getenv("ENDPOINT", "https://api.modelverse.cn")
+
 llm = ChatOpenAI(
     model_name="{model_name}",
     openai_api_key="{api_key}",
-    openai_api_base="https://api.modelverse.cn/v1/",
+    openai_api_base=ENDPOINT + "/v1/",
 )
 
 prompt = ChatPromptTemplate.from_template(
