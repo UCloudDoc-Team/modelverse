@@ -33,6 +33,7 @@
   - [Gemini 媒体分析功能和上传文件到GCS](/modelverse/api_doc/text_api/gemini-media-analysis.md)
   - [Claude (Anthropic) 兼容说明](/modelverse/api_doc/text_api/claude_compatible.md)
 - 图片生成
+  - [Wan-AI/Wan2.7 Image](/modelverse/api_doc/image_api/Wan-AI-Wan2.7-Image.md)
   - [gemini-2.5-flash-image ( Nano Banana )](/modelverse/api_doc/image_api/gemini-2.5-flash-image.md)
   - [gemini-3-pro-image ( Nano Banana Pro )](/modelverse/api_doc/image_api/gemini-3-pro-image.md)
   - [gemini-3.1-flash-image-preview  ( Nano Banana 2 )](/modelverse/api_doc/image_api/gemini-3.1-flash-image.md)
